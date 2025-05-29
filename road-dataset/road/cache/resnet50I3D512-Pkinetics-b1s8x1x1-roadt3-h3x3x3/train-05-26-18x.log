@@ -1,0 +1,2346 @@
+3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]
+Number of agent: all :: 11 to use: 10
+Number of action: all :: 22 to use: 19
+Number of loc: all :: 12 to use: 12
+Number of duplex: all :: 152 to use: 39
+Number of triplet: all :: 1620 to use: 68
+Frames with Boxes are 5307 out of 6000 in 2014-06-26-09-53-12_stereo_centre_02
+number of start frames: 750
+Frames with Boxes are 5597 out of 6001 in 2014-07-14-14-49-50_stereo_centre_01
+number of start frames: 750
+Frames with Boxes are 5345 out of 6000 in 2014-07-14-15-42-55_stereo_centre_03
+number of start frames: 750
+Frames with Boxes are 5801 out of 6001 in 2014-08-08-13-15-11_stereo_centre_01
+number of start frames: 750
+Frames with Boxes are 1168 out of 1168 in 2014-08-11-10-59-18_stereo_centre_02
+number of start frames: 146
+Frames with Boxes are 5134 out of 6000 in 2014-11-14-16-34-33_stereo_centre_06
+number of start frames: 750
+Frames with Boxes are 4804 out of 6001 in 2014-11-21-16-07-03_stereo_centre_01
+number of start frames: 750
+Frames with Boxes are 5844 out of 6000 in 2014-11-25-09-18-32_stereo_centre_04
+number of start frames: 750
+Frames with Boxes are 5710 out of 6001 in 2014-12-09-13-21-02_stereo_centre_01
+number of start frames: 750
+Frames with Boxes are 5611 out of 6000 in 2015-02-03-08-45-10_stereo_centre_02
+number of start frames: 750
+Frames with Boxes are 5473 out of 6000 in 2015-02-03-19-43-11_stereo_centre_04
+number of start frames: 750
+Frames with Boxes are 5431 out of 6000 in 2015-02-06-13-57-16_stereo_centre_02
+number of start frames: 750
+Frames with Boxes are 5091 out of 6000 in 2015-02-13-09-16-26_stereo_centre_02
+number of start frames: 750
+Frames with Boxes are 5316 out of 6000 in 2015-02-13-09-16-26_stereo_centre_05
+number of start frames: 750
+Frames with Boxes are 5859 out of 6000 in 2015-02-24-12-32-19_stereo_centre_04
+number of start frames: 750
+Done Loading Dataset Train Dataset
+Number of agent: all :: 11 to use: 10
+Number of action: all :: 22 to use: 19
+Number of loc: all :: 12 to use: 12
+Number of duplex: all :: 152 to use: 39
+Number of triplet: all :: 1620 to use: 68
+Frames with Boxes are 4033 out of 4734 in 2014-06-25-16-45-34_stereo_centre_02
+number of start frames: 74
+Frames with Boxes are 5724 out of 6000 in 2014-11-18-13-20-12_stereo_centre_05
+number of start frames: 94
+Frames with Boxes are 5133 out of 6001 in 2015-03-03-11-31-36_stereo_centre_01
+number of start frames: 94
+Done Loading Dataset Validation Dataset
+**LOAD STAE DICTIONARY FOR WEIGHT INITLISATIONS**
+conv1.weighttorch.Size([64, 3, 1, 7, 7]) ==>>torch.Size([64, 3, 1, 7, 7])
+bn1.weighttorch.Size([64]) ==>>torch.Size([64])
+bn1.biastorch.Size([64]) ==>>torch.Size([64])
+bn1.running_meantorch.Size([64]) ==>>torch.Size([64])
+bn1.running_vartorch.Size([64]) ==>>torch.Size([64])
+bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.0.conv1.weighttorch.Size([64, 64, 3, 1, 1]) ==>>torch.Size([64, 64, 3, 1, 1])
+layer1.0.bn1.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn1.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn1.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn1.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.0.conv2.weighttorch.Size([64, 64, 1, 3, 3]) ==>>torch.Size([64, 64, 1, 3, 3])
+layer1.0.bn2.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn2.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn2.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn2.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.0.conv3.weighttorch.Size([256, 64, 1, 1, 1]) ==>>torch.Size([256, 64, 1, 1, 1])
+layer1.0.bn3.weighttorch.Size([256]) ==>>torch.Size([256])
+layer1.0.bn3.biastorch.Size([256]) ==>>torch.Size([256])
+layer1.0.bn3.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer1.0.bn3.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer1.0.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.0.downsample.0.weighttorch.Size([256, 64, 1, 1, 1]) ==>>torch.Size([256, 64, 1, 1, 1])
+layer1.0.downsample.1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer1.0.downsample.1.biastorch.Size([256]) ==>>torch.Size([256])
+layer1.0.downsample.1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer1.0.downsample.1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer1.0.downsample.1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.1.conv1.weighttorch.Size([64, 256, 3, 1, 1]) ==>>torch.Size([64, 256, 3, 1, 1])
+layer1.1.bn1.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn1.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn1.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn1.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.1.conv2.weighttorch.Size([64, 64, 1, 3, 3]) ==>>torch.Size([64, 64, 1, 3, 3])
+layer1.1.bn2.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn2.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn2.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn2.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.1.conv3.weighttorch.Size([256, 64, 1, 1, 1]) ==>>torch.Size([256, 64, 1, 1, 1])
+layer1.1.bn3.weighttorch.Size([256]) ==>>torch.Size([256])
+layer1.1.bn3.biastorch.Size([256]) ==>>torch.Size([256])
+layer1.1.bn3.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer1.1.bn3.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer1.1.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.2.conv1.weighttorch.Size([64, 256, 3, 1, 1]) ==>>torch.Size([64, 256, 3, 1, 1])
+layer1.2.bn1.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn1.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn1.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn1.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.2.conv2.weighttorch.Size([64, 64, 1, 3, 3]) ==>>torch.Size([64, 64, 1, 3, 3])
+layer1.2.bn2.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn2.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn2.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn2.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.2.conv3.weighttorch.Size([256, 64, 1, 1, 1]) ==>>torch.Size([256, 64, 1, 1, 1])
+layer1.2.bn3.weighttorch.Size([256]) ==>>torch.Size([256])
+layer1.2.bn3.biastorch.Size([256]) ==>>torch.Size([256])
+layer1.2.bn3.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer1.2.bn3.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer1.2.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.0.conv1.weighttorch.Size([128, 256, 3, 1, 1]) ==>>torch.Size([128, 256, 3, 1, 1])
+layer2.0.bn1.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn1.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn1.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn1.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.0.conv2.weighttorch.Size([128, 128, 1, 3, 3]) ==>>torch.Size([128, 128, 1, 3, 3])
+layer2.0.bn2.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn2.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn2.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn2.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.0.conv3.weighttorch.Size([512, 128, 1, 1, 1]) ==>>torch.Size([512, 128, 1, 1, 1])
+layer2.0.bn3.weighttorch.Size([512]) ==>>torch.Size([512])
+layer2.0.bn3.biastorch.Size([512]) ==>>torch.Size([512])
+layer2.0.bn3.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer2.0.bn3.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer2.0.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.0.downsample.0.weighttorch.Size([512, 256, 1, 1, 1]) ==>>torch.Size([512, 256, 1, 1, 1])
+layer2.0.downsample.1.weighttorch.Size([512]) ==>>torch.Size([512])
+layer2.0.downsample.1.biastorch.Size([512]) ==>>torch.Size([512])
+layer2.0.downsample.1.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer2.0.downsample.1.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer2.0.downsample.1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.1.conv1.weighttorch.Size([128, 512, 1, 1, 1]) ==>>torch.Size([128, 512, 1, 1, 1])
+layer2.1.bn1.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn1.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn1.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn1.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.1.conv2.weighttorch.Size([128, 128, 1, 3, 3]) ==>>torch.Size([128, 128, 1, 3, 3])
+layer2.1.bn2.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn2.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn2.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn2.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.1.conv3.weighttorch.Size([512, 128, 1, 1, 1]) ==>>torch.Size([512, 128, 1, 1, 1])
+layer2.1.bn3.weighttorch.Size([512]) ==>>torch.Size([512])
+layer2.1.bn3.biastorch.Size([512]) ==>>torch.Size([512])
+layer2.1.bn3.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer2.1.bn3.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer2.1.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.2.conv1.weighttorch.Size([128, 512, 3, 1, 1]) ==>>torch.Size([128, 512, 3, 1, 1])
+layer2.2.bn1.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn1.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn1.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn1.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.2.conv2.weighttorch.Size([128, 128, 1, 3, 3]) ==>>torch.Size([128, 128, 1, 3, 3])
+layer2.2.bn2.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn2.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn2.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn2.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.2.conv3.weighttorch.Size([512, 128, 1, 1, 1]) ==>>torch.Size([512, 128, 1, 1, 1])
+layer2.2.bn3.weighttorch.Size([512]) ==>>torch.Size([512])
+layer2.2.bn3.biastorch.Size([512]) ==>>torch.Size([512])
+layer2.2.bn3.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer2.2.bn3.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer2.2.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.3.conv1.weighttorch.Size([128, 512, 1, 1, 1]) ==>>torch.Size([128, 512, 1, 1, 1])
+layer2.3.bn1.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn1.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn1.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn1.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.3.conv2.weighttorch.Size([128, 128, 1, 3, 3]) ==>>torch.Size([128, 128, 1, 3, 3])
+layer2.3.bn2.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn2.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn2.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn2.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.3.conv3.weighttorch.Size([512, 128, 1, 1, 1]) ==>>torch.Size([512, 128, 1, 1, 1])
+layer2.3.bn3.weighttorch.Size([512]) ==>>torch.Size([512])
+layer2.3.bn3.biastorch.Size([512]) ==>>torch.Size([512])
+layer2.3.bn3.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer2.3.bn3.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer2.3.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.0.conv1.weighttorch.Size([256, 512, 3, 1, 1]) ==>>torch.Size([256, 512, 3, 1, 1])
+layer3.0.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.0.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.0.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.0.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.0.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.0.downsample.0.weighttorch.Size([1024, 512, 1, 1, 1]) ==>>torch.Size([1024, 512, 1, 1, 1])
+layer3.0.downsample.1.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.downsample.1.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.downsample.1.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.downsample.1.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.downsample.1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.1.conv1.weighttorch.Size([256, 1024, 1, 1, 1]) ==>>torch.Size([256, 1024, 1, 1, 1])
+layer3.1.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.1.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.1.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.1.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.1.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.1.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.1.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.1.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.1.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.2.conv1.weighttorch.Size([256, 1024, 3, 1, 1]) ==>>torch.Size([256, 1024, 3, 1, 1])
+layer3.2.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.2.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.2.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.2.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.2.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.2.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.2.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.2.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.2.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.3.conv1.weighttorch.Size([256, 1024, 1, 1, 1]) ==>>torch.Size([256, 1024, 1, 1, 1])
+layer3.3.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.3.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.3.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.3.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.3.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.3.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.3.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.3.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.3.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.4.conv1.weighttorch.Size([256, 1024, 3, 1, 1]) ==>>torch.Size([256, 1024, 3, 1, 1])
+layer3.4.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.4.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.4.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.4.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.4.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.4.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.4.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.4.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.4.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.5.conv1.weighttorch.Size([256, 1024, 1, 1, 1]) ==>>torch.Size([256, 1024, 1, 1, 1])
+layer3.5.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.5.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.5.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.5.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.5.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.5.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.5.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.5.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.5.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.0.conv1.weighttorch.Size([512, 1024, 3, 1, 1]) ==>>torch.Size([512, 1024, 3, 1, 1])
+layer4.0.bn1.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn1.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn1.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn1.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.0.conv2.weighttorch.Size([512, 512, 1, 3, 3]) ==>>torch.Size([512, 512, 1, 3, 3])
+layer4.0.bn2.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn2.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn2.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn2.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.0.conv3.weighttorch.Size([2048, 512, 1, 1, 1]) ==>>torch.Size([2048, 512, 1, 1, 1])
+layer4.0.bn3.weighttorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.bn3.biastorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.bn3.running_meantorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.bn3.running_vartorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.0.downsample.0.weighttorch.Size([2048, 1024, 1, 1, 1]) ==>>torch.Size([2048, 1024, 1, 1, 1])
+layer4.0.downsample.1.weighttorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.downsample.1.biastorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.downsample.1.running_meantorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.downsample.1.running_vartorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.downsample.1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.1.conv1.weighttorch.Size([512, 2048, 3, 1, 1]) ==>>torch.Size([512, 2048, 3, 1, 1])
+layer4.1.bn1.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn1.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn1.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn1.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.1.conv2.weighttorch.Size([512, 512, 1, 3, 3]) ==>>torch.Size([512, 512, 1, 3, 3])
+layer4.1.bn2.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn2.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn2.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn2.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.1.conv3.weighttorch.Size([2048, 512, 1, 1, 1]) ==>>torch.Size([2048, 512, 1, 1, 1])
+layer4.1.bn3.weighttorch.Size([2048]) ==>>torch.Size([2048])
+layer4.1.bn3.biastorch.Size([2048]) ==>>torch.Size([2048])
+layer4.1.bn3.running_meantorch.Size([2048]) ==>>torch.Size([2048])
+layer4.1.bn3.running_vartorch.Size([2048]) ==>>torch.Size([2048])
+layer4.1.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.2.conv1.weighttorch.Size([512, 2048, 1, 1, 1]) ==>>torch.Size([512, 2048, 1, 1, 1])
+layer4.2.bn1.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn1.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn1.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn1.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.2.conv2.weighttorch.Size([512, 512, 1, 3, 3]) ==>>torch.Size([512, 512, 1, 3, 3])
+layer4.2.bn2.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn2.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn2.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn2.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.2.conv3.weighttorch.Size([2048, 512, 1, 1, 1]) ==>>torch.Size([2048, 512, 1, 1, 1])
+layer4.2.bn3.weighttorch.Size([2048]) ==>>torch.Size([2048])
+layer4.2.bn3.biastorch.Size([2048]) ==>>torch.Size([2048])
+layer4.2.bn3.running_meantorch.Size([2048]) ==>>torch.Size([2048])
+layer4.2.bn3.running_vartorch.Size([2048]) ==>>torch.Size([2048])
+layer4.2.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+NAME IS NOT INPUT STATE DICT::>conv6.weight
+NAME IS NOT INPUT STATE DICT::>conv7.weight
+NAME IS NOT INPUT STATE DICT::>ego_lateral.weight
+NAME IS NOT INPUT STATE DICT::>lateral_layer1.weight
+NAME IS NOT INPUT STATE DICT::>lateral_layer2.weight
+NAME IS NOT INPUT STATE DICT::>lateral_layer3.weight
+NAME IS NOT INPUT STATE DICT::>corr_layer1.weight
+NAME IS NOT INPUT STATE DICT::>corr_layer2.weight
+NAME IS NOT INPUT STATE DICT::>corr_layer3.weight
+ANCHOR_TYPE: RETINA
+ANNO_ROOT: 
+ARCH: resnet50
+BATCH_SIZE: 1
+CLASSWISE_NMS: False
+CLS_HEAD_TIME_SIZE: 3
+COMPUTE_PATHS: False
+COMPUTE_TUBES: False
+CONF_THRESH: 0.025
+DATASET: road
+DATA_ROOT: .\road-dataset\
+EVAL_EPOCHS: [30]
+FBN: True
+FREEZE_UPTO: 1
+GAMMA: 0.1
+GEN_CONF_THRESH: 0.025
+GEN_NMS: 0.5
+GEN_TOPK: 100
+HEAD_LAYERS: 3
+IOU_THRESH: 0.5
+JOINT_4M_MARGINALS: False
+LOG_START: 10
+LOG_STEP: 10
+LR: 0.0041
+MAN_SEED: 123
+MAX_EPOCHS: 30
+MAX_SEQ_STEP: 1
+MAX_SIZE: 691
+MEANS: [0.485, 0.456, 0.406]
+MILESTONES: [20, 25]
+MIN_SEQ_STEP: 1
+MIN_SIZE: 512
+MODE: train
+MODEL_PATH: .\kinetics-pt\resnet50I3D.pth
+MODEL_TYPE: I3D
+MOMENTUM: 0.9
+MULTI_GPUS: False
+NEGTIVE_THRESHOLD: 0.4
+NMS_THRESH: 0.5
+NUM_FEATURE_MAPS: 5
+NUM_WORKERS: 8
+OPTIM: SGD
+PATHS_COST_TYPE: score
+PATHS_IOUTH: 0.5
+PATHS_JUMP_GAP: 4
+PATHS_MINSCORE: 0.1
+PATHS_MIN_LEN: 6
+POSTIVE_THRESHOLD: 0.5
+REG_HEAD_TIME_SIZE: 3
+RESUME: 0
+SAVE_ROOT: .\road-dataset\road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/
+SEQ_LEN: 8
+STDS: [0.229, 0.224, 0.225]
+SUBSETS: ['val_3']
+TENSORBOARD: 1
+TEST_BATCH_SIZE: 1
+TEST_SEQ_LEN: 8
+TEST_SUBSETS: ['val_3']
+TOPK: 10
+TRAIN_SUBSETS: ['train_3']
+TRIM_METHOD: none
+TUBES_ALPHA: 0
+TUBES_EVAL_THRESHS: [0.2, 0.5]
+TUBES_MINLEN: 5
+TUBES_TOPK: 10
+VAL_STEP: 1
+VAL_SUBSETS: ['val_3']
+WEIGHT_DECAY: 0.0001
+all_classes: [['agent_ness'], ['Ped', 'Car', 'Cyc', 'Mobike', 'MedVeh', 'LarVeh', 'Bus', 'EmVeh', 'TL', 'OthTL'], ['Red', 'Amber', 'Green', 'MovAway', 'MovTow', 'Mov', 'Brake', 'Stop', 'IncatLft', 'IncatRht', 'HazLit', 'TurLft', 'TurRht', 'Ovtak', 'Wait2X', 'XingFmLft', 'XingFmRht', 'Xing', 'PushObj'], ['VehLane', 'OutgoLane', 'OutgoCycLane', 'IncomLane', 'IncomCycLane', 'Pav', 'LftPav', 'RhtPav', 'Jun', 'xing', 'BusStop', 'parking'], ['Bus-MovAway', 'Bus-MovTow', 'Bus-Stop', 'Bus-XingFmLft', 'Car-Brake', 'Car-IncatLft', 'Car-IncatRht', 'Car-MovAway', 'Car-MovTow', 'Car-Stop', 'Car-TurLft', 'Car-TurRht', 'Car-XingFmLft', 'Car-XingFmRht', 'Cyc-MovAway', 'Cyc-MovTow', 'Cyc-Stop', 'Cyc-TurLft', 'Cyc-XingFmLft', 'Cyc-XingFmRht', 'LarVeh-Stop', 'MedVeh-IncatLft', 'MedVeh-MovTow', 'MedVeh-Stop', 'MedVeh-TurRht', 'OthTL-Green', 'OthTL-Red', 'Ped-Mov', 'Ped-MovAway', 'Ped-MovTow', 'Ped-PushObj', 'Ped-Stop', 'Ped-Wait2X', 'Ped-Xing', 'Ped-XingFmLft', 'Ped-XingFmRht', 'TL-Amber', 'TL-Green', 'TL-Red'], ['Bus-MovTow-IncomLane', 'Bus-MovTow-Jun', 'Bus-Stop-IncomLane', 'Bus-Stop-VehLane', 'Bus-XingFmLft-Jun', 'Car-Brake-Jun', 'Car-Brake-VehLane', 'Car-IncatLft-Jun', 'Car-IncatLft-VehLane', 'Car-IncatRht-IncomLane', 'Car-IncatRht-Jun', 'Car-MovAway-Jun', 'Car-MovAway-OutgoLane', 'Car-MovAway-VehLane', 'Car-MovTow-IncomLane', 'Car-MovTow-Jun', 'Car-Stop-IncomLane', 'Car-Stop-Jun', 'Car-Stop-VehLane', 'Car-TurLft-Jun', 'Car-TurLft-VehLane', 'Car-TurRht-IncomLane', 'Car-TurRht-Jun', 'Car-XingFmLft-Jun', 'Cyc-MovAway-Jun', 'Cyc-MovAway-LftPav', 'Cyc-MovAway-OutgoCycLane', 'Cyc-MovAway-OutgoLane', 'Cyc-MovAway-VehLane', 'Cyc-MovTow-IncomCycLane', 'Cyc-MovTow-IncomLane', 'Cyc-MovTow-Jun', 'Cyc-MovTow-LftPav', 'Cyc-Stop-IncomCycLane', 'Cyc-Stop-IncomLane', 'Cyc-Stop-Jun', 'Cyc-TurLft-Jun', 'Cyc-XingFmLft-Jun', 'MedVeh-MovTow-IncomLane', 'MedVeh-MovTow-Jun', 'MedVeh-Stop-IncomLane', 'MedVeh-Stop-Jun', 'MedVeh-TurRht-Jun', 'Ped-Mov-Pav', 'Ped-MovAway-LftPav', 'Ped-MovAway-Pav', 'Ped-MovAway-RhtPav', 'Ped-MovTow-IncomLane', 'Ped-MovTow-LftPav', 'Ped-MovTow-RhtPav', 'Ped-MovTow-VehLane', 'Ped-PushObj-LftPav', 'Ped-PushObj-RhtPav', 'Ped-Stop-BusStop', 'Ped-Stop-LftPav', 'Ped-Stop-Pav', 'Ped-Stop-RhtPav', 'Ped-Stop-VehLane', 'Ped-Wait2X-LftPav', 'Ped-Wait2X-RhtPav', 'Ped-XingFmLft-IncomLane', 'Ped-XingFmLft-Jun', 'Ped-XingFmLft-VehLane', 'Ped-XingFmLft-xing', 'Ped-XingFmRht-IncomLane', 'Ped-XingFmRht-Jun', 'Ped-XingFmRht-RhtPav', 'Ped-XingFmRht-VehLane']]
+ar: 9
+ego_classes: ['AV-Stop', 'AV-Mov', 'AV-TurRht', 'AV-TurLft', 'AV-MovRht', 'AV-MovLft', 'AV-Ovtak']
+exp_name: resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3
+head_size: 256
+hostname: nona
+label_types: ['agent_ness', 'agent', 'action', 'loc', 'duplex', 'triplet']
+log_dir: logs/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/
+model_3d_layers: [[0, 1, 2], [0, 2], [0, 2, 4], [0, 1]]
+model_init: kinetics
+model_perms: [3, 4, 6, 3]
+model_subtype: I3D
+non_local_inds: [[], [], [], []]
+num_classes: 149
+num_classes_list: [1, 10, 19, 12, 39, 68]
+num_ego_classes: 7
+num_label_types: 6
+user: alexr
+RetinaNet(
+  (anchors): anchorBox(
+    (cell_anchors): BufferList()
+  )
+  (backbone): ResNetFPN(
+    (conv1): Conv3d(3, 64, kernel_size=(1, 7, 7), stride=(1, 2, 2), padding=(0, 3, 3), bias=False)
+    (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+    (pool1): MaxPool3d(kernel_size=(1, 3, 3), stride=(1, 2, 2), padding=(0, 0, 0), dilation=1, ceil_mode=False)
+    (layer1): Sequential(
+      (0): BottleneckI3D(
+        (conv1): Conv3d(64, 64, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(64, 64, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(64, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv3d(64, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+          (1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BottleneckI3D(
+        (conv1): Conv3d(256, 64, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(64, 64, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(64, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (2): BottleneckI3D(
+        (conv1): Conv3d(256, 64, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(64, 64, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(64, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (pool2): MaxPool3d(kernel_size=(2, 1, 1), stride=(2, 1, 1), padding=(0, 0, 0), dilation=1, ceil_mode=False)
+    (layer2): Sequential(
+      (0): BottleneckI3D(
+        (conv1): Conv3d(256, 128, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(128, 128, kernel_size=(1, 3, 3), stride=(1, 2, 2), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(128, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv3d(256, 512, kernel_size=(1, 1, 1), stride=(1, 2, 2), bias=False)
+          (1): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BottleneckI3D(
+        (conv1): Conv3d(512, 128, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(128, 128, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(128, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (2): BottleneckI3D(
+        (conv1): Conv3d(512, 128, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(128, 128, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(128, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (3): BottleneckI3D(
+        (conv1): Conv3d(512, 128, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(128, 128, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(128, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (layer3): Sequential(
+      (0): BottleneckI3D(
+        (conv1): Conv3d(512, 256, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 2, 2), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(256, 1024, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv3d(512, 1024, kernel_size=(1, 1, 1), stride=(1, 2, 2), bias=False)
+          (1): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BottleneckI3D(
+        (conv1): Conv3d(1024, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(256, 1024, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (2): BottleneckI3D(
+        (conv1): Conv3d(1024, 256, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(256, 1024, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (3): BottleneckI3D(
+        (conv1): Conv3d(1024, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(256, 1024, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (4): BottleneckI3D(
+        (conv1): Conv3d(1024, 256, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(256, 1024, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (5): BottleneckI3D(
+        (conv1): Conv3d(1024, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(256, 1024, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (layer4): Sequential(
+      (0): BottleneckI3D(
+        (conv1): Conv3d(1024, 512, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(512, 512, kernel_size=(1, 3, 3), stride=(1, 2, 2), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(512, 2048, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv3d(1024, 2048, kernel_size=(1, 1, 1), stride=(1, 2, 2), bias=False)
+          (1): BatchNorm3d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BottleneckI3D(
+        (conv1): Conv3d(2048, 512, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(512, 512, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(512, 2048, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (2): BottleneckI3D(
+        (conv1): Conv3d(2048, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn1): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(512, 512, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(512, 2048, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (conv6): Conv3d(2048, 256, kernel_size=(1, 3, 3), stride=(1, 2, 2), padding=(0, 1, 1), bias=False)
+    (conv7): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 2, 2), padding=(0, 1, 1), bias=False)
+    (ego_lateral): Conv3d(2048, 256, kernel_size=(1, 3, 3), stride=(1, 2, 2), bias=False)
+    (avg_pool): AdaptiveAvgPool3d(output_size=(None, 1, 1))
+    (lateral_layer1): Conv3d(2048, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+    (lateral_layer2): Conv3d(1024, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+    (lateral_layer3): Conv3d(512, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+    (corr_layer1): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+    (corr_layer2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+    (corr_layer3): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+  )
+  (reg_heads): Sequential(
+    (0): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1))
+    (3): ReLU(inplace=True)
+    (4): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1))
+    (5): ReLU(inplace=True)
+    (6): Conv3d(256, 36, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+  )
+  (cls_heads): Sequential(
+    (0): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1))
+    (3): ReLU(inplace=True)
+    (4): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1))
+    (5): ReLU(inplace=True)
+    (6): Conv3d(256, 1341, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+  )
+  (criterion): FocalLoss()
+  (ego_head): Conv3d(256, 7, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0))
+)
+
+
+Solver configs are as follow 
+
+
+backbone.layer1.0.conv1.weight is trained at the rate of 0.0041
+backbone.layer1.0.conv2.weight is trained at the rate of 0.0041
+backbone.layer1.0.conv3.weight is trained at the rate of 0.0041
+backbone.layer1.0.downsample.0.weight is trained at the rate of 0.0041
+backbone.layer1.1.conv1.weight is trained at the rate of 0.0041
+backbone.layer1.1.conv2.weight is trained at the rate of 0.0041
+backbone.layer1.1.conv3.weight is trained at the rate of 0.0041
+backbone.layer1.2.conv1.weight is trained at the rate of 0.0041
+backbone.layer1.2.conv2.weight is trained at the rate of 0.0041
+backbone.layer1.2.conv3.weight is trained at the rate of 0.0041
+backbone.layer2.0.conv1.weight is trained at the rate of 0.0041
+backbone.layer2.0.conv2.weight is trained at the rate of 0.0041
+backbone.layer2.0.conv3.weight is trained at the rate of 0.0041
+backbone.layer2.0.downsample.0.weight is trained at the rate of 0.0041
+backbone.layer2.1.conv1.weight is trained at the rate of 0.0041
+backbone.layer2.1.conv2.weight is trained at the rate of 0.0041
+backbone.layer2.1.conv3.weight is trained at the rate of 0.0041
+backbone.layer2.2.conv1.weight is trained at the rate of 0.0041
+backbone.layer2.2.conv2.weight is trained at the rate of 0.0041
+backbone.layer2.2.conv3.weight is trained at the rate of 0.0041
+backbone.layer2.3.conv1.weight is trained at the rate of 0.0041
+backbone.layer2.3.conv2.weight is trained at the rate of 0.0041
+backbone.layer2.3.conv3.weight is trained at the rate of 0.0041
+backbone.layer3.0.conv1.weight is trained at the rate of 0.0041
+backbone.layer3.0.conv2.weight is trained at the rate of 0.0041
+backbone.layer3.0.conv3.weight is trained at the rate of 0.0041
+backbone.layer3.0.downsample.0.weight is trained at the rate of 0.0041
+backbone.layer3.1.conv1.weight is trained at the rate of 0.0041
+backbone.layer3.1.conv2.weight is trained at the rate of 0.0041
+backbone.layer3.1.conv3.weight is trained at the rate of 0.0041
+backbone.layer3.2.conv1.weight is trained at the rate of 0.0041
+backbone.layer3.2.conv2.weight is trained at the rate of 0.0041
+backbone.layer3.2.conv3.weight is trained at the rate of 0.0041
+backbone.layer3.3.conv1.weight is trained at the rate of 0.0041
+backbone.layer3.3.conv2.weight is trained at the rate of 0.0041
+backbone.layer3.3.conv3.weight is trained at the rate of 0.0041
+backbone.layer3.4.conv1.weight is trained at the rate of 0.0041
+backbone.layer3.4.conv2.weight is trained at the rate of 0.0041
+backbone.layer3.4.conv3.weight is trained at the rate of 0.0041
+backbone.layer3.5.conv1.weight is trained at the rate of 0.0041
+backbone.layer3.5.conv2.weight is trained at the rate of 0.0041
+backbone.layer3.5.conv3.weight is trained at the rate of 0.0041
+backbone.layer4.0.conv1.weight is trained at the rate of 0.0041
+backbone.layer4.0.conv2.weight is trained at the rate of 0.0041
+backbone.layer4.0.conv3.weight is trained at the rate of 0.0041
+backbone.layer4.0.downsample.0.weight is trained at the rate of 0.0041
+backbone.layer4.1.conv1.weight is trained at the rate of 0.0041
+backbone.layer4.1.conv2.weight is trained at the rate of 0.0041
+backbone.layer4.1.conv3.weight is trained at the rate of 0.0041
+backbone.layer4.2.conv1.weight is trained at the rate of 0.0041
+backbone.layer4.2.conv2.weight is trained at the rate of 0.0041
+backbone.layer4.2.conv3.weight is trained at the rate of 0.0041
+backbone.conv6.weight is trained at the rate of 0.0041
+backbone.conv7.weight is trained at the rate of 0.0041
+backbone.ego_lateral.weight is trained at the rate of 0.0041
+backbone.lateral_layer1.weight is trained at the rate of 0.0041
+backbone.lateral_layer2.weight is trained at the rate of 0.0041
+backbone.lateral_layer3.weight is trained at the rate of 0.0041
+backbone.corr_layer1.weight is trained at the rate of 0.0041
+backbone.corr_layer2.weight is trained at the rate of 0.0041
+backbone.corr_layer3.weight is trained at the rate of 0.0041
+reg_heads.0.weight is trained at the rate of 0.0041
+reg_heads.0.bias is trained at the rate of 0.0082
+reg_heads.2.weight is trained at the rate of 0.0041
+reg_heads.2.bias is trained at the rate of 0.0082
+reg_heads.4.weight is trained at the rate of 0.0041
+reg_heads.4.bias is trained at the rate of 0.0082
+reg_heads.6.weight is trained at the rate of 0.0041
+reg_heads.6.bias is trained at the rate of 0.0082
+cls_heads.0.weight is trained at the rate of 0.0041
+cls_heads.0.bias is trained at the rate of 0.0082
+cls_heads.2.weight is trained at the rate of 0.0041
+cls_heads.2.bias is trained at the rate of 0.0082
+cls_heads.4.weight is trained at the rate of 0.0041
+cls_heads.4.bias is trained at the rate of 0.0082
+cls_heads.6.weight is trained at the rate of 0.0041
+cls_heads.6.bias is trained at the rate of 0.0082
+ego_head.weight is trained at the rate of 0.0041
+ego_head.bias is trained at the rate of 0.0082
+optimizer is SGD
+Done solver configs
+
+
+train_3 168572 label: ind=00 name:Ped
+train_3 80023 label: ind=01 name:Car
+train_3 44839 label: ind=02 name:Cyc
+train_3 02511 label: ind=03 name:Mobike
+train_3 19810 label: ind=04 name:MedVeh
+train_3 03819 label: ind=05 name:LarVeh
+train_3 09943 label: ind=06 name:Bus
+train_3 00155 label: ind=07 name:EmVeh
+train_3 48210 label: ind=08 name:TL
+train_3 15045 label: ind=09 name:OthTL
+train_3 40301 label: ind=00 name:Red
+train_3 05304 label: ind=01 name:Amber
+train_3 17508 label: ind=02 name:Green
+train_3 113082 label: ind=03 name:MovAway
+train_3 106515 label: ind=04 name:MovTow
+train_3 08675 label: ind=05 name:Mov
+train_3 12404 label: ind=06 name:Brake
+train_3 76562 label: ind=07 name:Stop
+train_3 03744 label: ind=08 name:IncatLft
+train_3 06866 label: ind=09 name:IncatRht
+train_3 02591 label: ind=10 name:HazLit
+train_3 04162 label: ind=11 name:TurLft
+train_3 06253 label: ind=12 name:TurRht
+train_3 00821 label: ind=13 name:Ovtak
+train_3 08658 label: ind=14 name:Wait2X
+train_3 16157 label: ind=15 name:XingFmLft
+train_3 10674 label: ind=16 name:XingFmRht
+train_3 04966 label: ind=17 name:Xing
+train_3 04068 label: ind=18 name:PushObj
+train_3 58645 label: ind=00 name:VehLane
+train_3 10078 label: ind=01 name:OutgoLane
+train_3 08109 label: ind=02 name:OutgoCycLane
+train_3 52367 label: ind=03 name:IncomLane
+train_3 04618 label: ind=04 name:IncomCycLane
+train_3 13370 label: ind=05 name:Pav
+train_3 79053 label: ind=06 name:LftPav
+train_3 55755 label: ind=07 name:RhtPav
+train_3 55566 label: ind=08 name:Jun
+train_3 09740 label: ind=09 name:xing
+train_3 02960 label: ind=10 name:BusStop
+train_3 00748 label: ind=11 name:parking
+train_3 02553 label: ind=00 name:Bus-MovAway
+train_3 02686 label: ind=01 name:Bus-MovTow
+train_3 03536 label: ind=02 name:Bus-Stop
+train_3 00685 label: ind=03 name:Bus-XingFmLft
+train_3 10745 label: ind=04 name:Car-Brake
+train_3 01474 label: ind=05 name:Car-IncatLft
+train_3 03693 label: ind=06 name:Car-IncatRht
+train_3 22962 label: ind=07 name:Car-MovAway
+train_3 21922 label: ind=08 name:Car-MovTow
+train_3 29942 label: ind=09 name:Car-Stop
+train_3 02275 label: ind=10 name:Car-TurLft
+train_3 03736 label: ind=11 name:Car-TurRht
+train_3 03832 label: ind=12 name:Car-XingFmLft
+train_3 03050 label: ind=13 name:Car-XingFmRht
+train_3 19617 label: ind=14 name:Cyc-MovAway
+train_3 10667 label: ind=15 name:Cyc-MovTow
+train_3 11465 label: ind=16 name:Cyc-Stop
+train_3 01151 label: ind=17 name:Cyc-TurLft
+train_3 01311 label: ind=18 name:Cyc-XingFmLft
+train_3 01851 label: ind=19 name:Cyc-XingFmRht
+train_3 01556 label: ind=20 name:LarVeh-Stop
+train_3 01652 label: ind=21 name:MedVeh-IncatLft
+train_3 04311 label: ind=22 name:MedVeh-MovTow
+train_3 09146 label: ind=23 name:MedVeh-Stop
+train_3 00821 label: ind=24 name:MedVeh-TurRht
+train_3 03941 label: ind=25 name:OthTL-Green
+train_3 10407 label: ind=26 name:OthTL-Red
+train_3 08675 label: ind=27 name:Ped-Mov
+train_3 60948 label: ind=28 name:Ped-MovAway
+train_3 65931 label: ind=29 name:Ped-MovTow
+train_3 04068 label: ind=30 name:Ped-PushObj
+train_3 19028 label: ind=31 name:Ped-Stop
+train_3 08437 label: ind=32 name:Ped-Wait2X
+train_3 04754 label: ind=33 name:Ped-Xing
+train_3 09590 label: ind=34 name:Ped-XingFmLft
+train_3 04606 label: ind=35 name:Ped-XingFmRht
+train_3 04749 label: ind=36 name:TL-Amber
+train_3 13567 label: ind=37 name:TL-Green
+train_3 29894 label: ind=38 name:TL-Red
+train_3 02110 label: ind=00 name:Bus-MovTow-IncomLane
+train_3 00510 label: ind=01 name:Bus-MovTow-Jun
+train_3 00919 label: ind=02 name:Bus-Stop-IncomLane
+train_3 00864 label: ind=03 name:Bus-Stop-VehLane
+train_3 00685 label: ind=04 name:Bus-XingFmLft-Jun
+train_3 01518 label: ind=05 name:Car-Brake-Jun
+train_3 07839 label: ind=06 name:Car-Brake-VehLane
+train_3 00596 label: ind=07 name:Car-IncatLft-Jun
+train_3 00582 label: ind=08 name:Car-IncatLft-VehLane
+train_3 00859 label: ind=09 name:Car-IncatRht-IncomLane
+train_3 02685 label: ind=10 name:Car-IncatRht-Jun
+train_3 06325 label: ind=11 name:Car-MovAway-Jun
+train_3 02229 label: ind=12 name:Car-MovAway-OutgoLane
+train_3 15205 label: ind=13 name:Car-MovAway-VehLane
+train_3 18061 label: ind=14 name:Car-MovTow-IncomLane
+train_3 04841 label: ind=15 name:Car-MovTow-Jun
+train_3 13168 label: ind=16 name:Car-Stop-IncomLane
+train_3 07189 label: ind=17 name:Car-Stop-Jun
+train_3 08249 label: ind=18 name:Car-Stop-VehLane
+train_3 01797 label: ind=19 name:Car-TurLft-Jun
+train_3 00724 label: ind=20 name:Car-TurLft-VehLane
+train_3 00168 label: ind=21 name:Car-TurRht-IncomLane
+train_3 03363 label: ind=22 name:Car-TurRht-Jun
+train_3 03739 label: ind=23 name:Car-XingFmLft-Jun
+train_3 04264 label: ind=24 name:Cyc-MovAway-Jun
+train_3 00755 label: ind=25 name:Cyc-MovAway-LftPav
+train_3 06550 label: ind=26 name:Cyc-MovAway-OutgoCycLane
+train_3 00501 label: ind=27 name:Cyc-MovAway-OutgoLane
+train_3 10018 label: ind=28 name:Cyc-MovAway-VehLane
+train_3 03006 label: ind=29 name:Cyc-MovTow-IncomCycLane
+train_3 05809 label: ind=30 name:Cyc-MovTow-IncomLane
+train_3 01820 label: ind=31 name:Cyc-MovTow-Jun
+train_3 00432 label: ind=32 name:Cyc-MovTow-LftPav
+train_3 00534 label: ind=33 name:Cyc-Stop-IncomCycLane
+train_3 00871 label: ind=34 name:Cyc-Stop-IncomLane
+train_3 03641 label: ind=35 name:Cyc-Stop-Jun
+train_3 00958 label: ind=36 name:Cyc-TurLft-Jun
+train_3 00932 label: ind=37 name:Cyc-XingFmLft-Jun
+train_3 03459 label: ind=38 name:MedVeh-MovTow-IncomLane
+train_3 00892 label: ind=39 name:MedVeh-MovTow-Jun
+train_3 03003 label: ind=40 name:MedVeh-Stop-IncomLane
+train_3 01871 label: ind=41 name:MedVeh-Stop-Jun
+train_3 00733 label: ind=42 name:MedVeh-TurRht-Jun
+train_3 06502 label: ind=43 name:Ped-Mov-Pav
+train_3 31522 label: ind=44 name:Ped-MovAway-LftPav
+train_3 01618 label: ind=45 name:Ped-MovAway-Pav
+train_3 23574 label: ind=46 name:Ped-MovAway-RhtPav
+train_3 00252 label: ind=47 name:Ped-MovTow-IncomLane
+train_3 35078 label: ind=48 name:Ped-MovTow-LftPav
+train_3 25759 label: ind=49 name:Ped-MovTow-RhtPav
+train_3 00467 label: ind=50 name:Ped-MovTow-VehLane
+train_3 02038 label: ind=51 name:Ped-PushObj-LftPav
+train_3 00843 label: ind=52 name:Ped-PushObj-RhtPav
+train_3 01107 label: ind=53 name:Ped-Stop-BusStop
+train_3 08369 label: ind=54 name:Ped-Stop-LftPav
+train_3 03364 label: ind=55 name:Ped-Stop-Pav
+train_3 04957 label: ind=56 name:Ped-Stop-RhtPav
+train_3 00519 label: ind=57 name:Ped-Stop-VehLane
+train_3 03964 label: ind=58 name:Ped-Wait2X-LftPav
+train_3 01147 label: ind=59 name:Ped-Wait2X-RhtPav
+train_3 01135 label: ind=60 name:Ped-XingFmLft-IncomLane
+train_3 01803 label: ind=61 name:Ped-XingFmLft-Jun
+train_3 01238 label: ind=62 name:Ped-XingFmLft-VehLane
+train_3 05418 label: ind=63 name:Ped-XingFmLft-xing
+train_3 00241 label: ind=64 name:Ped-XingFmRht-IncomLane
+train_3 00935 label: ind=65 name:Ped-XingFmRht-Jun
+train_3 00032 label: ind=66 name:Ped-XingFmRht-RhtPav
+train_3 00773 label: ind=67 name:Ped-XingFmRht-VehLane
+Number of ids are 10646
+
+val_3 29968 label: ind=00 name:Ped
+val_3 23903 label: ind=01 name:Car
+val_3 07760 label: ind=02 name:Cyc
+val_3 00627 label: ind=03 name:Mobike
+val_3 05458 label: ind=04 name:MedVeh
+val_3 02374 label: ind=05 name:LarVeh
+val_3 02052 label: ind=06 name:Bus
+val_3 00197 label: ind=07 name:EmVeh
+val_3 07809 label: ind=08 name:TL
+val_3 03602 label: ind=09 name:OthTL
+val_3 05414 label: ind=00 name:Red
+val_3 00885 label: ind=01 name:Amber
+val_3 04612 label: ind=02 name:Green
+val_3 28631 label: ind=03 name:MovAway
+val_3 18628 label: ind=04 name:MovTow
+val_3 00694 label: ind=05 name:Mov
+val_3 06651 label: ind=06 name:Brake
+val_3 21237 label: ind=07 name:Stop
+val_3 01303 label: ind=08 name:IncatLft
+val_3 00541 label: ind=09 name:IncatRht
+val_3 00549 label: ind=10 name:HazLit
+val_3 00563 label: ind=11 name:TurLft
+val_3 00309 label: ind=12 name:TurRht
+val_3 00128 label: ind=13 name:Ovtak
+val_3 01856 label: ind=14 name:Wait2X
+val_3 01632 label: ind=15 name:XingFmLft
+val_3 01499 label: ind=16 name:XingFmRht
+val_3 00171 label: ind=17 name:Xing
+val_3 00457 label: ind=18 name:PushObj
+val_3 21373 label: ind=00 name:VehLane
+val_3 04069 label: ind=01 name:OutgoLane
+val_3 01023 label: ind=02 name:OutgoCycLane
+val_3 11387 label: ind=03 name:IncomLane
+val_3 01150 label: ind=04 name:IncomCycLane
+val_3 02760 label: ind=05 name:Pav
+val_3 15738 label: ind=06 name:LftPav
+val_3 10234 label: ind=07 name:RhtPav
+val_3 07982 label: ind=08 name:Jun
+val_3 00903 label: ind=09 name:xing
+val_3 00465 label: ind=10 name:BusStop
+val_3 00000 label: ind=11 name:parking
+val_3 00739 label: ind=00 name:Bus-MovAway
+val_3 00646 label: ind=01 name:Bus-MovTow
+val_3 00484 label: ind=02 name:Bus-Stop
+val_3 00123 label: ind=03 name:Bus-XingFmLft
+val_3 05668 label: ind=04 name:Car-Brake
+val_3 00674 label: ind=05 name:Car-IncatLft
+val_3 00411 label: ind=06 name:Car-IncatRht
+val_3 09016 label: ind=07 name:Car-MovAway
+val_3 03752 label: ind=08 name:Car-MovTow
+val_3 09897 label: ind=09 name:Car-Stop
+val_3 00301 label: ind=10 name:Car-TurLft
+val_3 00252 label: ind=11 name:Car-TurRht
+val_3 00827 label: ind=12 name:Car-XingFmLft
+val_3 00393 label: ind=13 name:Car-XingFmRht
+val_3 03423 label: ind=14 name:Cyc-MovAway
+val_3 01902 label: ind=15 name:Cyc-MovTow
+val_3 02302 label: ind=16 name:Cyc-Stop
+val_3 00064 label: ind=17 name:Cyc-TurLft
+val_3 00070 label: ind=18 name:Cyc-XingFmLft
+val_3 00063 label: ind=19 name:Cyc-XingFmRht
+val_3 01431 label: ind=20 name:LarVeh-Stop
+val_3 00042 label: ind=21 name:MedVeh-IncatLft
+val_3 00908 label: ind=22 name:MedVeh-MovTow
+val_3 02444 label: ind=23 name:MedVeh-Stop
+val_3 00057 label: ind=24 name:MedVeh-TurRht
+val_3 01213 label: ind=25 name:OthTL-Green
+val_3 02183 label: ind=26 name:OthTL-Red
+val_3 00694 label: ind=27 name:Ped-Mov
+val_3 12895 label: ind=28 name:Ped-MovAway
+val_3 10959 label: ind=29 name:Ped-MovTow
+val_3 00457 label: ind=30 name:Ped-PushObj
+val_3 03934 label: ind=31 name:Ped-Stop
+val_3 01770 label: ind=32 name:Ped-Wait2X
+val_3 00171 label: ind=33 name:Ped-Xing
+val_3 00520 label: ind=34 name:Ped-XingFmLft
+val_3 00966 label: ind=35 name:Ped-XingFmRht
+val_3 00679 label: ind=36 name:TL-Amber
+val_3 03399 label: ind=37 name:TL-Green
+val_3 03231 label: ind=38 name:TL-Red
+val_3 00544 label: ind=00 name:Bus-MovTow-IncomLane
+val_3 00194 label: ind=01 name:Bus-MovTow-Jun
+val_3 00254 label: ind=02 name:Bus-Stop-IncomLane
+val_3 00182 label: ind=03 name:Bus-Stop-VehLane
+val_3 00123 label: ind=04 name:Bus-XingFmLft-Jun
+val_3 01143 label: ind=05 name:Car-Brake-Jun
+val_3 05425 label: ind=06 name:Car-Brake-VehLane
+val_3 00531 label: ind=07 name:Car-IncatLft-Jun
+val_3 00177 label: ind=08 name:Car-IncatLft-VehLane
+val_3 00193 label: ind=09 name:Car-IncatRht-IncomLane
+val_3 00128 label: ind=10 name:Car-IncatRht-Jun
+val_3 01991 label: ind=11 name:Car-MovAway-Jun
+val_3 00619 label: ind=12 name:Car-MovAway-OutgoLane
+val_3 08008 label: ind=13 name:Car-MovAway-VehLane
+val_3 03603 label: ind=14 name:Car-MovTow-IncomLane
+val_3 00339 label: ind=15 name:Car-MovTow-Jun
+val_3 02546 label: ind=16 name:Car-Stop-IncomLane
+val_3 02178 label: ind=17 name:Car-Stop-Jun
+val_3 05257 label: ind=18 name:Car-Stop-VehLane
+val_3 00268 label: ind=19 name:Car-TurLft-Jun
+val_3 00084 label: ind=20 name:Car-TurLft-VehLane
+val_3 00054 label: ind=21 name:Car-TurRht-IncomLane
+val_3 00198 label: ind=22 name:Car-TurRht-Jun
+val_3 00827 label: ind=23 name:Car-XingFmLft-Jun
+val_3 00185 label: ind=24 name:Cyc-MovAway-Jun
+val_3 00478 label: ind=25 name:Cyc-MovAway-LftPav
+val_3 01019 label: ind=26 name:Cyc-MovAway-OutgoCycLane
+val_3 00216 label: ind=27 name:Cyc-MovAway-OutgoLane
+val_3 01671 label: ind=28 name:Cyc-MovAway-VehLane
+val_3 01002 label: ind=29 name:Cyc-MovTow-IncomCycLane
+val_3 00577 label: ind=30 name:Cyc-MovTow-IncomLane
+val_3 00106 label: ind=31 name:Cyc-MovTow-Jun
+val_3 00240 label: ind=32 name:Cyc-MovTow-LftPav
+val_3 00073 label: ind=33 name:Cyc-Stop-IncomCycLane
+val_3 00485 label: ind=34 name:Cyc-Stop-IncomLane
+val_3 00174 label: ind=35 name:Cyc-Stop-Jun
+val_3 00064 label: ind=36 name:Cyc-TurLft-Jun
+val_3 00070 label: ind=37 name:Cyc-XingFmLft-Jun
+val_3 00908 label: ind=38 name:MedVeh-MovTow-IncomLane
+val_3 00030 label: ind=39 name:MedVeh-MovTow-Jun
+val_3 00602 label: ind=40 name:MedVeh-Stop-IncomLane
+val_3 00028 label: ind=41 name:MedVeh-Stop-Jun
+val_3 00051 label: ind=42 name:MedVeh-TurRht-Jun
+val_3 00694 label: ind=43 name:Ped-Mov-Pav
+val_3 08328 label: ind=44 name:Ped-MovAway-LftPav
+val_3 00659 label: ind=45 name:Ped-MovAway-Pav
+val_3 02822 label: ind=46 name:Ped-MovAway-RhtPav
+val_3 00035 label: ind=47 name:Ped-MovTow-IncomLane
+val_3 04637 label: ind=48 name:Ped-MovTow-LftPav
+val_3 05090 label: ind=49 name:Ped-MovTow-RhtPav
+val_3 00067 label: ind=50 name:Ped-MovTow-VehLane
+val_3 00198 label: ind=51 name:Ped-PushObj-LftPav
+val_3 00085 label: ind=52 name:Ped-PushObj-RhtPav
+val_3 00465 label: ind=53 name:Ped-Stop-BusStop
+val_3 01726 label: ind=54 name:Ped-Stop-LftPav
+val_3 00236 label: ind=55 name:Ped-Stop-Pav
+val_3 01610 label: ind=56 name:Ped-Stop-RhtPav
+val_3 00151 label: ind=57 name:Ped-Stop-VehLane
+val_3 00900 label: ind=58 name:Ped-Wait2X-LftPav
+val_3 00680 label: ind=59 name:Ped-Wait2X-RhtPav
+val_3 00083 label: ind=60 name:Ped-XingFmLft-IncomLane
+val_3 00054 label: ind=61 name:Ped-XingFmLft-Jun
+val_3 00071 label: ind=62 name:Ped-XingFmLft-VehLane
+val_3 00305 label: ind=63 name:Ped-XingFmLft-xing
+val_3 00157 label: ind=64 name:Ped-XingFmRht-IncomLane
+val_3 00056 label: ind=65 name:Ped-XingFmRht-Jun
+val_3 00090 label: ind=66 name:Ped-XingFmRht-RhtPav
+val_3 00108 label: ind=67 name:Ped-XingFmRht-VehLane
+Number of ids are 262
+
+ANCHOR_TYPE: RETINA
+ANNO_ROOT: 
+ARCH: resnet50
+BATCH_SIZE: 1
+CLASSWISE_NMS: False
+CLS_HEAD_TIME_SIZE: 3
+COMPUTE_PATHS: False
+COMPUTE_TUBES: False
+CONF_THRESH: 0.025
+DATASET: road
+DATA_ROOT: .\road-dataset\
+EVAL_EPOCHS: [30]
+FBN: True
+FREEZE_UPTO: 1
+GAMMA: 0.1
+GEN_CONF_THRESH: 0.025
+GEN_NMS: 0.5
+GEN_TOPK: 100
+HEAD_LAYERS: 3
+IOU_THRESH: 0.5
+JOINT_4M_MARGINALS: False
+LOG_START: 10
+LOG_STEP: 10
+LR: 0.0041
+MAN_SEED: 123
+MAX_EPOCHS: 30
+MAX_ITERS: 319380
+MAX_SEQ_STEP: 1
+MAX_SIZE: 691
+MEANS: [0.485, 0.456, 0.406]
+MILESTONES: [20, 25]
+MIN_SEQ_STEP: 1
+MIN_SIZE: 512
+MODE: train
+MODEL_PATH: .\kinetics-pt\resnet50I3D.pth
+MODEL_TYPE: I3D
+MOMENTUM: 0.9
+MULTI_GPUS: False
+NEGTIVE_THRESHOLD: 0.4
+NMS_THRESH: 0.5
+NUM_FEATURE_MAPS: 5
+NUM_WORKERS: 8
+OPTIM: SGD
+PATHS_COST_TYPE: score
+PATHS_IOUTH: 0.5
+PATHS_JUMP_GAP: 4
+PATHS_MINSCORE: 0.1
+PATHS_MIN_LEN: 6
+POSTIVE_THRESHOLD: 0.5
+REG_HEAD_TIME_SIZE: 3
+RESUME: 0
+SAVE_ROOT: .\road-dataset\road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/
+SEQ_LEN: 8
+START_EPOCH: 1
+STDS: [0.229, 0.224, 0.225]
+SUBSETS: ['val_3']
+TENSORBOARD: 1
+TEST_BATCH_SIZE: 1
+TEST_SEQ_LEN: 8
+TEST_SUBSETS: ['val_3']
+TOPK: 10
+TRAIN_SUBSETS: ['train_3']
+TRIM_METHOD: none
+TUBES_ALPHA: 0
+TUBES_EVAL_THRESHS: [0.2, 0.5]
+TUBES_MINLEN: 5
+TUBES_TOPK: 10
+VAL_STEP: 1
+VAL_SUBSETS: ['val_3']
+WEIGHT_DECAY: 0.0001
+all_classes: [['agent_ness'], ['Ped', 'Car', 'Cyc', 'Mobike', 'MedVeh', 'LarVeh', 'Bus', 'EmVeh', 'TL', 'OthTL'], ['Red', 'Amber', 'Green', 'MovAway', 'MovTow', 'Mov', 'Brake', 'Stop', 'IncatLft', 'IncatRht', 'HazLit', 'TurLft', 'TurRht', 'Ovtak', 'Wait2X', 'XingFmLft', 'XingFmRht', 'Xing', 'PushObj'], ['VehLane', 'OutgoLane', 'OutgoCycLane', 'IncomLane', 'IncomCycLane', 'Pav', 'LftPav', 'RhtPav', 'Jun', 'xing', 'BusStop', 'parking'], ['Bus-MovAway', 'Bus-MovTow', 'Bus-Stop', 'Bus-XingFmLft', 'Car-Brake', 'Car-IncatLft', 'Car-IncatRht', 'Car-MovAway', 'Car-MovTow', 'Car-Stop', 'Car-TurLft', 'Car-TurRht', 'Car-XingFmLft', 'Car-XingFmRht', 'Cyc-MovAway', 'Cyc-MovTow', 'Cyc-Stop', 'Cyc-TurLft', 'Cyc-XingFmLft', 'Cyc-XingFmRht', 'LarVeh-Stop', 'MedVeh-IncatLft', 'MedVeh-MovTow', 'MedVeh-Stop', 'MedVeh-TurRht', 'OthTL-Green', 'OthTL-Red', 'Ped-Mov', 'Ped-MovAway', 'Ped-MovTow', 'Ped-PushObj', 'Ped-Stop', 'Ped-Wait2X', 'Ped-Xing', 'Ped-XingFmLft', 'Ped-XingFmRht', 'TL-Amber', 'TL-Green', 'TL-Red'], ['Bus-MovTow-IncomLane', 'Bus-MovTow-Jun', 'Bus-Stop-IncomLane', 'Bus-Stop-VehLane', 'Bus-XingFmLft-Jun', 'Car-Brake-Jun', 'Car-Brake-VehLane', 'Car-IncatLft-Jun', 'Car-IncatLft-VehLane', 'Car-IncatRht-IncomLane', 'Car-IncatRht-Jun', 'Car-MovAway-Jun', 'Car-MovAway-OutgoLane', 'Car-MovAway-VehLane', 'Car-MovTow-IncomLane', 'Car-MovTow-Jun', 'Car-Stop-IncomLane', 'Car-Stop-Jun', 'Car-Stop-VehLane', 'Car-TurLft-Jun', 'Car-TurLft-VehLane', 'Car-TurRht-IncomLane', 'Car-TurRht-Jun', 'Car-XingFmLft-Jun', 'Cyc-MovAway-Jun', 'Cyc-MovAway-LftPav', 'Cyc-MovAway-OutgoCycLane', 'Cyc-MovAway-OutgoLane', 'Cyc-MovAway-VehLane', 'Cyc-MovTow-IncomCycLane', 'Cyc-MovTow-IncomLane', 'Cyc-MovTow-Jun', 'Cyc-MovTow-LftPav', 'Cyc-Stop-IncomCycLane', 'Cyc-Stop-IncomLane', 'Cyc-Stop-Jun', 'Cyc-TurLft-Jun', 'Cyc-XingFmLft-Jun', 'MedVeh-MovTow-IncomLane', 'MedVeh-MovTow-Jun', 'MedVeh-Stop-IncomLane', 'MedVeh-Stop-Jun', 'MedVeh-TurRht-Jun', 'Ped-Mov-Pav', 'Ped-MovAway-LftPav', 'Ped-MovAway-Pav', 'Ped-MovAway-RhtPav', 'Ped-MovTow-IncomLane', 'Ped-MovTow-LftPav', 'Ped-MovTow-RhtPav', 'Ped-MovTow-VehLane', 'Ped-PushObj-LftPav', 'Ped-PushObj-RhtPav', 'Ped-Stop-BusStop', 'Ped-Stop-LftPav', 'Ped-Stop-Pav', 'Ped-Stop-RhtPav', 'Ped-Stop-VehLane', 'Ped-Wait2X-LftPav', 'Ped-Wait2X-RhtPav', 'Ped-XingFmLft-IncomLane', 'Ped-XingFmLft-Jun', 'Ped-XingFmLft-VehLane', 'Ped-XingFmLft-xing', 'Ped-XingFmRht-IncomLane', 'Ped-XingFmRht-Jun', 'Ped-XingFmRht-RhtPav', 'Ped-XingFmRht-VehLane']]
+ar: 9
+ego_classes: ['AV-Stop', 'AV-Mov', 'AV-TurRht', 'AV-TurLft', 'AV-MovRht', 'AV-MovLft', 'AV-Ovtak']
+exp_name: resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3
+head_size: 256
+hostname: nona
+label_types: ['agent_ness', 'agent', 'action', 'loc', 'duplex', 'triplet']
+log_dir: logs/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/
+model_3d_layers: [[0, 1, 2], [0, 2], [0, 2, 4], [0, 1]]
+model_init: kinetics
+model_perms: [3, 4, 6, 3]
+model_subtype: I3D
+non_local_inds: [[], [], [], []]
+num_classes: 149
+num_classes_list: [1, 10, 19, 12, 39, 68]
+num_ego_classes: 7
+num_label_types: 6
+sw: <tensorboardX.writer.SummaryWriter object at 0x0000021318B95F10>
+user: alexr
+EXPERIMENT NAME:: resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3
+Training FPN with resnet50 + I3D as backbone 
+3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]
+Number of agent: all :: 11 to use: 10
+Number of action: all :: 22 to use: 19
+Number of loc: all :: 12 to use: 12
+Number of duplex: all :: 152 to use: 39
+Number of triplet: all :: 1620 to use: 68
+Frames with Boxes are 5307 out of 6000 in 2014-06-26-09-53-12_stereo_centre_02
+number of start frames: 750
+Frames with Boxes are 5597 out of 6001 in 2014-07-14-14-49-50_stereo_centre_01
+number of start frames: 750
+Frames with Boxes are 5345 out of 6000 in 2014-07-14-15-42-55_stereo_centre_03
+number of start frames: 750
+Frames with Boxes are 5801 out of 6001 in 2014-08-08-13-15-11_stereo_centre_01
+number of start frames: 750
+Frames with Boxes are 1168 out of 1168 in 2014-08-11-10-59-18_stereo_centre_02
+number of start frames: 146
+Frames with Boxes are 5134 out of 6000 in 2014-11-14-16-34-33_stereo_centre_06
+number of start frames: 750
+Frames with Boxes are 4804 out of 6001 in 2014-11-21-16-07-03_stereo_centre_01
+number of start frames: 750
+Frames with Boxes are 5844 out of 6000 in 2014-11-25-09-18-32_stereo_centre_04
+number of start frames: 750
+Frames with Boxes are 5710 out of 6001 in 2014-12-09-13-21-02_stereo_centre_01
+number of start frames: 750
+Frames with Boxes are 5611 out of 6000 in 2015-02-03-08-45-10_stereo_centre_02
+number of start frames: 750
+Frames with Boxes are 5473 out of 6000 in 2015-02-03-19-43-11_stereo_centre_04
+number of start frames: 750
+Frames with Boxes are 5431 out of 6000 in 2015-02-06-13-57-16_stereo_centre_02
+number of start frames: 750
+Frames with Boxes are 5091 out of 6000 in 2015-02-13-09-16-26_stereo_centre_02
+number of start frames: 750
+Frames with Boxes are 5316 out of 6000 in 2015-02-13-09-16-26_stereo_centre_05
+number of start frames: 750
+Frames with Boxes are 5859 out of 6000 in 2015-02-24-12-32-19_stereo_centre_04
+number of start frames: 750
+Done Loading Dataset Train Dataset
+Number of agent: all :: 11 to use: 10
+Number of action: all :: 22 to use: 19
+Number of loc: all :: 12 to use: 12
+Number of duplex: all :: 152 to use: 39
+Number of triplet: all :: 1620 to use: 68
+Frames with Boxes are 4033 out of 4734 in 2014-06-25-16-45-34_stereo_centre_02
+number of start frames: 74
+Frames with Boxes are 5724 out of 6000 in 2014-11-18-13-20-12_stereo_centre_05
+number of start frames: 94
+Frames with Boxes are 5133 out of 6001 in 2015-03-03-11-31-36_stereo_centre_01
+number of start frames: 94
+Done Loading Dataset Validation Dataset
+**LOAD STAE DICTIONARY FOR WEIGHT INITLISATIONS**
+conv1.weighttorch.Size([64, 3, 1, 7, 7]) ==>>torch.Size([64, 3, 1, 7, 7])
+bn1.weighttorch.Size([64]) ==>>torch.Size([64])
+bn1.biastorch.Size([64]) ==>>torch.Size([64])
+bn1.running_meantorch.Size([64]) ==>>torch.Size([64])
+bn1.running_vartorch.Size([64]) ==>>torch.Size([64])
+bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.0.conv1.weighttorch.Size([64, 64, 3, 1, 1]) ==>>torch.Size([64, 64, 3, 1, 1])
+layer1.0.bn1.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn1.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn1.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn1.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.0.conv2.weighttorch.Size([64, 64, 1, 3, 3]) ==>>torch.Size([64, 64, 1, 3, 3])
+layer1.0.bn2.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn2.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn2.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn2.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.0.conv3.weighttorch.Size([256, 64, 1, 1, 1]) ==>>torch.Size([256, 64, 1, 1, 1])
+layer1.0.bn3.weighttorch.Size([256]) ==>>torch.Size([256])
+layer1.0.bn3.biastorch.Size([256]) ==>>torch.Size([256])
+layer1.0.bn3.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer1.0.bn3.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer1.0.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.0.downsample.0.weighttorch.Size([256, 64, 1, 1, 1]) ==>>torch.Size([256, 64, 1, 1, 1])
+layer1.0.downsample.1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer1.0.downsample.1.biastorch.Size([256]) ==>>torch.Size([256])
+layer1.0.downsample.1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer1.0.downsample.1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer1.0.downsample.1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.1.conv1.weighttorch.Size([64, 256, 3, 1, 1]) ==>>torch.Size([64, 256, 3, 1, 1])
+layer1.1.bn1.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn1.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn1.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn1.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.1.conv2.weighttorch.Size([64, 64, 1, 3, 3]) ==>>torch.Size([64, 64, 1, 3, 3])
+layer1.1.bn2.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn2.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn2.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn2.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.1.conv3.weighttorch.Size([256, 64, 1, 1, 1]) ==>>torch.Size([256, 64, 1, 1, 1])
+layer1.1.bn3.weighttorch.Size([256]) ==>>torch.Size([256])
+layer1.1.bn3.biastorch.Size([256]) ==>>torch.Size([256])
+layer1.1.bn3.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer1.1.bn3.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer1.1.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.2.conv1.weighttorch.Size([64, 256, 3, 1, 1]) ==>>torch.Size([64, 256, 3, 1, 1])
+layer1.2.bn1.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn1.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn1.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn1.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.2.conv2.weighttorch.Size([64, 64, 1, 3, 3]) ==>>torch.Size([64, 64, 1, 3, 3])
+layer1.2.bn2.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn2.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn2.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn2.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.2.conv3.weighttorch.Size([256, 64, 1, 1, 1]) ==>>torch.Size([256, 64, 1, 1, 1])
+layer1.2.bn3.weighttorch.Size([256]) ==>>torch.Size([256])
+layer1.2.bn3.biastorch.Size([256]) ==>>torch.Size([256])
+layer1.2.bn3.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer1.2.bn3.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer1.2.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.0.conv1.weighttorch.Size([128, 256, 3, 1, 1]) ==>>torch.Size([128, 256, 3, 1, 1])
+layer2.0.bn1.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn1.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn1.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn1.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.0.conv2.weighttorch.Size([128, 128, 1, 3, 3]) ==>>torch.Size([128, 128, 1, 3, 3])
+layer2.0.bn2.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn2.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn2.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn2.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.0.conv3.weighttorch.Size([512, 128, 1, 1, 1]) ==>>torch.Size([512, 128, 1, 1, 1])
+layer2.0.bn3.weighttorch.Size([512]) ==>>torch.Size([512])
+layer2.0.bn3.biastorch.Size([512]) ==>>torch.Size([512])
+layer2.0.bn3.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer2.0.bn3.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer2.0.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.0.downsample.0.weighttorch.Size([512, 256, 1, 1, 1]) ==>>torch.Size([512, 256, 1, 1, 1])
+layer2.0.downsample.1.weighttorch.Size([512]) ==>>torch.Size([512])
+layer2.0.downsample.1.biastorch.Size([512]) ==>>torch.Size([512])
+layer2.0.downsample.1.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer2.0.downsample.1.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer2.0.downsample.1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.1.conv1.weighttorch.Size([128, 512, 1, 1, 1]) ==>>torch.Size([128, 512, 1, 1, 1])
+layer2.1.bn1.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn1.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn1.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn1.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.1.conv2.weighttorch.Size([128, 128, 1, 3, 3]) ==>>torch.Size([128, 128, 1, 3, 3])
+layer2.1.bn2.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn2.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn2.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn2.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.1.conv3.weighttorch.Size([512, 128, 1, 1, 1]) ==>>torch.Size([512, 128, 1, 1, 1])
+layer2.1.bn3.weighttorch.Size([512]) ==>>torch.Size([512])
+layer2.1.bn3.biastorch.Size([512]) ==>>torch.Size([512])
+layer2.1.bn3.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer2.1.bn3.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer2.1.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.2.conv1.weighttorch.Size([128, 512, 3, 1, 1]) ==>>torch.Size([128, 512, 3, 1, 1])
+layer2.2.bn1.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn1.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn1.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn1.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.2.conv2.weighttorch.Size([128, 128, 1, 3, 3]) ==>>torch.Size([128, 128, 1, 3, 3])
+layer2.2.bn2.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn2.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn2.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn2.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.2.conv3.weighttorch.Size([512, 128, 1, 1, 1]) ==>>torch.Size([512, 128, 1, 1, 1])
+layer2.2.bn3.weighttorch.Size([512]) ==>>torch.Size([512])
+layer2.2.bn3.biastorch.Size([512]) ==>>torch.Size([512])
+layer2.2.bn3.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer2.2.bn3.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer2.2.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.3.conv1.weighttorch.Size([128, 512, 1, 1, 1]) ==>>torch.Size([128, 512, 1, 1, 1])
+layer2.3.bn1.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn1.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn1.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn1.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.3.conv2.weighttorch.Size([128, 128, 1, 3, 3]) ==>>torch.Size([128, 128, 1, 3, 3])
+layer2.3.bn2.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn2.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn2.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn2.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.3.conv3.weighttorch.Size([512, 128, 1, 1, 1]) ==>>torch.Size([512, 128, 1, 1, 1])
+layer2.3.bn3.weighttorch.Size([512]) ==>>torch.Size([512])
+layer2.3.bn3.biastorch.Size([512]) ==>>torch.Size([512])
+layer2.3.bn3.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer2.3.bn3.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer2.3.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.0.conv1.weighttorch.Size([256, 512, 3, 1, 1]) ==>>torch.Size([256, 512, 3, 1, 1])
+layer3.0.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.0.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.0.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.0.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.0.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.0.downsample.0.weighttorch.Size([1024, 512, 1, 1, 1]) ==>>torch.Size([1024, 512, 1, 1, 1])
+layer3.0.downsample.1.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.downsample.1.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.downsample.1.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.downsample.1.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.downsample.1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.1.conv1.weighttorch.Size([256, 1024, 1, 1, 1]) ==>>torch.Size([256, 1024, 1, 1, 1])
+layer3.1.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.1.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.1.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.1.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.1.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.1.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.1.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.1.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.1.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.2.conv1.weighttorch.Size([256, 1024, 3, 1, 1]) ==>>torch.Size([256, 1024, 3, 1, 1])
+layer3.2.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.2.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.2.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.2.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.2.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.2.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.2.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.2.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.2.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.3.conv1.weighttorch.Size([256, 1024, 1, 1, 1]) ==>>torch.Size([256, 1024, 1, 1, 1])
+layer3.3.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.3.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.3.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.3.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.3.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.3.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.3.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.3.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.3.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.4.conv1.weighttorch.Size([256, 1024, 3, 1, 1]) ==>>torch.Size([256, 1024, 3, 1, 1])
+layer3.4.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.4.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.4.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.4.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.4.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.4.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.4.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.4.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.4.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.5.conv1.weighttorch.Size([256, 1024, 1, 1, 1]) ==>>torch.Size([256, 1024, 1, 1, 1])
+layer3.5.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.5.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.5.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.5.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.5.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.5.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.5.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.5.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.5.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.0.conv1.weighttorch.Size([512, 1024, 3, 1, 1]) ==>>torch.Size([512, 1024, 3, 1, 1])
+layer4.0.bn1.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn1.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn1.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn1.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.0.conv2.weighttorch.Size([512, 512, 1, 3, 3]) ==>>torch.Size([512, 512, 1, 3, 3])
+layer4.0.bn2.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn2.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn2.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn2.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.0.conv3.weighttorch.Size([2048, 512, 1, 1, 1]) ==>>torch.Size([2048, 512, 1, 1, 1])
+layer4.0.bn3.weighttorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.bn3.biastorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.bn3.running_meantorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.bn3.running_vartorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.0.downsample.0.weighttorch.Size([2048, 1024, 1, 1, 1]) ==>>torch.Size([2048, 1024, 1, 1, 1])
+layer4.0.downsample.1.weighttorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.downsample.1.biastorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.downsample.1.running_meantorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.downsample.1.running_vartorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.downsample.1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.1.conv1.weighttorch.Size([512, 2048, 3, 1, 1]) ==>>torch.Size([512, 2048, 3, 1, 1])
+layer4.1.bn1.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn1.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn1.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn1.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.1.conv2.weighttorch.Size([512, 512, 1, 3, 3]) ==>>torch.Size([512, 512, 1, 3, 3])
+layer4.1.bn2.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn2.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn2.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn2.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.1.conv3.weighttorch.Size([2048, 512, 1, 1, 1]) ==>>torch.Size([2048, 512, 1, 1, 1])
+layer4.1.bn3.weighttorch.Size([2048]) ==>>torch.Size([2048])
+layer4.1.bn3.biastorch.Size([2048]) ==>>torch.Size([2048])
+layer4.1.bn3.running_meantorch.Size([2048]) ==>>torch.Size([2048])
+layer4.1.bn3.running_vartorch.Size([2048]) ==>>torch.Size([2048])
+layer4.1.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.2.conv1.weighttorch.Size([512, 2048, 1, 1, 1]) ==>>torch.Size([512, 2048, 1, 1, 1])
+layer4.2.bn1.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn1.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn1.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn1.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.2.conv2.weighttorch.Size([512, 512, 1, 3, 3]) ==>>torch.Size([512, 512, 1, 3, 3])
+layer4.2.bn2.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn2.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn2.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn2.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.2.conv3.weighttorch.Size([2048, 512, 1, 1, 1]) ==>>torch.Size([2048, 512, 1, 1, 1])
+layer4.2.bn3.weighttorch.Size([2048]) ==>>torch.Size([2048])
+layer4.2.bn3.biastorch.Size([2048]) ==>>torch.Size([2048])
+layer4.2.bn3.running_meantorch.Size([2048]) ==>>torch.Size([2048])
+layer4.2.bn3.running_vartorch.Size([2048]) ==>>torch.Size([2048])
+layer4.2.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+NAME IS NOT INPUT STATE DICT::>conv6.weight
+NAME IS NOT INPUT STATE DICT::>conv7.weight
+NAME IS NOT INPUT STATE DICT::>ego_lateral.weight
+NAME IS NOT INPUT STATE DICT::>lateral_layer1.weight
+NAME IS NOT INPUT STATE DICT::>lateral_layer2.weight
+NAME IS NOT INPUT STATE DICT::>lateral_layer3.weight
+NAME IS NOT INPUT STATE DICT::>corr_layer1.weight
+NAME IS NOT INPUT STATE DICT::>corr_layer2.weight
+NAME IS NOT INPUT STATE DICT::>corr_layer3.weight
+ANCHOR_TYPE: RETINA
+ANNO_ROOT: 
+ARCH: resnet50
+BATCH_SIZE: 1
+CLASSWISE_NMS: False
+CLS_HEAD_TIME_SIZE: 3
+COMPUTE_PATHS: False
+COMPUTE_TUBES: False
+CONF_THRESH: 0.025
+DATASET: road
+DATA_ROOT: .\road-dataset\
+EVAL_EPOCHS: [30]
+FBN: True
+FREEZE_UPTO: 1
+GAMMA: 0.1
+GEN_CONF_THRESH: 0.025
+GEN_NMS: 0.5
+GEN_TOPK: 100
+HEAD_LAYERS: 3
+IOU_THRESH: 0.5
+JOINT_4M_MARGINALS: False
+LOG_START: 10
+LOG_STEP: 10
+LR: 0.0041
+MAN_SEED: 123
+MAX_EPOCHS: 30
+MAX_SEQ_STEP: 1
+MAX_SIZE: 691
+MEANS: [0.485, 0.456, 0.406]
+MILESTONES: [20, 25]
+MIN_SEQ_STEP: 1
+MIN_SIZE: 512
+MODE: train
+MODEL_PATH: .\kinetics-pt\resnet50I3D.pth
+MODEL_TYPE: I3D
+MOMENTUM: 0.9
+MULTI_GPUS: False
+NEGTIVE_THRESHOLD: 0.4
+NMS_THRESH: 0.5
+NUM_FEATURE_MAPS: 5
+NUM_WORKERS: 8
+OPTIM: SGD
+PATHS_COST_TYPE: score
+PATHS_IOUTH: 0.5
+PATHS_JUMP_GAP: 4
+PATHS_MINSCORE: 0.1
+PATHS_MIN_LEN: 6
+POSTIVE_THRESHOLD: 0.5
+REG_HEAD_TIME_SIZE: 3
+RESUME: 0
+SAVE_ROOT: .\road-dataset\road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/
+SEQ_LEN: 8
+STDS: [0.229, 0.224, 0.225]
+SUBSETS: ['val_3']
+TENSORBOARD: 1
+TEST_BATCH_SIZE: 1
+TEST_SEQ_LEN: 8
+TEST_SUBSETS: ['val_3']
+TOPK: 10
+TRAIN_SUBSETS: ['train_3']
+TRIM_METHOD: none
+TUBES_ALPHA: 0
+TUBES_EVAL_THRESHS: [0.2, 0.5]
+TUBES_MINLEN: 5
+TUBES_TOPK: 10
+VAL_STEP: 1
+VAL_SUBSETS: ['val_3']
+WEIGHT_DECAY: 0.0001
+all_classes: [['agent_ness'], ['Ped', 'Car', 'Cyc', 'Mobike', 'MedVeh', 'LarVeh', 'Bus', 'EmVeh', 'TL', 'OthTL'], ['Red', 'Amber', 'Green', 'MovAway', 'MovTow', 'Mov', 'Brake', 'Stop', 'IncatLft', 'IncatRht', 'HazLit', 'TurLft', 'TurRht', 'Ovtak', 'Wait2X', 'XingFmLft', 'XingFmRht', 'Xing', 'PushObj'], ['VehLane', 'OutgoLane', 'OutgoCycLane', 'IncomLane', 'IncomCycLane', 'Pav', 'LftPav', 'RhtPav', 'Jun', 'xing', 'BusStop', 'parking'], ['Bus-MovAway', 'Bus-MovTow', 'Bus-Stop', 'Bus-XingFmLft', 'Car-Brake', 'Car-IncatLft', 'Car-IncatRht', 'Car-MovAway', 'Car-MovTow', 'Car-Stop', 'Car-TurLft', 'Car-TurRht', 'Car-XingFmLft', 'Car-XingFmRht', 'Cyc-MovAway', 'Cyc-MovTow', 'Cyc-Stop', 'Cyc-TurLft', 'Cyc-XingFmLft', 'Cyc-XingFmRht', 'LarVeh-Stop', 'MedVeh-IncatLft', 'MedVeh-MovTow', 'MedVeh-Stop', 'MedVeh-TurRht', 'OthTL-Green', 'OthTL-Red', 'Ped-Mov', 'Ped-MovAway', 'Ped-MovTow', 'Ped-PushObj', 'Ped-Stop', 'Ped-Wait2X', 'Ped-Xing', 'Ped-XingFmLft', 'Ped-XingFmRht', 'TL-Amber', 'TL-Green', 'TL-Red'], ['Bus-MovTow-IncomLane', 'Bus-MovTow-Jun', 'Bus-Stop-IncomLane', 'Bus-Stop-VehLane', 'Bus-XingFmLft-Jun', 'Car-Brake-Jun', 'Car-Brake-VehLane', 'Car-IncatLft-Jun', 'Car-IncatLft-VehLane', 'Car-IncatRht-IncomLane', 'Car-IncatRht-Jun', 'Car-MovAway-Jun', 'Car-MovAway-OutgoLane', 'Car-MovAway-VehLane', 'Car-MovTow-IncomLane', 'Car-MovTow-Jun', 'Car-Stop-IncomLane', 'Car-Stop-Jun', 'Car-Stop-VehLane', 'Car-TurLft-Jun', 'Car-TurLft-VehLane', 'Car-TurRht-IncomLane', 'Car-TurRht-Jun', 'Car-XingFmLft-Jun', 'Cyc-MovAway-Jun', 'Cyc-MovAway-LftPav', 'Cyc-MovAway-OutgoCycLane', 'Cyc-MovAway-OutgoLane', 'Cyc-MovAway-VehLane', 'Cyc-MovTow-IncomCycLane', 'Cyc-MovTow-IncomLane', 'Cyc-MovTow-Jun', 'Cyc-MovTow-LftPav', 'Cyc-Stop-IncomCycLane', 'Cyc-Stop-IncomLane', 'Cyc-Stop-Jun', 'Cyc-TurLft-Jun', 'Cyc-XingFmLft-Jun', 'MedVeh-MovTow-IncomLane', 'MedVeh-MovTow-Jun', 'MedVeh-Stop-IncomLane', 'MedVeh-Stop-Jun', 'MedVeh-TurRht-Jun', 'Ped-Mov-Pav', 'Ped-MovAway-LftPav', 'Ped-MovAway-Pav', 'Ped-MovAway-RhtPav', 'Ped-MovTow-IncomLane', 'Ped-MovTow-LftPav', 'Ped-MovTow-RhtPav', 'Ped-MovTow-VehLane', 'Ped-PushObj-LftPav', 'Ped-PushObj-RhtPav', 'Ped-Stop-BusStop', 'Ped-Stop-LftPav', 'Ped-Stop-Pav', 'Ped-Stop-RhtPav', 'Ped-Stop-VehLane', 'Ped-Wait2X-LftPav', 'Ped-Wait2X-RhtPav', 'Ped-XingFmLft-IncomLane', 'Ped-XingFmLft-Jun', 'Ped-XingFmLft-VehLane', 'Ped-XingFmLft-xing', 'Ped-XingFmRht-IncomLane', 'Ped-XingFmRht-Jun', 'Ped-XingFmRht-RhtPav', 'Ped-XingFmRht-VehLane']]
+ar: 9
+ego_classes: ['AV-Stop', 'AV-Mov', 'AV-TurRht', 'AV-TurLft', 'AV-MovRht', 'AV-MovLft', 'AV-Ovtak']
+exp_name: resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3
+head_size: 256
+hostname: nona
+label_types: ['agent_ness', 'agent', 'action', 'loc', 'duplex', 'triplet']
+log_dir: logs/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/
+model_3d_layers: [[0, 1, 2], [0, 2], [0, 2, 4], [0, 1]]
+model_init: kinetics
+model_perms: [3, 4, 6, 3]
+model_subtype: I3D
+non_local_inds: [[], [], [], []]
+num_classes: 149
+num_classes_list: [1, 10, 19, 12, 39, 68]
+num_ego_classes: 7
+num_label_types: 6
+user: alexr
+RetinaNet(
+  (anchors): anchorBox(
+    (cell_anchors): BufferList()
+  )
+  (backbone): ResNetFPN(
+    (conv1): Conv3d(3, 64, kernel_size=(1, 7, 7), stride=(1, 2, 2), padding=(0, 3, 3), bias=False)
+    (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+    (pool1): MaxPool3d(kernel_size=(1, 3, 3), stride=(1, 2, 2), padding=(0, 0, 0), dilation=1, ceil_mode=False)
+    (layer1): Sequential(
+      (0): BottleneckI3D(
+        (conv1): Conv3d(64, 64, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(64, 64, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(64, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv3d(64, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+          (1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BottleneckI3D(
+        (conv1): Conv3d(256, 64, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(64, 64, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(64, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (2): BottleneckI3D(
+        (conv1): Conv3d(256, 64, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(64, 64, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(64, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (pool2): MaxPool3d(kernel_size=(2, 1, 1), stride=(2, 1, 1), padding=(0, 0, 0), dilation=1, ceil_mode=False)
+    (layer2): Sequential(
+      (0): BottleneckI3D(
+        (conv1): Conv3d(256, 128, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(128, 128, kernel_size=(1, 3, 3), stride=(1, 2, 2), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(128, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv3d(256, 512, kernel_size=(1, 1, 1), stride=(1, 2, 2), bias=False)
+          (1): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BottleneckI3D(
+        (conv1): Conv3d(512, 128, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(128, 128, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(128, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (2): BottleneckI3D(
+        (conv1): Conv3d(512, 128, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(128, 128, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(128, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (3): BottleneckI3D(
+        (conv1): Conv3d(512, 128, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(128, 128, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(128, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (layer3): Sequential(
+      (0): BottleneckI3D(
+        (conv1): Conv3d(512, 256, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 2, 2), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(256, 1024, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv3d(512, 1024, kernel_size=(1, 1, 1), stride=(1, 2, 2), bias=False)
+          (1): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BottleneckI3D(
+        (conv1): Conv3d(1024, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(256, 1024, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (2): BottleneckI3D(
+        (conv1): Conv3d(1024, 256, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(256, 1024, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (3): BottleneckI3D(
+        (conv1): Conv3d(1024, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(256, 1024, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (4): BottleneckI3D(
+        (conv1): Conv3d(1024, 256, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(256, 1024, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (5): BottleneckI3D(
+        (conv1): Conv3d(1024, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(256, 1024, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (layer4): Sequential(
+      (0): BottleneckI3D(
+        (conv1): Conv3d(1024, 512, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(512, 512, kernel_size=(1, 3, 3), stride=(1, 2, 2), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(512, 2048, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (downsample): Sequential(
+          (0): Conv3d(1024, 2048, kernel_size=(1, 1, 1), stride=(1, 2, 2), bias=False)
+          (1): BatchNorm3d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BottleneckI3D(
+        (conv1): Conv3d(2048, 512, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0), bias=False)
+        (bn1): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(512, 512, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(512, 2048, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+      (2): BottleneckI3D(
+        (conv1): Conv3d(2048, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn1): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv3d(512, 512, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+        (bn2): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv3d(512, 2048, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+        (bn3): BatchNorm3d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+      )
+    )
+    (conv6): Conv3d(2048, 256, kernel_size=(1, 3, 3), stride=(1, 2, 2), padding=(0, 1, 1), bias=False)
+    (conv7): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 2, 2), padding=(0, 1, 1), bias=False)
+    (ego_lateral): Conv3d(2048, 256, kernel_size=(1, 3, 3), stride=(1, 2, 2), bias=False)
+    (avg_pool): AdaptiveAvgPool3d(output_size=(None, 1, 1))
+    (lateral_layer1): Conv3d(2048, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+    (lateral_layer2): Conv3d(1024, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+    (lateral_layer3): Conv3d(512, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+    (corr_layer1): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+    (corr_layer2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+    (corr_layer3): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1), bias=False)
+  )
+  (reg_heads): Sequential(
+    (0): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1))
+    (3): ReLU(inplace=True)
+    (4): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1))
+    (5): ReLU(inplace=True)
+    (6): Conv3d(256, 36, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+  )
+  (cls_heads): Sequential(
+    (0): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1))
+    (3): ReLU(inplace=True)
+    (4): Conv3d(256, 256, kernel_size=(1, 3, 3), stride=(1, 1, 1), padding=(0, 1, 1))
+    (5): ReLU(inplace=True)
+    (6): Conv3d(256, 1341, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+  )
+  (criterion): FocalLoss()
+  (ego_head): Conv3d(256, 7, kernel_size=(3, 1, 1), stride=(1, 1, 1), padding=(1, 0, 0))
+)
+
+
+Solver configs are as follow 
+
+
+backbone.layer1.0.conv1.weight is trained at the rate of 0.0041
+backbone.layer1.0.conv2.weight is trained at the rate of 0.0041
+backbone.layer1.0.conv3.weight is trained at the rate of 0.0041
+backbone.layer1.0.downsample.0.weight is trained at the rate of 0.0041
+backbone.layer1.1.conv1.weight is trained at the rate of 0.0041
+backbone.layer1.1.conv2.weight is trained at the rate of 0.0041
+backbone.layer1.1.conv3.weight is trained at the rate of 0.0041
+backbone.layer1.2.conv1.weight is trained at the rate of 0.0041
+backbone.layer1.2.conv2.weight is trained at the rate of 0.0041
+backbone.layer1.2.conv3.weight is trained at the rate of 0.0041
+backbone.layer2.0.conv1.weight is trained at the rate of 0.0041
+backbone.layer2.0.conv2.weight is trained at the rate of 0.0041
+backbone.layer2.0.conv3.weight is trained at the rate of 0.0041
+backbone.layer2.0.downsample.0.weight is trained at the rate of 0.0041
+backbone.layer2.1.conv1.weight is trained at the rate of 0.0041
+backbone.layer2.1.conv2.weight is trained at the rate of 0.0041
+backbone.layer2.1.conv3.weight is trained at the rate of 0.0041
+backbone.layer2.2.conv1.weight is trained at the rate of 0.0041
+backbone.layer2.2.conv2.weight is trained at the rate of 0.0041
+backbone.layer2.2.conv3.weight is trained at the rate of 0.0041
+backbone.layer2.3.conv1.weight is trained at the rate of 0.0041
+backbone.layer2.3.conv2.weight is trained at the rate of 0.0041
+backbone.layer2.3.conv3.weight is trained at the rate of 0.0041
+backbone.layer3.0.conv1.weight is trained at the rate of 0.0041
+backbone.layer3.0.conv2.weight is trained at the rate of 0.0041
+backbone.layer3.0.conv3.weight is trained at the rate of 0.0041
+backbone.layer3.0.downsample.0.weight is trained at the rate of 0.0041
+backbone.layer3.1.conv1.weight is trained at the rate of 0.0041
+backbone.layer3.1.conv2.weight is trained at the rate of 0.0041
+backbone.layer3.1.conv3.weight is trained at the rate of 0.0041
+backbone.layer3.2.conv1.weight is trained at the rate of 0.0041
+backbone.layer3.2.conv2.weight is trained at the rate of 0.0041
+backbone.layer3.2.conv3.weight is trained at the rate of 0.0041
+backbone.layer3.3.conv1.weight is trained at the rate of 0.0041
+backbone.layer3.3.conv2.weight is trained at the rate of 0.0041
+backbone.layer3.3.conv3.weight is trained at the rate of 0.0041
+backbone.layer3.4.conv1.weight is trained at the rate of 0.0041
+backbone.layer3.4.conv2.weight is trained at the rate of 0.0041
+backbone.layer3.4.conv3.weight is trained at the rate of 0.0041
+backbone.layer3.5.conv1.weight is trained at the rate of 0.0041
+backbone.layer3.5.conv2.weight is trained at the rate of 0.0041
+backbone.layer3.5.conv3.weight is trained at the rate of 0.0041
+backbone.layer4.0.conv1.weight is trained at the rate of 0.0041
+backbone.layer4.0.conv2.weight is trained at the rate of 0.0041
+backbone.layer4.0.conv3.weight is trained at the rate of 0.0041
+backbone.layer4.0.downsample.0.weight is trained at the rate of 0.0041
+backbone.layer4.1.conv1.weight is trained at the rate of 0.0041
+backbone.layer4.1.conv2.weight is trained at the rate of 0.0041
+backbone.layer4.1.conv3.weight is trained at the rate of 0.0041
+backbone.layer4.2.conv1.weight is trained at the rate of 0.0041
+backbone.layer4.2.conv2.weight is trained at the rate of 0.0041
+backbone.layer4.2.conv3.weight is trained at the rate of 0.0041
+backbone.conv6.weight is trained at the rate of 0.0041
+backbone.conv7.weight is trained at the rate of 0.0041
+backbone.ego_lateral.weight is trained at the rate of 0.0041
+backbone.lateral_layer1.weight is trained at the rate of 0.0041
+backbone.lateral_layer2.weight is trained at the rate of 0.0041
+backbone.lateral_layer3.weight is trained at the rate of 0.0041
+backbone.corr_layer1.weight is trained at the rate of 0.0041
+backbone.corr_layer2.weight is trained at the rate of 0.0041
+backbone.corr_layer3.weight is trained at the rate of 0.0041
+reg_heads.0.weight is trained at the rate of 0.0041
+reg_heads.0.bias is trained at the rate of 0.0082
+reg_heads.2.weight is trained at the rate of 0.0041
+reg_heads.2.bias is trained at the rate of 0.0082
+reg_heads.4.weight is trained at the rate of 0.0041
+reg_heads.4.bias is trained at the rate of 0.0082
+reg_heads.6.weight is trained at the rate of 0.0041
+reg_heads.6.bias is trained at the rate of 0.0082
+cls_heads.0.weight is trained at the rate of 0.0041
+cls_heads.0.bias is trained at the rate of 0.0082
+cls_heads.2.weight is trained at the rate of 0.0041
+cls_heads.2.bias is trained at the rate of 0.0082
+cls_heads.4.weight is trained at the rate of 0.0041
+cls_heads.4.bias is trained at the rate of 0.0082
+cls_heads.6.weight is trained at the rate of 0.0041
+cls_heads.6.bias is trained at the rate of 0.0082
+ego_head.weight is trained at the rate of 0.0041
+ego_head.bias is trained at the rate of 0.0082
+optimizer is SGD
+Done solver configs
+
+
+train_3 168572 label: ind=00 name:Ped
+train_3 80023 label: ind=01 name:Car
+train_3 44839 label: ind=02 name:Cyc
+train_3 02511 label: ind=03 name:Mobike
+train_3 19810 label: ind=04 name:MedVeh
+train_3 03819 label: ind=05 name:LarVeh
+train_3 09943 label: ind=06 name:Bus
+train_3 00155 label: ind=07 name:EmVeh
+train_3 48210 label: ind=08 name:TL
+train_3 15045 label: ind=09 name:OthTL
+train_3 40301 label: ind=00 name:Red
+train_3 05304 label: ind=01 name:Amber
+train_3 17508 label: ind=02 name:Green
+train_3 113082 label: ind=03 name:MovAway
+train_3 106515 label: ind=04 name:MovTow
+train_3 08675 label: ind=05 name:Mov
+train_3 12404 label: ind=06 name:Brake
+train_3 76562 label: ind=07 name:Stop
+train_3 03744 label: ind=08 name:IncatLft
+train_3 06866 label: ind=09 name:IncatRht
+train_3 02591 label: ind=10 name:HazLit
+train_3 04162 label: ind=11 name:TurLft
+train_3 06253 label: ind=12 name:TurRht
+train_3 00821 label: ind=13 name:Ovtak
+train_3 08658 label: ind=14 name:Wait2X
+train_3 16157 label: ind=15 name:XingFmLft
+train_3 10674 label: ind=16 name:XingFmRht
+train_3 04966 label: ind=17 name:Xing
+train_3 04068 label: ind=18 name:PushObj
+train_3 58645 label: ind=00 name:VehLane
+train_3 10078 label: ind=01 name:OutgoLane
+train_3 08109 label: ind=02 name:OutgoCycLane
+train_3 52367 label: ind=03 name:IncomLane
+train_3 04618 label: ind=04 name:IncomCycLane
+train_3 13370 label: ind=05 name:Pav
+train_3 79053 label: ind=06 name:LftPav
+train_3 55755 label: ind=07 name:RhtPav
+train_3 55566 label: ind=08 name:Jun
+train_3 09740 label: ind=09 name:xing
+train_3 02960 label: ind=10 name:BusStop
+train_3 00748 label: ind=11 name:parking
+train_3 02553 label: ind=00 name:Bus-MovAway
+train_3 02686 label: ind=01 name:Bus-MovTow
+train_3 03536 label: ind=02 name:Bus-Stop
+train_3 00685 label: ind=03 name:Bus-XingFmLft
+train_3 10745 label: ind=04 name:Car-Brake
+train_3 01474 label: ind=05 name:Car-IncatLft
+train_3 03693 label: ind=06 name:Car-IncatRht
+train_3 22962 label: ind=07 name:Car-MovAway
+train_3 21922 label: ind=08 name:Car-MovTow
+train_3 29942 label: ind=09 name:Car-Stop
+train_3 02275 label: ind=10 name:Car-TurLft
+train_3 03736 label: ind=11 name:Car-TurRht
+train_3 03832 label: ind=12 name:Car-XingFmLft
+train_3 03050 label: ind=13 name:Car-XingFmRht
+train_3 19617 label: ind=14 name:Cyc-MovAway
+train_3 10667 label: ind=15 name:Cyc-MovTow
+train_3 11465 label: ind=16 name:Cyc-Stop
+train_3 01151 label: ind=17 name:Cyc-TurLft
+train_3 01311 label: ind=18 name:Cyc-XingFmLft
+train_3 01851 label: ind=19 name:Cyc-XingFmRht
+train_3 01556 label: ind=20 name:LarVeh-Stop
+train_3 01652 label: ind=21 name:MedVeh-IncatLft
+train_3 04311 label: ind=22 name:MedVeh-MovTow
+train_3 09146 label: ind=23 name:MedVeh-Stop
+train_3 00821 label: ind=24 name:MedVeh-TurRht
+train_3 03941 label: ind=25 name:OthTL-Green
+train_3 10407 label: ind=26 name:OthTL-Red
+train_3 08675 label: ind=27 name:Ped-Mov
+train_3 60948 label: ind=28 name:Ped-MovAway
+train_3 65931 label: ind=29 name:Ped-MovTow
+train_3 04068 label: ind=30 name:Ped-PushObj
+train_3 19028 label: ind=31 name:Ped-Stop
+train_3 08437 label: ind=32 name:Ped-Wait2X
+train_3 04754 label: ind=33 name:Ped-Xing
+train_3 09590 label: ind=34 name:Ped-XingFmLft
+train_3 04606 label: ind=35 name:Ped-XingFmRht
+train_3 04749 label: ind=36 name:TL-Amber
+train_3 13567 label: ind=37 name:TL-Green
+train_3 29894 label: ind=38 name:TL-Red
+train_3 02110 label: ind=00 name:Bus-MovTow-IncomLane
+train_3 00510 label: ind=01 name:Bus-MovTow-Jun
+train_3 00919 label: ind=02 name:Bus-Stop-IncomLane
+train_3 00864 label: ind=03 name:Bus-Stop-VehLane
+train_3 00685 label: ind=04 name:Bus-XingFmLft-Jun
+train_3 01518 label: ind=05 name:Car-Brake-Jun
+train_3 07839 label: ind=06 name:Car-Brake-VehLane
+train_3 00596 label: ind=07 name:Car-IncatLft-Jun
+train_3 00582 label: ind=08 name:Car-IncatLft-VehLane
+train_3 00859 label: ind=09 name:Car-IncatRht-IncomLane
+train_3 02685 label: ind=10 name:Car-IncatRht-Jun
+train_3 06325 label: ind=11 name:Car-MovAway-Jun
+train_3 02229 label: ind=12 name:Car-MovAway-OutgoLane
+train_3 15205 label: ind=13 name:Car-MovAway-VehLane
+train_3 18061 label: ind=14 name:Car-MovTow-IncomLane
+train_3 04841 label: ind=15 name:Car-MovTow-Jun
+train_3 13168 label: ind=16 name:Car-Stop-IncomLane
+train_3 07189 label: ind=17 name:Car-Stop-Jun
+train_3 08249 label: ind=18 name:Car-Stop-VehLane
+train_3 01797 label: ind=19 name:Car-TurLft-Jun
+train_3 00724 label: ind=20 name:Car-TurLft-VehLane
+train_3 00168 label: ind=21 name:Car-TurRht-IncomLane
+train_3 03363 label: ind=22 name:Car-TurRht-Jun
+train_3 03739 label: ind=23 name:Car-XingFmLft-Jun
+train_3 04264 label: ind=24 name:Cyc-MovAway-Jun
+train_3 00755 label: ind=25 name:Cyc-MovAway-LftPav
+train_3 06550 label: ind=26 name:Cyc-MovAway-OutgoCycLane
+train_3 00501 label: ind=27 name:Cyc-MovAway-OutgoLane
+train_3 10018 label: ind=28 name:Cyc-MovAway-VehLane
+train_3 03006 label: ind=29 name:Cyc-MovTow-IncomCycLane
+train_3 05809 label: ind=30 name:Cyc-MovTow-IncomLane
+train_3 01820 label: ind=31 name:Cyc-MovTow-Jun
+train_3 00432 label: ind=32 name:Cyc-MovTow-LftPav
+train_3 00534 label: ind=33 name:Cyc-Stop-IncomCycLane
+train_3 00871 label: ind=34 name:Cyc-Stop-IncomLane
+train_3 03641 label: ind=35 name:Cyc-Stop-Jun
+train_3 00958 label: ind=36 name:Cyc-TurLft-Jun
+train_3 00932 label: ind=37 name:Cyc-XingFmLft-Jun
+train_3 03459 label: ind=38 name:MedVeh-MovTow-IncomLane
+train_3 00892 label: ind=39 name:MedVeh-MovTow-Jun
+train_3 03003 label: ind=40 name:MedVeh-Stop-IncomLane
+train_3 01871 label: ind=41 name:MedVeh-Stop-Jun
+train_3 00733 label: ind=42 name:MedVeh-TurRht-Jun
+train_3 06502 label: ind=43 name:Ped-Mov-Pav
+train_3 31522 label: ind=44 name:Ped-MovAway-LftPav
+train_3 01618 label: ind=45 name:Ped-MovAway-Pav
+train_3 23574 label: ind=46 name:Ped-MovAway-RhtPav
+train_3 00252 label: ind=47 name:Ped-MovTow-IncomLane
+train_3 35078 label: ind=48 name:Ped-MovTow-LftPav
+train_3 25759 label: ind=49 name:Ped-MovTow-RhtPav
+train_3 00467 label: ind=50 name:Ped-MovTow-VehLane
+train_3 02038 label: ind=51 name:Ped-PushObj-LftPav
+train_3 00843 label: ind=52 name:Ped-PushObj-RhtPav
+train_3 01107 label: ind=53 name:Ped-Stop-BusStop
+train_3 08369 label: ind=54 name:Ped-Stop-LftPav
+train_3 03364 label: ind=55 name:Ped-Stop-Pav
+train_3 04957 label: ind=56 name:Ped-Stop-RhtPav
+train_3 00519 label: ind=57 name:Ped-Stop-VehLane
+train_3 03964 label: ind=58 name:Ped-Wait2X-LftPav
+train_3 01147 label: ind=59 name:Ped-Wait2X-RhtPav
+train_3 01135 label: ind=60 name:Ped-XingFmLft-IncomLane
+train_3 01803 label: ind=61 name:Ped-XingFmLft-Jun
+train_3 01238 label: ind=62 name:Ped-XingFmLft-VehLane
+train_3 05418 label: ind=63 name:Ped-XingFmLft-xing
+train_3 00241 label: ind=64 name:Ped-XingFmRht-IncomLane
+train_3 00935 label: ind=65 name:Ped-XingFmRht-Jun
+train_3 00032 label: ind=66 name:Ped-XingFmRht-RhtPav
+train_3 00773 label: ind=67 name:Ped-XingFmRht-VehLane
+Number of ids are 10646
+
+val_3 29968 label: ind=00 name:Ped
+val_3 23903 label: ind=01 name:Car
+val_3 07760 label: ind=02 name:Cyc
+val_3 00627 label: ind=03 name:Mobike
+val_3 05458 label: ind=04 name:MedVeh
+val_3 02374 label: ind=05 name:LarVeh
+val_3 02052 label: ind=06 name:Bus
+val_3 00197 label: ind=07 name:EmVeh
+val_3 07809 label: ind=08 name:TL
+val_3 03602 label: ind=09 name:OthTL
+val_3 05414 label: ind=00 name:Red
+val_3 00885 label: ind=01 name:Amber
+val_3 04612 label: ind=02 name:Green
+val_3 28631 label: ind=03 name:MovAway
+val_3 18628 label: ind=04 name:MovTow
+val_3 00694 label: ind=05 name:Mov
+val_3 06651 label: ind=06 name:Brake
+val_3 21237 label: ind=07 name:Stop
+val_3 01303 label: ind=08 name:IncatLft
+val_3 00541 label: ind=09 name:IncatRht
+val_3 00549 label: ind=10 name:HazLit
+val_3 00563 label: ind=11 name:TurLft
+val_3 00309 label: ind=12 name:TurRht
+val_3 00128 label: ind=13 name:Ovtak
+val_3 01856 label: ind=14 name:Wait2X
+val_3 01632 label: ind=15 name:XingFmLft
+val_3 01499 label: ind=16 name:XingFmRht
+val_3 00171 label: ind=17 name:Xing
+val_3 00457 label: ind=18 name:PushObj
+val_3 21373 label: ind=00 name:VehLane
+val_3 04069 label: ind=01 name:OutgoLane
+val_3 01023 label: ind=02 name:OutgoCycLane
+val_3 11387 label: ind=03 name:IncomLane
+val_3 01150 label: ind=04 name:IncomCycLane
+val_3 02760 label: ind=05 name:Pav
+val_3 15738 label: ind=06 name:LftPav
+val_3 10234 label: ind=07 name:RhtPav
+val_3 07982 label: ind=08 name:Jun
+val_3 00903 label: ind=09 name:xing
+val_3 00465 label: ind=10 name:BusStop
+val_3 00000 label: ind=11 name:parking
+val_3 00739 label: ind=00 name:Bus-MovAway
+val_3 00646 label: ind=01 name:Bus-MovTow
+val_3 00484 label: ind=02 name:Bus-Stop
+val_3 00123 label: ind=03 name:Bus-XingFmLft
+val_3 05668 label: ind=04 name:Car-Brake
+val_3 00674 label: ind=05 name:Car-IncatLft
+val_3 00411 label: ind=06 name:Car-IncatRht
+val_3 09016 label: ind=07 name:Car-MovAway
+val_3 03752 label: ind=08 name:Car-MovTow
+val_3 09897 label: ind=09 name:Car-Stop
+val_3 00301 label: ind=10 name:Car-TurLft
+val_3 00252 label: ind=11 name:Car-TurRht
+val_3 00827 label: ind=12 name:Car-XingFmLft
+val_3 00393 label: ind=13 name:Car-XingFmRht
+val_3 03423 label: ind=14 name:Cyc-MovAway
+val_3 01902 label: ind=15 name:Cyc-MovTow
+val_3 02302 label: ind=16 name:Cyc-Stop
+val_3 00064 label: ind=17 name:Cyc-TurLft
+val_3 00070 label: ind=18 name:Cyc-XingFmLft
+val_3 00063 label: ind=19 name:Cyc-XingFmRht
+val_3 01431 label: ind=20 name:LarVeh-Stop
+val_3 00042 label: ind=21 name:MedVeh-IncatLft
+val_3 00908 label: ind=22 name:MedVeh-MovTow
+val_3 02444 label: ind=23 name:MedVeh-Stop
+val_3 00057 label: ind=24 name:MedVeh-TurRht
+val_3 01213 label: ind=25 name:OthTL-Green
+val_3 02183 label: ind=26 name:OthTL-Red
+val_3 00694 label: ind=27 name:Ped-Mov
+val_3 12895 label: ind=28 name:Ped-MovAway
+val_3 10959 label: ind=29 name:Ped-MovTow
+val_3 00457 label: ind=30 name:Ped-PushObj
+val_3 03934 label: ind=31 name:Ped-Stop
+val_3 01770 label: ind=32 name:Ped-Wait2X
+val_3 00171 label: ind=33 name:Ped-Xing
+val_3 00520 label: ind=34 name:Ped-XingFmLft
+val_3 00966 label: ind=35 name:Ped-XingFmRht
+val_3 00679 label: ind=36 name:TL-Amber
+val_3 03399 label: ind=37 name:TL-Green
+val_3 03231 label: ind=38 name:TL-Red
+val_3 00544 label: ind=00 name:Bus-MovTow-IncomLane
+val_3 00194 label: ind=01 name:Bus-MovTow-Jun
+val_3 00254 label: ind=02 name:Bus-Stop-IncomLane
+val_3 00182 label: ind=03 name:Bus-Stop-VehLane
+val_3 00123 label: ind=04 name:Bus-XingFmLft-Jun
+val_3 01143 label: ind=05 name:Car-Brake-Jun
+val_3 05425 label: ind=06 name:Car-Brake-VehLane
+val_3 00531 label: ind=07 name:Car-IncatLft-Jun
+val_3 00177 label: ind=08 name:Car-IncatLft-VehLane
+val_3 00193 label: ind=09 name:Car-IncatRht-IncomLane
+val_3 00128 label: ind=10 name:Car-IncatRht-Jun
+val_3 01991 label: ind=11 name:Car-MovAway-Jun
+val_3 00619 label: ind=12 name:Car-MovAway-OutgoLane
+val_3 08008 label: ind=13 name:Car-MovAway-VehLane
+val_3 03603 label: ind=14 name:Car-MovTow-IncomLane
+val_3 00339 label: ind=15 name:Car-MovTow-Jun
+val_3 02546 label: ind=16 name:Car-Stop-IncomLane
+val_3 02178 label: ind=17 name:Car-Stop-Jun
+val_3 05257 label: ind=18 name:Car-Stop-VehLane
+val_3 00268 label: ind=19 name:Car-TurLft-Jun
+val_3 00084 label: ind=20 name:Car-TurLft-VehLane
+val_3 00054 label: ind=21 name:Car-TurRht-IncomLane
+val_3 00198 label: ind=22 name:Car-TurRht-Jun
+val_3 00827 label: ind=23 name:Car-XingFmLft-Jun
+val_3 00185 label: ind=24 name:Cyc-MovAway-Jun
+val_3 00478 label: ind=25 name:Cyc-MovAway-LftPav
+val_3 01019 label: ind=26 name:Cyc-MovAway-OutgoCycLane
+val_3 00216 label: ind=27 name:Cyc-MovAway-OutgoLane
+val_3 01671 label: ind=28 name:Cyc-MovAway-VehLane
+val_3 01002 label: ind=29 name:Cyc-MovTow-IncomCycLane
+val_3 00577 label: ind=30 name:Cyc-MovTow-IncomLane
+val_3 00106 label: ind=31 name:Cyc-MovTow-Jun
+val_3 00240 label: ind=32 name:Cyc-MovTow-LftPav
+val_3 00073 label: ind=33 name:Cyc-Stop-IncomCycLane
+val_3 00485 label: ind=34 name:Cyc-Stop-IncomLane
+val_3 00174 label: ind=35 name:Cyc-Stop-Jun
+val_3 00064 label: ind=36 name:Cyc-TurLft-Jun
+val_3 00070 label: ind=37 name:Cyc-XingFmLft-Jun
+val_3 00908 label: ind=38 name:MedVeh-MovTow-IncomLane
+val_3 00030 label: ind=39 name:MedVeh-MovTow-Jun
+val_3 00602 label: ind=40 name:MedVeh-Stop-IncomLane
+val_3 00028 label: ind=41 name:MedVeh-Stop-Jun
+val_3 00051 label: ind=42 name:MedVeh-TurRht-Jun
+val_3 00694 label: ind=43 name:Ped-Mov-Pav
+val_3 08328 label: ind=44 name:Ped-MovAway-LftPav
+val_3 00659 label: ind=45 name:Ped-MovAway-Pav
+val_3 02822 label: ind=46 name:Ped-MovAway-RhtPav
+val_3 00035 label: ind=47 name:Ped-MovTow-IncomLane
+val_3 04637 label: ind=48 name:Ped-MovTow-LftPav
+val_3 05090 label: ind=49 name:Ped-MovTow-RhtPav
+val_3 00067 label: ind=50 name:Ped-MovTow-VehLane
+val_3 00198 label: ind=51 name:Ped-PushObj-LftPav
+val_3 00085 label: ind=52 name:Ped-PushObj-RhtPav
+val_3 00465 label: ind=53 name:Ped-Stop-BusStop
+val_3 01726 label: ind=54 name:Ped-Stop-LftPav
+val_3 00236 label: ind=55 name:Ped-Stop-Pav
+val_3 01610 label: ind=56 name:Ped-Stop-RhtPav
+val_3 00151 label: ind=57 name:Ped-Stop-VehLane
+val_3 00900 label: ind=58 name:Ped-Wait2X-LftPav
+val_3 00680 label: ind=59 name:Ped-Wait2X-RhtPav
+val_3 00083 label: ind=60 name:Ped-XingFmLft-IncomLane
+val_3 00054 label: ind=61 name:Ped-XingFmLft-Jun
+val_3 00071 label: ind=62 name:Ped-XingFmLft-VehLane
+val_3 00305 label: ind=63 name:Ped-XingFmLft-xing
+val_3 00157 label: ind=64 name:Ped-XingFmRht-IncomLane
+val_3 00056 label: ind=65 name:Ped-XingFmRht-Jun
+val_3 00090 label: ind=66 name:Ped-XingFmRht-RhtPav
+val_3 00108 label: ind=67 name:Ped-XingFmRht-VehLane
+Number of ids are 262
+
+ANCHOR_TYPE: RETINA
+ANNO_ROOT: 
+ARCH: resnet50
+BATCH_SIZE: 1
+CLASSWISE_NMS: False
+CLS_HEAD_TIME_SIZE: 3
+COMPUTE_PATHS: False
+COMPUTE_TUBES: False
+CONF_THRESH: 0.025
+DATASET: road
+DATA_ROOT: .\road-dataset\
+EVAL_EPOCHS: [30]
+FBN: True
+FREEZE_UPTO: 1
+GAMMA: 0.1
+GEN_CONF_THRESH: 0.025
+GEN_NMS: 0.5
+GEN_TOPK: 100
+HEAD_LAYERS: 3
+IOU_THRESH: 0.5
+JOINT_4M_MARGINALS: False
+LOG_START: 10
+LOG_STEP: 10
+LR: 0.0041
+MAN_SEED: 123
+MAX_EPOCHS: 30
+MAX_ITERS: 319380
+MAX_SEQ_STEP: 1
+MAX_SIZE: 691
+MEANS: [0.485, 0.456, 0.406]
+MILESTONES: [20, 25]
+MIN_SEQ_STEP: 1
+MIN_SIZE: 512
+MODE: train
+MODEL_PATH: .\kinetics-pt\resnet50I3D.pth
+MODEL_TYPE: I3D
+MOMENTUM: 0.9
+MULTI_GPUS: False
+NEGTIVE_THRESHOLD: 0.4
+NMS_THRESH: 0.5
+NUM_FEATURE_MAPS: 5
+NUM_WORKERS: 8
+OPTIM: SGD
+PATHS_COST_TYPE: score
+PATHS_IOUTH: 0.5
+PATHS_JUMP_GAP: 4
+PATHS_MINSCORE: 0.1
+PATHS_MIN_LEN: 6
+POSTIVE_THRESHOLD: 0.5
+REG_HEAD_TIME_SIZE: 3
+RESUME: 0
+SAVE_ROOT: .\road-dataset\road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/
+SEQ_LEN: 8
+START_EPOCH: 1
+STDS: [0.229, 0.224, 0.225]
+SUBSETS: ['val_3']
+TENSORBOARD: 1
+TEST_BATCH_SIZE: 1
+TEST_SEQ_LEN: 8
+TEST_SUBSETS: ['val_3']
+TOPK: 10
+TRAIN_SUBSETS: ['train_3']
+TRIM_METHOD: none
+TUBES_ALPHA: 0
+TUBES_EVAL_THRESHS: [0.2, 0.5]
+TUBES_MINLEN: 5
+TUBES_TOPK: 10
+VAL_STEP: 1
+VAL_SUBSETS: ['val_3']
+WEIGHT_DECAY: 0.0001
+all_classes: [['agent_ness'], ['Ped', 'Car', 'Cyc', 'Mobike', 'MedVeh', 'LarVeh', 'Bus', 'EmVeh', 'TL', 'OthTL'], ['Red', 'Amber', 'Green', 'MovAway', 'MovTow', 'Mov', 'Brake', 'Stop', 'IncatLft', 'IncatRht', 'HazLit', 'TurLft', 'TurRht', 'Ovtak', 'Wait2X', 'XingFmLft', 'XingFmRht', 'Xing', 'PushObj'], ['VehLane', 'OutgoLane', 'OutgoCycLane', 'IncomLane', 'IncomCycLane', 'Pav', 'LftPav', 'RhtPav', 'Jun', 'xing', 'BusStop', 'parking'], ['Bus-MovAway', 'Bus-MovTow', 'Bus-Stop', 'Bus-XingFmLft', 'Car-Brake', 'Car-IncatLft', 'Car-IncatRht', 'Car-MovAway', 'Car-MovTow', 'Car-Stop', 'Car-TurLft', 'Car-TurRht', 'Car-XingFmLft', 'Car-XingFmRht', 'Cyc-MovAway', 'Cyc-MovTow', 'Cyc-Stop', 'Cyc-TurLft', 'Cyc-XingFmLft', 'Cyc-XingFmRht', 'LarVeh-Stop', 'MedVeh-IncatLft', 'MedVeh-MovTow', 'MedVeh-Stop', 'MedVeh-TurRht', 'OthTL-Green', 'OthTL-Red', 'Ped-Mov', 'Ped-MovAway', 'Ped-MovTow', 'Ped-PushObj', 'Ped-Stop', 'Ped-Wait2X', 'Ped-Xing', 'Ped-XingFmLft', 'Ped-XingFmRht', 'TL-Amber', 'TL-Green', 'TL-Red'], ['Bus-MovTow-IncomLane', 'Bus-MovTow-Jun', 'Bus-Stop-IncomLane', 'Bus-Stop-VehLane', 'Bus-XingFmLft-Jun', 'Car-Brake-Jun', 'Car-Brake-VehLane', 'Car-IncatLft-Jun', 'Car-IncatLft-VehLane', 'Car-IncatRht-IncomLane', 'Car-IncatRht-Jun', 'Car-MovAway-Jun', 'Car-MovAway-OutgoLane', 'Car-MovAway-VehLane', 'Car-MovTow-IncomLane', 'Car-MovTow-Jun', 'Car-Stop-IncomLane', 'Car-Stop-Jun', 'Car-Stop-VehLane', 'Car-TurLft-Jun', 'Car-TurLft-VehLane', 'Car-TurRht-IncomLane', 'Car-TurRht-Jun', 'Car-XingFmLft-Jun', 'Cyc-MovAway-Jun', 'Cyc-MovAway-LftPav', 'Cyc-MovAway-OutgoCycLane', 'Cyc-MovAway-OutgoLane', 'Cyc-MovAway-VehLane', 'Cyc-MovTow-IncomCycLane', 'Cyc-MovTow-IncomLane', 'Cyc-MovTow-Jun', 'Cyc-MovTow-LftPav', 'Cyc-Stop-IncomCycLane', 'Cyc-Stop-IncomLane', 'Cyc-Stop-Jun', 'Cyc-TurLft-Jun', 'Cyc-XingFmLft-Jun', 'MedVeh-MovTow-IncomLane', 'MedVeh-MovTow-Jun', 'MedVeh-Stop-IncomLane', 'MedVeh-Stop-Jun', 'MedVeh-TurRht-Jun', 'Ped-Mov-Pav', 'Ped-MovAway-LftPav', 'Ped-MovAway-Pav', 'Ped-MovAway-RhtPav', 'Ped-MovTow-IncomLane', 'Ped-MovTow-LftPav', 'Ped-MovTow-RhtPav', 'Ped-MovTow-VehLane', 'Ped-PushObj-LftPav', 'Ped-PushObj-RhtPav', 'Ped-Stop-BusStop', 'Ped-Stop-LftPav', 'Ped-Stop-Pav', 'Ped-Stop-RhtPav', 'Ped-Stop-VehLane', 'Ped-Wait2X-LftPav', 'Ped-Wait2X-RhtPav', 'Ped-XingFmLft-IncomLane', 'Ped-XingFmLft-Jun', 'Ped-XingFmLft-VehLane', 'Ped-XingFmLft-xing', 'Ped-XingFmRht-IncomLane', 'Ped-XingFmRht-Jun', 'Ped-XingFmRht-RhtPav', 'Ped-XingFmRht-VehLane']]
+ar: 9
+ego_classes: ['AV-Stop', 'AV-Mov', 'AV-TurRht', 'AV-TurLft', 'AV-MovRht', 'AV-MovLft', 'AV-Ovtak']
+exp_name: resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3
+head_size: 256
+hostname: nona
+label_types: ['agent_ness', 'agent', 'action', 'loc', 'duplex', 'triplet']
+log_dir: logs/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/
+model_3d_layers: [[0, 1, 2], [0, 2], [0, 2, 4], [0, 1]]
+model_init: kinetics
+model_perms: [3, 4, 6, 3]
+model_subtype: I3D
+non_local_inds: [[], [], [], []]
+num_classes: 149
+num_classes_list: [1, 10, 19, 12, 39, 68]
+num_ego_classes: 7
+num_label_types: 6
+sw: <tensorboardX.writer.SummaryWriter object at 0x0000015AFF740CD0>
+user: alexr
+EXPERIMENT NAME:: resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3
+Training FPN with resnet50 + I3D as backbone 
+Itration [1/30]000011/319380 loc-loss 1.02(0.35) cls-loss 1.24(0.60) average-loss 1.13(0.48) DataTime 0.02(229.04) Timer 4.79(240.42)
+Itration [1/30]000021/319380 loc-loss 1.81(0.67) cls-loss 1.97(0.86) average-loss 1.89(0.76) DataTime 0.02(137.14) Timer 4.77(145.87)
+Itration [1/30]000031/319380 loc-loss 1.63(0.94) cls-loss 1.80(0.93) average-loss 1.71(0.93) DataTime 0.02(82.12) Timer 4.80(89.27)
+Itration [1/30]000041/319380 loc-loss 0.98(0.92) cls-loss 0.99(1.62) average-loss 0.99(1.27) DataTime 0.02(49.17) Timer 4.80(55.35)
+Itration [1/30]000051/319380 loc-loss 0.98(0.92) cls-loss 1.57(1.40) average-loss 1.27(1.16) DataTime 0.02(29.45) Timer 4.79(35.03)
+Itration [1/30]000061/319380 loc-loss 0.96(0.92) cls-loss 1.12(1.24) average-loss 1.04(1.08) DataTime 0.02(17.64) Timer 4.83(22.88)
+Itration [1/30]000071/319380 loc-loss 0.98(0.99) cls-loss 1.23(1.31) average-loss 1.10(1.15) DataTime 0.02(10.57) Timer 4.82(15.60)
+Itration [1/30]000081/319380 loc-loss 1.05(1.02) cls-loss 1.13(1.26) average-loss 1.09(1.14) DataTime 0.02(6.33) Timer 4.79(11.26)
+Itration [1/30]000091/319380 loc-loss 0.94(1.02) cls-loss 1.16(1.22) average-loss 1.05(1.12) DataTime 0.02(3.80) Timer 4.79(8.67)
+Itration [1/30]000101/319380 loc-loss 0.85(1.02) cls-loss 0.91(1.20) average-loss 0.88(1.11) DataTime 0.02(2.28) Timer 4.80(7.12)
+Itration [1/30]000111/319380 loc-loss 1.06(1.04) cls-loss 0.99(1.17) average-loss 1.03(1.10) DataTime 0.02(1.37) Timer 4.81(6.19)
+Itration [1/30]000121/319380 loc-loss 1.03(1.12) cls-loss 1.68(1.19) average-loss 1.35(1.15) DataTime 0.02(0.83) Timer 5.12(5.67)
+Itration [1/30]000131/319380 loc-loss 0.86(1.03) cls-loss 1.14(1.16) average-loss 1.00(1.10) DataTime 0.02(0.50) Timer 4.84(5.32)
+Itration [1/30]000141/319380 loc-loss 1.02(1.09) cls-loss 1.13(1.16) average-loss 1.08(1.13) DataTime 0.02(0.31) Timer 4.75(5.09)
+Itration [1/30]000151/319380 loc-loss 1.52(1.04) cls-loss 1.07(1.15) average-loss 1.29(1.10) DataTime 0.02(0.19) Timer 4.81(4.92)
+Itration [1/30]000161/319380 loc-loss 1.06(1.05) cls-loss 0.94(1.11) average-loss 1.00(1.08) DataTime 0.02(0.12) Timer 4.99(4.88)
+Itration [1/30]000171/319380 loc-loss 0.93(1.03) cls-loss 0.84(1.10) average-loss 0.89(1.07) DataTime 0.02(0.08) Timer 4.79(4.86)
+Itration [1/30]000181/319380 loc-loss 0.00(1.00) cls-loss 0.01(1.08) average-loss 0.00(1.04) DataTime 0.02(0.05) Timer 4.12(4.81)
+Itration [1/30]000191/319380 loc-loss 1.03(1.00) cls-loss 1.07(1.12) average-loss 1.05(1.06) DataTime 0.02(0.04) Timer 4.77(4.78)
+Itration [1/30]000201/319380 loc-loss 0.00(0.92) cls-loss 0.32(1.04) average-loss 0.16(0.98) DataTime 0.02(0.03) Timer 4.11(4.72)
+resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3
+Itration [1/30]000211/319380 loc-loss 1.16(1.02) cls-loss 0.78(1.05) average-loss 0.97(1.04) DataTime 0.02(0.02) Timer 4.81(4.75)
+Itration [1/30]000221/319380 loc-loss 1.02(1.02) cls-loss 0.84(0.98) average-loss 0.93(1.00) DataTime 0.02(0.02) Timer 4.90(4.79)
+Itration [1/30]000231/319380 loc-loss 1.10(1.03) cls-loss 0.77(0.97) average-loss 0.94(1.00) DataTime 0.02(0.02) Timer 4.79(4.80)
+Itration [1/30]000241/319380 loc-loss 0.00(0.94) cls-loss 0.01(0.87) average-loss 0.01(0.90) DataTime 0.02(0.02) Timer 4.12(4.74)
+Itration [1/30]000251/319380 loc-loss 0.98(0.94) cls-loss 0.80(0.82) average-loss 0.89(0.88) DataTime 0.02(0.02) Timer 4.81(4.72)
+Itration [1/30]000261/319380 loc-loss 1.00(0.95) cls-loss 1.02(0.83) average-loss 1.01(0.89) DataTime 0.02(0.02) Timer 4.82(4.70)
+Itration [1/30]000271/319380 loc-loss 1.04(1.00) cls-loss 1.17(0.90) average-loss 1.10(0.95) DataTime 0.02(0.02) Timer 4.80(4.72)
+Itration [1/30]000281/319380 loc-loss 1.04(1.04) cls-loss 0.80(0.89) average-loss 0.92(0.96) DataTime 0.02(0.02) Timer 4.98(4.78)
+Itration [1/30]000291/319380 loc-loss 0.98(1.08) cls-loss 0.89(0.97) average-loss 0.94(1.02) DataTime 0.02(0.02) Timer 4.86(4.80)
+Itration [1/30]000301/319380 loc-loss 1.11(1.07) cls-loss 0.84(0.98) average-loss 0.98(1.03) DataTime 0.02(0.02) Timer 4.76(4.84)
+Itration [1/30]000311/319380 loc-loss 0.87(1.05) cls-loss 1.04(0.99) average-loss 0.95(1.02) DataTime 0.02(0.02) Timer 4.83(4.87)
+Itration [1/30]000321/319380 loc-loss 1.68(1.03) cls-loss 1.34(0.94) average-loss 1.51(0.99) DataTime 0.02(0.02) Timer 4.80(4.83)
+Itration [1/30]000331/319380 loc-loss 0.96(1.03) cls-loss 0.89(0.94) average-loss 0.93(0.98) DataTime 0.02(0.02) Timer 4.85(4.83)
+Itration [1/30]000341/319380 loc-loss 0.93(0.99) cls-loss 1.02(0.91) average-loss 0.97(0.95) DataTime 0.02(0.02) Timer 4.80(4.79)
+Itration [1/30]000351/319380 loc-loss 1.06(0.96) cls-loss 0.87(0.89) average-loss 0.96(0.93) DataTime 0.02(0.02) Timer 4.85(4.79)
+Itration [1/30]000361/319380 loc-loss 1.07(0.96) cls-loss 0.76(0.87) average-loss 0.92(0.91) DataTime 0.02(0.02) Timer 4.82(4.78)
+Itration [1/30]000371/319380 loc-loss 0.90(1.03) cls-loss 1.09(0.99) average-loss 1.00(1.01) DataTime 0.02(0.02) Timer 4.83(4.79)
+Itration [1/30]000381/319380 loc-loss 1.05(0.95) cls-loss 0.82(0.90) average-loss 0.94(0.93) DataTime 0.02(0.02) Timer 4.81(4.76)
+Itration [1/30]000391/319380 loc-loss 1.03(0.95) cls-loss 0.93(0.90) average-loss 0.98(0.92) DataTime 0.02(0.02) Timer 4.86(4.76)
+Itration [1/30]000401/319380 loc-loss 1.11(0.97) cls-loss 0.84(0.96) average-loss 0.98(0.96) DataTime 0.02(0.02) Timer 4.82(4.79)
+resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3
