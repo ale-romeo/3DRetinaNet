@@ -34,8 +34,10 @@ def train(args, net, train_dataset, val_dataset):
         model_file_name = '{:s}/model_{:06d}.pth'.format(args.SAVE_ROOT, args.RESUME)
         optimizer_file_name = '{:s}/optimizer_{:06d}.pth'.format(args.SAVE_ROOT, args.RESUME)
         # sechdular_file_name = '{:s}/optimizer_{:06d}.pth'.format(args.SAVE_ROOT, args.START_EPOCH)
-        net.load_state_dict(torch.load(model_file_name))
-        optimizer.load_state_dict(torch.load(optimizer_file_name))
+        state_dict = torch.load(model_file_name)
+        net.load_state_dict(state_dict, strict=False)
+
+        #optimizer.load_state_dict(torch.load(optimizer_file_name))
         
     if args.TENSORBOARD:
         log_dir = '{:s}/tboard-{}-{date:%m-%d-%Hx}'.format(args.log_dir, args.MODE, date=datetime.datetime.now())
@@ -93,13 +95,14 @@ def run_train(args, train_data_loader, net, optimizer, epoch, iteration):
     torch.cuda.synchronize()
     start = time.perf_counter()
 
-    for internel_iter, (images, gt_boxes, gt_labels, ego_labels, counts, img_indexs, wh) in enumerate(train_data_loader):
+    for internel_iter, (images, gt_boxes, gt_labels, ego_labels, counts, img_indexs, wh, concept_labels) in enumerate(train_data_loader):
         iteration += 1
         images = images.cuda(0, non_blocking=True)
         gt_boxes = gt_boxes.cuda(0, non_blocking=True)
         gt_labels = gt_labels.cuda(0, non_blocking=True)
         counts = counts.cuda(0, non_blocking=True)
         ego_labels = ego_labels.cuda(0, non_blocking=True)
+        concept_labels = concept_labels.cuda(0, non_blocking=True)
         # forward
         torch.cuda.synchronize()
         data_time.update(time.perf_counter() - start)
@@ -107,9 +110,15 @@ def run_train(args, train_data_loader, net, optimizer, epoch, iteration):
         # print(images.size(), anchors.size())
         optimizer.zero_grad()
         # pdb.set_trace()
-        loss_l, loss_c = net(images, gt_boxes, gt_labels, ego_labels, counts, img_indexs)
-        loss_l, loss_c = loss_l.mean(), loss_c.mean()
-        loss = loss_l + loss_c
+        loss_out = net(images, gt_boxes, gt_labels, ego_labels, counts, img_indexs, concept_labels=concept_labels)
+        if isinstance(loss_out, tuple) and len(loss_out) == 2:
+            loss_l, loss_c = loss_out
+            loss = loss_l + loss_c
+        elif isinstance(loss_out, torch.Tensor):  # solo un loss (es. somma totale)
+            loss = loss_out
+            loss_l, loss_c = loss, loss  # dummy
+        else:
+            raise ValueError("Unexpected loss format from model.")
 
         loss.backward()
         optimizer.step()

@@ -395,6 +395,19 @@ class VideoDataset(tutils.data.Dataset):
         
         self.num_label_types = len(self.label_types)
 
+        frame_index_path = os.path.join(self.root, 'frame_index.json')
+        with open(frame_index_path, 'r') as f:
+            self.frame_index = json.load(f)
+
+        frame_to_triplets_path = os.path.join(self.root, 'frame_to_triplets.json')
+        with open(frame_to_triplets_path) as f:
+            self.frame_to_triplets = json.load(f)
+
+        road_trainval_path = os.path.join(self.root, 'road_trainval_v1.0.json')
+        with open(road_trainval_path) as f:
+            triplet_labels = json.load(f)["triplet_labels"]
+            self.triplet_to_index = {label: i for i, label in enumerate(triplet_labels)}
+        self.num_concepts = len(self.triplet_to_index)
 
 
     def _make_lists_ava(self):
@@ -417,7 +430,7 @@ class VideoDataset(tutils.data.Dataset):
         self.ego_classes = ['Non_action', 'action']
         self.num_ego_classes = len(self.ego_classes)
         
-        counts = np.zeros((num_action_classes, 2), dtype=np.int32)
+        counts = np.zeros((num_action_classes, 2), dtype=int)
     
         # ratios = [1.0, 1.1, 1.1, 0.9, 1.1, 0.8, 0.7, 0.8, 1.1, 1.4, 1.0, 0.8, 0.7, 1.2, 1.0, 0.8, 0.7, 1.2, 1.2, 1.0, 0.9]
     
@@ -497,7 +510,7 @@ class VideoDataset(tutils.data.Dataset):
         self.ego_classes = ['Non_action']  +  ucf_classes
         self.num_ego_classes = len(self.ego_classes)
         
-        counts = np.zeros((24, 2), dtype=np.int32)
+        counts = np.zeros((24, 2), dtype=int)
     
         ratios = [1.0, 1.1, 1.1, 0.9, 1.1, 0.8, 0.7, 0.8, 1.1, 1.4, 1.0, 0.8, 0.7, 1.2, 1.0, 0.8, 0.7, 1.2, 1.2, 1.0, 0.9]
     
@@ -598,7 +611,7 @@ class VideoDataset(tutils.data.Dataset):
         self.ego_classes = final_annots['av_action_labels']
         self.num_ego_classes = len(self.ego_classes)
         
-        counts = np.zeros((len(final_annots[self.label_types[-1] + '_labels']), num_label_type), dtype=np.int32)
+        counts = np.zeros((len(final_annots[self.label_types[-1] + '_labels']), num_label_type), dtype=int)
 
         self.video_list = []
         self.numf_list = []
@@ -721,7 +734,7 @@ class VideoDataset(tutils.data.Dataset):
         all_boxes = []
         labels = []
         ego_labels = []
-        mask = np.zeros(self.SEQ_LEN, dtype=np.int)
+        mask = np.zeros(self.SEQ_LEN, dtype=int)
         indexs = []
         for i in range(self.SEQ_LEN):
             indexs.append(frame_num)
@@ -760,7 +773,20 @@ class VideoDataset(tutils.data.Dataset):
                     boxes[:, 1] *= height # height y1
                     boxes[:, 3] *= height # height y2
 
-        return clip, all_boxes, labels, ego_labels, index, wh, self.num_classes
+        concept_labels_seq = []
+        for frame_num in indexs:
+            key = f"{videoname}_{frame_num:05d}"  # zero-padding corretto
+            triplet_tensor = np.zeros(self.num_concepts, dtype=np.float32)
+            if key in self.frame_to_triplets:
+                for triplet_label in self.frame_to_triplets[key]:
+                    idx = self.triplet_to_index.get(triplet_label)
+                    if idx is not None:
+                        triplet_tensor[idx] = 1.0
+            concept_labels_seq.append(triplet_tensor)
+
+        concept_labels_seq = np.stack(concept_labels_seq)  # shape: [SEQ_LEN, num_concepts]
+
+        return clip, all_boxes, labels, ego_labels, index, wh, self.num_classes, concept_labels_seq
 
 
 def custum_collate(batch):
@@ -771,6 +797,7 @@ def custum_collate(batch):
     ego_targets = []
     image_ids = []
     whs = []
+    concept_labels_batch = []
     
     for sample in batch:
         images.append(sample[0])
@@ -780,6 +807,8 @@ def custum_collate(batch):
         image_ids.append(sample[4])
         whs.append(torch.LongTensor(sample[5]))
         num_classes = sample[6]
+        concept_labels_batch.append(torch.from_numpy(sample[7]).float())
+
         
     counts = []
     max_len = -1
@@ -791,7 +820,7 @@ def custum_collate(batch):
             temp_counts.append(bs.shape[0])
         assert seq_len == len(temp_counts)
         counts.append(temp_counts)
-    counts = np.asarray(counts, dtype=np.int)
+    counts = np.asarray(counts, dtype=int)
     new_boxes = torch.zeros(len(boxes), seq_len, max_len, 4)
     new_targets = torch.zeros([len(boxes), seq_len, max_len, num_classes])
     for c1, bs_ in enumerate(boxes):
@@ -806,5 +835,7 @@ def custum_collate(batch):
     # images = torch.stack(images, 0)
     images = get_clip_list_resized(images)
     # print(images.shape)
+    concept_labels_batch = torch.stack(concept_labels_batch, 0)  # [B, SEQ_LEN, num_concepts]
     return images, new_boxes, new_targets, torch.stack(ego_targets,0), \
-            torch.LongTensor(counts), image_ids, torch.stack(whs,0)
+        torch.LongTensor(counts), image_ids, torch.stack(whs,0), concept_labels_batch
+

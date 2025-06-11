@@ -79,7 +79,7 @@ def main():
                         type=str, help='Optimiser type')
     parser.add_argument('--RESUME', default=0, 
                         type=int, help='Resume from given epoch')
-    parser.add_argument('--MAX_EPOCHS', default=30, 
+    parser.add_argument('--MAX_EPOCHS', default=35, 
                         type=int, help='Number of training epoc')
     parser.add_argument('-l','--LR', '--learning-rate', 
                         default=0.004225, type=float, help='initial learning rate')
@@ -168,6 +168,9 @@ def main():
     parser.add_argument('--MAN_SEED', default=123, 
                         type=int, help='manualseed for reproduction')
     parser.add_argument('--MULTI_GPUS', default=True, type=str2bool, help='If  more than 0 then use all visible GPUs by default only one GPU used ') 
+
+    parser.add_argument('--USE_CEM', default=True, type=str2bool, help='Use Concept Embedding Module')
+    parser.add_argument('--num_concepts', default=27, type=int, help='Number of concept labels (triplets)')
 
     # Use CUDA_VISIBLE_DEVICES=0,1,4,6 to select GPUs to use
 
@@ -269,6 +272,11 @@ def main():
                 net.module.backbone.apply(utils.set_bn_eval)
             else:
                 net.backbone.apply(utils.set_bn_eval)
+        if args.USE_CEM:
+            for name, param in net.named_parameters():
+                if "cem_head" not in name:
+                    param.requires_grad = False
+
         train(args, net, train_dataset, val_dataset)
     elif args.MODE == 'val':
         val(args, net, val_dataset)

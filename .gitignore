@@ -102,3 +102,23 @@ kinetics-pt/resnet50RCN.pth
 kinetics-pt/SLOWFAST_R50_K400.pth
 kinetics-pt/SLOWFAST_R101_K700.pth
 
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/model_000031.pth
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/model_000032.pth
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/model_000033.pth
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/model_000034.pth
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/model_000035.pth
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/optimizer_000031.pth
+.gitignore
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/optimizer_000032.pth
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/optimizer_000033.pth
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/optimizer_000034.pth
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/optimizer_000035.pth
+.gitignore
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/train-06-10-19x.log
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/train-06-10-21x.log
+.gitignore
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/train-06-10-22x.log
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/train-06-11-09x.log
+.gitignore
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/train-06-11-10x.log
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/gen_dets-06-10-19x.log
