@@ -92,6 +92,7 @@ def run_train(args, train_data_loader, net, optimizer, epoch, iteration):
     losses = AverageMeter()
     loc_losses = AverageMeter()
     cls_losses = AverageMeter()
+    cem_losses = AverageMeter()
     torch.cuda.synchronize()
     start = time.perf_counter()
 
@@ -111,12 +112,13 @@ def run_train(args, train_data_loader, net, optimizer, epoch, iteration):
         optimizer.zero_grad()
         # pdb.set_trace()
         loss_out = net(images, gt_boxes, gt_labels, ego_labels, counts, img_indexs, concept_labels=concept_labels)
-        if isinstance(loss_out, tuple) and len(loss_out) == 2:
+        if isinstance(loss_out, tuple) and len(loss_out) == 3:
+            loss_l, loss_c, loss_cem = loss_out
+            loss = loss_l + loss_c + 2.0 * loss_cem
+        elif isinstance(loss_out, tuple) and len(loss_out) == 2:
             loss_l, loss_c = loss_out
             loss = loss_l + loss_c
-        elif isinstance(loss_out, torch.Tensor):  # solo un loss (es. somma totale)
-            loss = loss_out
-            loss_l, loss_c = loss, loss  # dummy
+            loss_cem = torch.tensor(0.0).to(loss.device)  # dummy
         else:
             raise ValueError("Unexpected loss format from model.")
 
@@ -125,18 +127,24 @@ def run_train(args, train_data_loader, net, optimizer, epoch, iteration):
         
         loc_loss = loss_l.item()
         conf_loss = loss_c.item()
+        cem_loss = loss_cem.item() if loss_cem is not None else 0.0
         if math.isnan(loc_loss) or loc_loss>300:
-            lline = '\n\n\n We got faulty LOCATION loss {} {} \n\n\n'.format(loc_loss, conf_loss)
+            lline = '\n\n\n We got faulty LOCATION loss {} {} {} \n\n\n'.format(loc_loss, conf_loss, cem_loss)
             logger.info(lline)
             loc_loss = 20.0
         if math.isnan(conf_loss) or  conf_loss>300:
-            lline = '\n\n\n We got faulty CLASSIFICATION loss {} {} \n\n\n'.format(loc_loss, conf_loss)
+            lline = '\n\n\n We got faulty CLASSIFICATION loss {} {} {} \n\n\n'.format(loc_loss, conf_loss, cem_loss)
+            logger.info(lline)
+            conf_loss = 20.0
+        if math.isnan(cem_loss) or  cem_loss>300:
+            lline = '\n\n\n We got faulty CEM loss {} {} {} \n\n\n'.format(loc_loss, conf_loss, cem_loss)
             logger.info(lline)
             conf_loss = 20.0
         
         loc_losses.update(loc_loss)
         cls_losses.update(conf_loss)
-        losses.update((loc_loss + conf_loss)/2.0)
+        cem_losses.update(cem_loss)
+        losses.update((loc_loss + conf_loss + cem_loss)/3.0)
 
         torch.cuda.synchronize()
         batch_time.update(time.perf_counter() - start)
@@ -147,13 +155,14 @@ def run_train(args, train_data_loader, net, optimizer, epoch, iteration):
                 loss_group = dict()
                 loss_group['Classification'] = cls_losses.val
                 loss_group['Localisation'] = loc_losses.val
+                loss_group['CEM'] = cem_losses.val
                 loss_group['Overall'] = losses.val
                 args.sw.add_scalars('Losses', loss_group, iteration)
 
-            print_line = 'Itration [{:d}/{:d}]{:06d}/{:06d} loc-loss {:.2f}({:.2f}) cls-loss {:.2f}({:.2f}) ' \
+            print_line = 'Itration [{:d}/{:d}]{:06d}/{:06d} loc-loss {:.2f}({:.2f}) cls-loss {:.2f}({:.2f}) cem-loss {:.2f}({:.2f}) ' \
                         'average-loss {:.2f}({:.2f}) DataTime {:0.2f}({:0.2f}) Timer {:0.2f}({:0.2f})'.format( epoch, 
                         args.MAX_EPOCHS, iteration, args.MAX_ITERS, loc_losses.val, loc_losses.avg, cls_losses.val,
-                        cls_losses.avg, losses.val, losses.avg, 10*data_time.val, 10*data_time.avg, 10*batch_time.val, 10*batch_time.avg)
+                        cls_losses.avg, cem_losses.val, cem_losses.avg, losses.val, losses.avg, 10*data_time.val, 10*data_time.avg, 10*batch_time.val, 10*batch_time.avg)
 
             logger.info(print_line)
             if internel_iter % (args.LOG_STEP*20) == 0:

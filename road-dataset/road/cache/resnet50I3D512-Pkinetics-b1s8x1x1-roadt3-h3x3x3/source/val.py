@@ -8,6 +8,7 @@ from modules.utils import get_individual_labels
 import torch.utils.data as data_utils
 from data import custum_collate
 from sklearn.metrics import f1_score
+from models.log_cem_explanations import log_cem_explanations
 
 logger = utils.get_logger(__name__)
 
@@ -26,10 +27,21 @@ def val(args, net, val_dataset):
         ptr_str = '\n{:s} MEANAP:::=> {:0.5f}'.format(label_types[nlt], mAP[nlt])
         logger.info(ptr_str)
 
-def validate(args, net,  val_data_loader, val_dataset, iteration_num):
+def validate(args, net, val_data_loader, val_dataset, iteration_num):
+    import time
+    import numpy as np
+    import torch
+    from sklearn.metrics import f1_score, classification_report, precision_recall_curve
+    from modules import utils
+    import modules.evaluation as evaluate
+    from modules.box_utils import decode
+    from modules.utils import get_individual_labels
+    from models.log_cem_explanations import log_cem_explanations
+
     iou_thresh = args.IOU_THRESH
     num_samples = len(val_dataset)
-    logger.info('Validating at ' + str(iteration_num) + ' number of samples:: '+ str(num_samples))
+    logger = utils.get_logger(__name__)
+    logger.info('Validating at ' + str(iteration_num) + ' number of samples:: ' + str(num_samples))
 
     print_time = True
     val_step = 20
@@ -44,7 +56,6 @@ def validate(args, net,  val_data_loader, val_dataset, iteration_num):
     det_boxes = []
     gt_boxes_all = []
 
-    # === CEM Evaluation ===
     concept_preds_all = []
     concept_labels_all = []
 
@@ -65,16 +76,23 @@ def validate(args, net,  val_data_loader, val_dataset, iteration_num):
 
             outputs = net(images)
 
-            if len(outputs) == 4:
-                decoded_boxes, confidence, ego_preds, concept_preds = outputs
-
-                # === CEM Evaluation: collect predictions and targets ===
-                concept_preds_sigmoid = activation(concept_preds)
-                concept_preds_all.append(concept_preds_sigmoid.detach().cpu().numpy())
-                concept_labels_all.append(concept_labels.detach().cpu().numpy())
-
+            if isinstance(outputs, tuple):
+                if len(outputs) == 5:
+                    decoded_boxes, confidence, ego_preds, concept_probs, _ = outputs
+                    concept_preds_sigmoid = activation(concept_probs)
+                    concept_preds_all.append(concept_preds_sigmoid.detach().cpu().numpy())
+                    concept_labels_all.append(concept_labels.detach().cpu().numpy())
+                elif len(outputs) == 4:
+                    decoded_boxes, confidence, ego_preds, concept_probs = outputs
+                    concept_preds_sigmoid = activation(concept_probs)
+                    concept_preds_all.append(concept_preds_sigmoid.detach().cpu().numpy())
+                    concept_labels_all.append(concept_labels.detach().cpu().numpy())
+                elif len(outputs) == 3:
+                    decoded_boxes, confidence, ego_preds = outputs
+                else:
+                    raise ValueError(f"[validate] Numero inatteso di output dal modello: {len(outputs)}")
             else:
-                decoded_boxes, confidence, ego_preds = outputs
+                raise TypeError("[validate] L'output del modello non è una tupla!")
 
             ego_preds = activation(ego_preds).cpu().numpy()
             ego_labels = ego_labels.numpy()
@@ -98,7 +116,6 @@ def validate(args, net,  val_data_loader, val_dataset, iteration_num):
                     width, height = wh[b][0], wh[b][1]
                     gt_boxes_batch = gt_boxes[b, s, :batch_counts[b, s], :].numpy()
                     gt_labels_batch = gt_targets[b, s, :batch_counts[b, s]].numpy()
-
                     decoded_boxes_frame = decoded_boxes[b, s].clone()
 
                     cc = 0
@@ -136,9 +153,37 @@ def validate(args, net,  val_data_loader, val_dataset, iteration_num):
         concept_labels_bin = concept_labels_all.astype(int)
 
         cem_accuracy = (concept_preds_bin == concept_labels_bin).mean()
-        cem_f1 = f1_score(concept_labels_bin, concept_preds_bin, average='micro')
+        cem_f1_micro = f1_score(concept_labels_bin, concept_preds_bin, average='micro')
+        cem_f1_macro = f1_score(concept_labels_bin, concept_preds_bin, average='macro')
 
         logger.info(f'[CEM] Concept Prediction Accuracy: {cem_accuracy:.4f}')
-        logger.info(f'[CEM] Concept Prediction F1 Score: {cem_f1:.4f}')
+        logger.info(f'[CEM] Concept F1 Micro: {cem_f1_micro:.4f}')
+        logger.info(f'[CEM] Concept F1 Macro: {cem_f1_macro:.4f}')
+
+        # === Class-wise performance
+        try:
+            report = classification_report(
+                concept_labels_bin, concept_preds_bin,
+                target_names=args.triplet_labels if hasattr(args, 'triplet_labels') else None,
+                zero_division=0
+            )
+            logger.info(f'[CEM] Classification Report:\n{report}')
+        except Exception as e:
+            logger.warning(f'[CEM] Impossibile stampare classification_report: {e}')
+
+        # === Error Analysis: concetti peggiori
+        error_counts = (concept_preds_bin != concept_labels_bin).sum(axis=0)
+        concept_counts = concept_labels_bin.sum(axis=0)
+        top_errors = np.argsort(error_counts)[-10:]
+
+        logger.info("[CEM] Top 10 concetti più difficili (errori/frequenza):")
+        for i in top_errors:
+            cname = args.triplet_labels[i] if hasattr(args, 'triplet_labels') else f"Concept {i}"
+            logger.info(f"{cname}: errors={error_counts[i]}, freq={concept_counts[i]}")
+
+        # === Log explanations
+        json_path, heatmap_path = log_cem_explanations(concept_preds_bin, np.asarray(ego_pds), output_dir="cem_outputs", prefix=f"epoch_{iteration_num}")
+        logger.info(f"[CEM] Explanations salvate in:\n- {json_path}\n- {heatmap_path}")
 
     return mAP + [mAP_ego], ap_all + [ap_all_ego], ap_strs + [ap_strs_ego]
+

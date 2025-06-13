@@ -79,7 +79,7 @@ def main():
                         type=str, help='Optimiser type')
     parser.add_argument('--RESUME', default=0, 
                         type=int, help='Resume from given epoch')
-    parser.add_argument('--MAX_EPOCHS', default=35, 
+    parser.add_argument('--MAX_EPOCHS', default=45, 
                         type=int, help='Number of training epoc')
     parser.add_argument('-l','--LR', '--learning-rate', 
                         default=0.004225, type=float, help='initial learning rate')
@@ -170,7 +170,8 @@ def main():
     parser.add_argument('--MULTI_GPUS', default=True, type=str2bool, help='If  more than 0 then use all visible GPUs by default only one GPU used ') 
 
     parser.add_argument('--USE_CEM', default=True, type=str2bool, help='Use Concept Embedding Module')
-    parser.add_argument('--num_concepts', default=27, type=int, help='Number of concept labels (triplets)')
+    parser.add_argument('--num_concepts', default=1620, type=int, help='Number of concept labels (triplets)')
+    parser.add_argument('--cem_dim', type=int, default=16, help='Dimensione embedding per ciascun concetto nel CEM')
 
     # Use CUDA_VISIBLE_DEVICES=0,1,4,6 to select GPUs to use
 
@@ -256,6 +257,20 @@ def main():
     args.num_ego_classes = val_dataset.num_ego_classes
     args.ego_classes = val_dataset.ego_classes
     args.head_size = 256
+
+    # === Calcolo pesi positivi per la CEM loss ===
+    if args.USE_CEM:
+        concept_freq = np.zeros(args.num_concepts)
+        for frame_triplets in train_dataset.frame_to_triplets.values():
+            for triplet in frame_triplets:
+                idx = train_dataset.triplet_to_index[triplet]
+                concept_freq[idx] += 1
+
+        total_samples = len(train_dataset)
+        pos_weights = total_samples / (concept_freq + 1e-6)  # evita divisione per zero
+        pos_weights = np.clip(pos_weights, a_min=1.0, a_max=20.0)  # clip per evitare outlier enormi
+        args.pos_weights = torch.tensor(pos_weights, dtype=torch.float32).cuda()
+
 
     if args.MODE in ['train', 'val','gen_dets']:
         net = build_retinanet(args).cuda()

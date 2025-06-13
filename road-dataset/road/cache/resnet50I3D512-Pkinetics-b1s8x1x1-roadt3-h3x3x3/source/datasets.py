@@ -405,7 +405,7 @@ class VideoDataset(tutils.data.Dataset):
 
         road_trainval_path = os.path.join(self.root, 'road_trainval_v1.0.json')
         with open(road_trainval_path) as f:
-            triplet_labels = json.load(f)["triplet_labels"]
+            triplet_labels = json.load(f)["all_triplet_labels"]
             self.triplet_to_index = {label: i for i, label in enumerate(triplet_labels)}
         self.num_concepts = len(self.triplet_to_index)
 

@@ -48,16 +48,24 @@ class RetinaNet(nn.Module):
 
         self.use_cem = getattr(args, 'USE_CEM', False)
         if self.use_cem:
+            self.cem_projector = nn.Linear(args.num_concepts * args.cem_dim, self.head_size)
             self.cem_head = CEMHead(input_dim=self.head_size, concept_dim=args.num_concepts)
-            self.cem_loss_fn = nn.BCELoss()
+            self.cem_loss_fn = nn.BCEWithLogitsLoss(pos_weight=args.pos_weights)
 
     def forward(self, images, gt_boxes=None, gt_labels=None, ego_labels=None, counts=None, img_indexs=None, concept_labels=None, get_features=False):
         sources, ego_feat = self.backbone(images)
 
-        ego_preds = self.ego_head(ego_feat).squeeze(-1).squeeze(-1).permute(0, 2, 1).contiguous()
-
         if self.use_cem:
-            concept_preds = self.cem_head(ego_feat)  # [B, T, num_concepts]
+            cem_bottleneck, concept_probs = self.cem_head(ego_feat)  # [B, T, k·m], [B, T, k]
+            B, T, km = cem_bottleneck.shape
+            cem_proj = self.cem_projector(cem_bottleneck.view(B * T, km))  # [B·T, 256]
+            cem_proj = cem_proj.view(B, T, self.head_size).permute(0, 2, 1).unsqueeze(-1).unsqueeze(-1)  # [B, 256, T, 1, 1]
+            cem_input = cem_proj
+
+        else:
+            cem_input = ego_feat  # fallback
+
+        ego_preds = self.ego_head(cem_input).squeeze(-1).squeeze(-1).permute(0, 2, 1)
 
         grid_sizes = [feature_map.shape[-2:] for feature_map in sources]
         ancohor_boxes = self.anchors(grid_sizes)
@@ -80,15 +88,11 @@ class RetinaNet(nn.Module):
         elif gt_boxes is not None:
             total_loss = self.criterion(flat_conf, flat_loc, gt_boxes, gt_labels, counts, ancohor_boxes, ego_preds, ego_labels)
             if self.use_cem and concept_labels is not None:
-                if concept_preds.shape != concept_labels.shape:
-                    print(f"[CEM Debug] Shape mismatch: preds {concept_preds.shape}, labels {concept_labels.shape}")
-                if concept_preds.device != concept_labels.device:
-                    print(f"[CEM Debug] Device mismatch: preds on {concept_preds.device}, labels on {concept_labels.device}")
                 #print(f"[CEM Debug] preds min/max: {concept_preds.min().item()} / {concept_preds.max().item()}")
                 #print(f"[CEM Debug] labels sum: {concept_labels.sum().item()}")
                 
-                cem_loss = self.cem_loss_fn(concept_preds, concept_labels)
-                total_loss = (total_loss[0], total_loss[1] + cem_loss)
+                cem_loss = self.cem_loss_fn(concept_probs, concept_labels)
+                return total_loss[0], total_loss[1], cem_loss 
             return total_loss
         else:
             decoded_boxes = []
@@ -98,7 +102,7 @@ class RetinaNet(nn.Module):
                     temp_l.append(decode(flat_loc[b, s], ancohor_boxes))
                 decoded_boxes.append(torch.stack(temp_l, 0))
             if self.use_cem:
-                return torch.stack(decoded_boxes, 0), flat_conf, ego_preds, concept_preds
+                return torch.stack(decoded_boxes, 0), flat_conf, ego_preds, concept_probs, cem_bottleneck
             else:
                 return torch.stack(decoded_boxes, 0), flat_conf, ego_preds
 
