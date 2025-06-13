@@ -7,8 +7,8 @@ from modules.box_utils import decode
 from modules.utils import get_individual_labels
 import torch.utils.data as data_utils
 from data import custum_collate
-from sklearn.metrics import f1_score
-from models.log_cem_explanations import log_cem_explanations
+from sklearn.metrics import f1_score, classification_report
+from modules.utils import get_individual_labels
 
 logger = utils.get_logger(__name__)
 
@@ -28,19 +28,8 @@ def val(args, net, val_dataset):
         logger.info(ptr_str)
 
 def validate(args, net, val_data_loader, val_dataset, iteration_num):
-    import time
-    import numpy as np
-    import torch
-    from sklearn.metrics import f1_score, classification_report, precision_recall_curve
-    from modules import utils
-    import modules.evaluation as evaluate
-    from modules.box_utils import decode
-    from modules.utils import get_individual_labels
-    from models.log_cem_explanations import log_cem_explanations
-
     iou_thresh = args.IOU_THRESH
     num_samples = len(val_dataset)
-    logger = utils.get_logger(__name__)
     logger.info('Validating at ' + str(iteration_num) + ' number of samples:: ' + str(num_samples))
 
     print_time = True
@@ -66,17 +55,21 @@ def validate(args, net, val_data_loader, val_dataset, iteration_num):
 
     net.eval()
     with torch.no_grad():
+        # Added concept_labels to the validation loop
         for val_itr, (images, gt_boxes, gt_targets, ego_labels, batch_counts, img_indexs, wh, concept_labels) in enumerate(val_data_loader):
             torch.cuda.synchronize()
             t1 = time.perf_counter()
 
             batch_size = images.size(0)
             images = images.cuda(0, non_blocking=True)
+
+            # Added concept_labels to the validation loop
             concept_labels = concept_labels.cuda(0, non_blocking=True)
 
             outputs = net(images)
 
             if isinstance(outputs, tuple):
+                # Added handling for concept predictions
                 if len(outputs) == 5:
                     decoded_boxes, confidence, ego_preds, concept_probs, _ = outputs
                     concept_preds_sigmoid = activation(concept_probs)
@@ -180,10 +173,6 @@ def validate(args, net, val_data_loader, val_dataset, iteration_num):
         for i in top_errors:
             cname = args.triplet_labels[i] if hasattr(args, 'triplet_labels') else f"Concept {i}"
             logger.info(f"{cname}: errors={error_counts[i]}, freq={concept_counts[i]}")
-
-        # === Log explanations
-        json_path, heatmap_path = log_cem_explanations(concept_preds_bin, np.asarray(ego_pds), output_dir="cem_outputs", prefix=f"epoch_{iteration_num}")
-        logger.info(f"[CEM] Explanations salvate in:\n- {json_path}\n- {heatmap_path}")
 
     return mAP + [mAP_ego], ap_all + [ap_all_ego], ap_strs + [ap_strs_ego]
 

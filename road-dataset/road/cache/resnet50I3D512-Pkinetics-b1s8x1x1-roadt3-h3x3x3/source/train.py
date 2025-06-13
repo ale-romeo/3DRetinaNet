@@ -92,10 +92,11 @@ def run_train(args, train_data_loader, net, optimizer, epoch, iteration):
     losses = AverageMeter()
     loc_losses = AverageMeter()
     cls_losses = AverageMeter()
-    cem_losses = AverageMeter()
+    cem_losses = AverageMeter() # Added for CEM loss
     torch.cuda.synchronize()
     start = time.perf_counter()
 
+    # Added concept_labels from train_data_loader
     for internel_iter, (images, gt_boxes, gt_labels, ego_labels, counts, img_indexs, wh, concept_labels) in enumerate(train_data_loader):
         iteration += 1
         images = images.cuda(0, non_blocking=True)
@@ -103,7 +104,10 @@ def run_train(args, train_data_loader, net, optimizer, epoch, iteration):
         gt_labels = gt_labels.cuda(0, non_blocking=True)
         counts = counts.cuda(0, non_blocking=True)
         ego_labels = ego_labels.cuda(0, non_blocking=True)
+
+        # Added concept_labels to the training loop
         concept_labels = concept_labels.cuda(0, non_blocking=True)
+
         # forward
         torch.cuda.synchronize()
         data_time.update(time.perf_counter() - start)
@@ -111,6 +115,7 @@ def run_train(args, train_data_loader, net, optimizer, epoch, iteration):
         # print(images.size(), anchors.size())
         optimizer.zero_grad()
         # pdb.set_trace()
+        # Added concept_labels to the forward pass
         loss_out = net(images, gt_boxes, gt_labels, ego_labels, counts, img_indexs, concept_labels=concept_labels)
         if isinstance(loss_out, tuple) and len(loss_out) == 3:
             loss_l, loss_c, loss_cem = loss_out
@@ -143,7 +148,11 @@ def run_train(args, train_data_loader, net, optimizer, epoch, iteration):
         
         loc_losses.update(loc_loss)
         cls_losses.update(conf_loss)
+
+        # Added CEM loss update
         cem_losses.update(cem_loss)
+
+        # Update the overall loss
         losses.update((loc_loss + conf_loss + cem_loss)/3.0)
 
         torch.cuda.synchronize()
@@ -155,7 +164,10 @@ def run_train(args, train_data_loader, net, optimizer, epoch, iteration):
                 loss_group = dict()
                 loss_group['Classification'] = cls_losses.val
                 loss_group['Localisation'] = loc_losses.val
+                
+                # Added CEM loss to the tensorboard logging
                 loss_group['CEM'] = cem_losses.val
+
                 loss_group['Overall'] = losses.val
                 args.sw.add_scalars('Losses', loss_group, iteration)
 

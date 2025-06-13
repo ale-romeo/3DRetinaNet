@@ -171,7 +171,7 @@ def main():
 
     # Concept Embedding Module arguments
     parser.add_argument('--USE_CEM', default=True, type=str2bool, help='Use Concept Embedding Module')
-    parser.add_argument('--num_concepts', default=1620, type=int, help='Number of concept labels (triplets)')
+    parser.add_argument('--num_concepts', default=68, type=int, help='Number of concept labels (triplets)')
     parser.add_argument('--cem_dim', type=int, default=16, help='Dimensione embedding per ciascun concetto nel CEM')
 
     # Use CUDA_VISIBLE_DEVICES=0,1,4,6 to select GPUs to use

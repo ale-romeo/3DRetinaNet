@@ -395,17 +395,14 @@ class VideoDataset(tutils.data.Dataset):
         
         self.num_label_types = len(self.label_types)
 
-        frame_index_path = os.path.join(self.root, 'frame_index.json')
-        with open(frame_index_path, 'r') as f:
-            self.frame_index = json.load(f)
-
         frame_to_triplets_path = os.path.join(self.root, 'frame_to_triplets.json')
         with open(frame_to_triplets_path) as f:
             self.frame_to_triplets = json.load(f)
 
+        
         road_trainval_path = os.path.join(self.root, 'road_trainval_v1.0.json')
         with open(road_trainval_path) as f:
-            triplet_labels = json.load(f)["all_triplet_labels"]
+            triplet_labels = json.load(f)["triplet_labels"]  # ✅ solo quelli attivi
             self.triplet_to_index = {label: i for i, label in enumerate(triplet_labels)}
         self.num_concepts = len(self.triplet_to_index)
 

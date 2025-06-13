@@ -46,18 +46,25 @@ class RetinaNet(nn.Module):
         self.ego_head = nn.Conv3d(self.head_size, args.num_ego_classes, kernel_size=(3, 1, 1), stride=1, padding=(1, 0, 0))
         nn.init.constant_(self.ego_head.bias, bias_value)
 
+        # If CEM is used, initialize the CEM head and projector
         self.use_cem = getattr(args, 'USE_CEM', False)
         if self.use_cem:
             self.cem_projector = nn.Linear(args.num_concepts * args.cem_dim, self.head_size)
             self.cem_head = CEMHead(input_dim=self.head_size, concept_dim=args.num_concepts)
-            self.cem_loss_fn = nn.BCEWithLogitsLoss(pos_weight=args.pos_weights)
+            self.cem_loss_fn = nn.BCEWithLogitsLoss(pos_weight=args.pos_weights.cuda())
 
     def forward(self, images, gt_boxes=None, gt_labels=None, ego_labels=None, counts=None, img_indexs=None, concept_labels=None, get_features=False):
         sources, ego_feat = self.backbone(images)
 
+        # If CEM is used, we need to process the ego_feat through the CEM head
         if self.use_cem:
-            cem_bottleneck, concept_probs = self.cem_head(ego_feat)  # [B, T, k·m], [B, T, k]
+            # CEM head processes the ego feature to get concept probabilities
+            # and a bottleneck representation
+            cem_bottleneck, concept_logits = self.cem_head(ego_feat)  # [B, T, k·m], [B, T, k]
             B, T, km = cem_bottleneck.shape
+
+            # Reshape and project the bottleneck representation
+            # to match the head size for further processing
             cem_proj = self.cem_projector(cem_bottleneck.view(B * T, km))  # [B·T, 256]
             cem_proj = cem_proj.view(B, T, self.head_size).permute(0, 2, 1).unsqueeze(-1).unsqueeze(-1)  # [B, 256, T, 1, 1]
             cem_input = cem_proj
@@ -90,8 +97,9 @@ class RetinaNet(nn.Module):
             if self.use_cem and concept_labels is not None:
                 #print(f"[CEM Debug] preds min/max: {concept_preds.min().item()} / {concept_preds.max().item()}")
                 #print(f"[CEM Debug] labels sum: {concept_labels.sum().item()}")
-                
-                cem_loss = self.cem_loss_fn(concept_probs, concept_labels)
+
+                # Calculate CEM loss if concept labels are provided
+                cem_loss = self.cem_loss_fn(concept_logits, concept_labels)
                 return total_loss[0], total_loss[1], cem_loss 
             return total_loss
         else:
@@ -102,7 +110,7 @@ class RetinaNet(nn.Module):
                     temp_l.append(decode(flat_loc[b, s], ancohor_boxes))
                 decoded_boxes.append(torch.stack(temp_l, 0))
             if self.use_cem:
-                return torch.stack(decoded_boxes, 0), flat_conf, ego_preds, concept_probs, cem_bottleneck
+                return torch.stack(decoded_boxes, 0), flat_conf, ego_preds, concept_logits, cem_bottleneck
             else:
                 return torch.stack(decoded_boxes, 0), flat_conf, ego_preds
 

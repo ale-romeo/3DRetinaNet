@@ -169,8 +169,9 @@ def main():
                         type=int, help='manualseed for reproduction')
     parser.add_argument('--MULTI_GPUS', default=True, type=str2bool, help='If  more than 0 then use all visible GPUs by default only one GPU used ') 
 
+    # Concept Embedding Module arguments
     parser.add_argument('--USE_CEM', default=True, type=str2bool, help='Use Concept Embedding Module')
-    parser.add_argument('--num_concepts', default=1620, type=int, help='Number of concept labels (triplets)')
+    parser.add_argument('--num_concepts', default=68, type=int, help='Number of concept labels (triplets)')
     parser.add_argument('--cem_dim', type=int, default=16, help='Dimensione embedding per ciascun concetto nel CEM')
 
     # Use CUDA_VISIBLE_DEVICES=0,1,4,6 to select GPUs to use
@@ -287,6 +288,7 @@ def main():
                 net.module.backbone.apply(utils.set_bn_eval)
             else:
                 net.backbone.apply(utils.set_bn_eval)
+        # Freeze layers if cem is used
         if args.USE_CEM:
             for name, param in net.named_parameters():
                 if "cem_head" not in name:

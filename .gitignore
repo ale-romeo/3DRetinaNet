@@ -158,3 +158,4 @@ cem_outputs/epoch_39_concepts_heatmap.png
 cem_outputs/epoch_39_explanations.json
 cem_outputs/epoch_40_concepts_heatmap.png
 cem_outputs/epoch_40_explanations.json
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/train-06-13-18x.log
