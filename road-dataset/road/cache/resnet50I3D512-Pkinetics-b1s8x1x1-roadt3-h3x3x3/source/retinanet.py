@@ -43,36 +43,40 @@ class RetinaNet(nn.Module):
         if args.MODE == 'train':
             self.criterion = FocalLoss(args)
 
-        self.ego_head = nn.Conv3d(self.head_size, args.num_ego_classes, kernel_size=(3, 1, 1), stride=1, padding=(1, 0, 0))
-        nn.init.constant_(self.ego_head.bias, bias_value)
-
         # If CEM is used, initialize the CEM head and projector
         self.use_cem = getattr(args, 'USE_CEM', False)
         if self.use_cem:
-            self.cem_projector = nn.Linear(args.num_concepts * args.cem_dim, self.head_size)
-            self.cem_head = CEMHead(input_dim=self.head_size, concept_dim=args.num_concepts)
-            self.cem_loss_fn = nn.BCEWithLogitsLoss(pos_weight=args.pos_weights.cuda())
+            self.cem_head = CEMHead(input_dim=self.head_size, concept_dim=args.num_concepts, emb_dim=args.cem_dim)
+            self.cem_loss_fn = nn.BCEWithLogitsLoss(pos_weight=torch.tensor(args.pos_weights).float().cuda())
+
+            # Transformer sulla sequenza dei concetti
+            encoder_layer = nn.TransformerEncoderLayer(
+                d_model=args.num_concepts * args.cem_dim,
+                nhead=4,
+                dim_feedforward=512,
+                dropout=0.1,
+                batch_first=True
+            )
+            self.ego_transformer = nn.TransformerEncoder(encoder_layer, num_layers=2)
+
+            # Head finale per predire le classi ego per ogni frame
+            self.ego_head = nn.Linear(args.num_concepts * args.cem_dim, args.num_ego_classes)
+
+        else:
+            # Versione classica: input 5D → Conv3d
+            self.ego_head = nn.Conv3d(self.head_size, args.num_ego_classes, kernel_size=(3, 1, 1), stride=1, padding=(1, 0, 0))
 
     def forward(self, images, gt_boxes=None, gt_labels=None, ego_labels=None, counts=None, img_indexs=None, concept_labels=None, get_features=False):
         sources, ego_feat = self.backbone(images)
 
         # If CEM is used, we need to process the ego_feat through the CEM head
         if self.use_cem:
-            # CEM head processes the ego feature to get concept probabilities
-            # and a bottleneck representation
-            cem_bottleneck, concept_logits = self.cem_head(ego_feat)  # [B, T, k·m], [B, T, k]
-            B, T, km = cem_bottleneck.shape
-
-            # Reshape and project the bottleneck representation
-            # to match the head size for further processing
-            cem_proj = self.cem_projector(cem_bottleneck.view(B * T, km))  # [B·T, 256]
-            cem_proj = cem_proj.view(B, T, self.head_size).permute(0, 2, 1).unsqueeze(-1).unsqueeze(-1)  # [B, 256, T, 1, 1]
-            cem_input = cem_proj
-
+            cem_bottleneck, concept_logits = self.cem_head(ego_feat)         # [B, T, k·m]
+            x = self.ego_transformer(cem_bottleneck)                          # [B, T, k·m]
+            ego_preds = self.ego_head(x)                                      # [B, T, num_ego_classes]
         else:
-            cem_input = ego_feat  # fallback
-
-        ego_preds = self.ego_head(cem_input).squeeze(-1).squeeze(-1).permute(0, 2, 1)
+            # ego_feat: [B, C, T, 1, 1] → Conv3D
+            ego_preds = self.ego_head(ego_feat).squeeze(-1).squeeze(-1).permute(0, 2, 1)  # [B, T, num_ego_classes]
 
         grid_sizes = [feature_map.shape[-2:] for feature_map in sources]
         ancohor_boxes = self.anchors(grid_sizes)
@@ -95,10 +99,6 @@ class RetinaNet(nn.Module):
         elif gt_boxes is not None:
             total_loss = self.criterion(flat_conf, flat_loc, gt_boxes, gt_labels, counts, ancohor_boxes, ego_preds, ego_labels)
             if self.use_cem and concept_labels is not None:
-                #print(f"[CEM Debug] preds min/max: {concept_preds.min().item()} / {concept_preds.max().item()}")
-                #print(f"[CEM Debug] labels sum: {concept_labels.sum().item()}")
-
-                # Calculate CEM loss if concept labels are provided
                 cem_loss = self.cem_loss_fn(concept_logits, concept_labels)
                 return total_loss[0], total_loss[1], cem_loss 
             return total_loss

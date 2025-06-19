@@ -47,7 +47,7 @@ class RetinaNet(nn.Module):
         self.use_cem = getattr(args, 'USE_CEM', False)
         if self.use_cem:
             self.cem_head = CEMHead(input_dim=self.head_size, concept_dim=args.num_concepts, emb_dim=args.cem_dim)
-            self.cem_loss_fn = nn.BCEWithLogitsLoss(pos_weight=torch.tensor(args.pos_weights).float().cuda())
+            self.cem_loss_fn = nn.BCEWithLogitsLoss(pos_weight=torch.tensor(args.pos_weights).cuda())
 
             # Transformer sulla sequenza dei concetti
             encoder_layer = nn.TransformerEncoderLayer(
@@ -99,6 +99,10 @@ class RetinaNet(nn.Module):
         elif gt_boxes is not None:
             total_loss = self.criterion(flat_conf, flat_loc, gt_boxes, gt_labels, counts, ancohor_boxes, ego_preds, ego_labels)
             if self.use_cem and concept_labels is not None:
+                with torch.no_grad():
+                    probs = torch.sigmoid(concept_logits)
+                    print("[DEBUG] Concept probs: mean =", probs.mean().item(), "| max =", probs.max().item(), "| min =", probs.min().item())
+
                 cem_loss = self.cem_loss_fn(concept_logits, concept_labels)
                 return total_loss[0], total_loss[1], cem_loss 
             return total_loss

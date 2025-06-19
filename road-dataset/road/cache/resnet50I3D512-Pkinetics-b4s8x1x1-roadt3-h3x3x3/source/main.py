@@ -79,7 +79,7 @@ def main():
                         type=str, help='Optimiser type')
     parser.add_argument('--RESUME', default=0, 
                         type=int, help='Resume from given epoch')
-    parser.add_argument('--MAX_EPOCHS', default=60, 
+    parser.add_argument('--MAX_EPOCHS', default=45, 
                         type=int, help='Number of training epoc')
     parser.add_argument('-l','--LR', '--learning-rate', 
                         default=0.004225, type=float, help='initial learning rate')
@@ -268,9 +268,9 @@ def main():
                 concept_freq[idx] += 1
 
         total_samples = len(train_dataset)
-        # Inversione log-scaled + stabilizzazione
-        pos_weights = np.log((total_samples + 1e-6) / (concept_freq + 1e-6))
-        pos_weights = np.clip(pos_weights, 1.0, 20.0)
+        raw_weights = total_samples / (concept_freq + 1e-6)
+        pos_weights = raw_weights / np.mean(raw_weights)
+        pos_weights = np.clip(pos_weights, 1.0, 10.0)
         args.pos_weights = torch.tensor(pos_weights, dtype=torch.float32).cuda()
 
     if args.MODE in ['train', 'val','gen_dets']:

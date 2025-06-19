@@ -1,0 +1,477 @@
+3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]
+Number of agent: all :: 11 to use: 10
+Number of action: all :: 22 to use: 19
+Number of loc: all :: 12 to use: 12
+Number of duplex: all :: 152 to use: 39
+Number of triplet: all :: 1620 to use: 68
+Frames with Boxes are 5307 out of 6000 in 2014-06-26-09-53-12_stereo_centre_02
+number of start frames: 750
+Frames with Boxes are 5597 out of 6001 in 2014-07-14-14-49-50_stereo_centre_01
+number of start frames: 750
+Frames with Boxes are 5345 out of 6000 in 2014-07-14-15-42-55_stereo_centre_03
+number of start frames: 750
+Frames with Boxes are 5801 out of 6001 in 2014-08-08-13-15-11_stereo_centre_01
+number of start frames: 750
+Frames with Boxes are 1168 out of 1168 in 2014-08-11-10-59-18_stereo_centre_02
+number of start frames: 146
+Frames with Boxes are 5134 out of 6000 in 2014-11-14-16-34-33_stereo_centre_06
+number of start frames: 750
+Frames with Boxes are 4804 out of 6001 in 2014-11-21-16-07-03_stereo_centre_01
+number of start frames: 750
+Frames with Boxes are 5844 out of 6000 in 2014-11-25-09-18-32_stereo_centre_04
+number of start frames: 750
+Frames with Boxes are 5710 out of 6001 in 2014-12-09-13-21-02_stereo_centre_01
+number of start frames: 750
+Frames with Boxes are 5611 out of 6000 in 2015-02-03-08-45-10_stereo_centre_02
+number of start frames: 750
+Frames with Boxes are 5473 out of 6000 in 2015-02-03-19-43-11_stereo_centre_04
+number of start frames: 750
+Frames with Boxes are 5431 out of 6000 in 2015-02-06-13-57-16_stereo_centre_02
+number of start frames: 750
+Frames with Boxes are 5091 out of 6000 in 2015-02-13-09-16-26_stereo_centre_02
+number of start frames: 750
+Frames with Boxes are 5316 out of 6000 in 2015-02-13-09-16-26_stereo_centre_05
+number of start frames: 750
+Frames with Boxes are 5859 out of 6000 in 2015-02-24-12-32-19_stereo_centre_04
+number of start frames: 750
+Done Loading Dataset Train Dataset
+Number of agent: all :: 11 to use: 10
+Number of action: all :: 22 to use: 19
+Number of loc: all :: 12 to use: 12
+Number of duplex: all :: 152 to use: 39
+Number of triplet: all :: 1620 to use: 68
+Frames with Boxes are 4033 out of 4734 in 2014-06-25-16-45-34_stereo_centre_02
+number of start frames: 74
+Frames with Boxes are 5724 out of 6000 in 2014-11-18-13-20-12_stereo_centre_05
+number of start frames: 94
+Frames with Boxes are 5133 out of 6001 in 2015-03-03-11-31-36_stereo_centre_01
+number of start frames: 94
+Done Loading Dataset Validation Dataset
+**LOAD STAE DICTIONARY FOR WEIGHT INITLISATIONS**
+conv1.weighttorch.Size([64, 3, 1, 7, 7]) ==>>torch.Size([64, 3, 1, 7, 7])
+bn1.weighttorch.Size([64]) ==>>torch.Size([64])
+bn1.biastorch.Size([64]) ==>>torch.Size([64])
+bn1.running_meantorch.Size([64]) ==>>torch.Size([64])
+bn1.running_vartorch.Size([64]) ==>>torch.Size([64])
+bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.0.conv1.weighttorch.Size([64, 64, 3, 1, 1]) ==>>torch.Size([64, 64, 3, 1, 1])
+layer1.0.bn1.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn1.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn1.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn1.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.0.conv2.weighttorch.Size([64, 64, 1, 3, 3]) ==>>torch.Size([64, 64, 1, 3, 3])
+layer1.0.bn2.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn2.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn2.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn2.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.0.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.0.conv3.weighttorch.Size([256, 64, 1, 1, 1]) ==>>torch.Size([256, 64, 1, 1, 1])
+layer1.0.bn3.weighttorch.Size([256]) ==>>torch.Size([256])
+layer1.0.bn3.biastorch.Size([256]) ==>>torch.Size([256])
+layer1.0.bn3.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer1.0.bn3.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer1.0.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.0.downsample.0.weighttorch.Size([256, 64, 1, 1, 1]) ==>>torch.Size([256, 64, 1, 1, 1])
+layer1.0.downsample.1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer1.0.downsample.1.biastorch.Size([256]) ==>>torch.Size([256])
+layer1.0.downsample.1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer1.0.downsample.1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer1.0.downsample.1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.1.conv1.weighttorch.Size([64, 256, 3, 1, 1]) ==>>torch.Size([64, 256, 3, 1, 1])
+layer1.1.bn1.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn1.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn1.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn1.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.1.conv2.weighttorch.Size([64, 64, 1, 3, 3]) ==>>torch.Size([64, 64, 1, 3, 3])
+layer1.1.bn2.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn2.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn2.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn2.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.1.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.1.conv3.weighttorch.Size([256, 64, 1, 1, 1]) ==>>torch.Size([256, 64, 1, 1, 1])
+layer1.1.bn3.weighttorch.Size([256]) ==>>torch.Size([256])
+layer1.1.bn3.biastorch.Size([256]) ==>>torch.Size([256])
+layer1.1.bn3.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer1.1.bn3.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer1.1.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.2.conv1.weighttorch.Size([64, 256, 3, 1, 1]) ==>>torch.Size([64, 256, 3, 1, 1])
+layer1.2.bn1.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn1.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn1.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn1.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.2.conv2.weighttorch.Size([64, 64, 1, 3, 3]) ==>>torch.Size([64, 64, 1, 3, 3])
+layer1.2.bn2.weighttorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn2.biastorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn2.running_meantorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn2.running_vartorch.Size([64]) ==>>torch.Size([64])
+layer1.2.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer1.2.conv3.weighttorch.Size([256, 64, 1, 1, 1]) ==>>torch.Size([256, 64, 1, 1, 1])
+layer1.2.bn3.weighttorch.Size([256]) ==>>torch.Size([256])
+layer1.2.bn3.biastorch.Size([256]) ==>>torch.Size([256])
+layer1.2.bn3.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer1.2.bn3.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer1.2.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.0.conv1.weighttorch.Size([128, 256, 3, 1, 1]) ==>>torch.Size([128, 256, 3, 1, 1])
+layer2.0.bn1.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn1.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn1.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn1.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.0.conv2.weighttorch.Size([128, 128, 1, 3, 3]) ==>>torch.Size([128, 128, 1, 3, 3])
+layer2.0.bn2.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn2.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn2.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn2.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.0.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.0.conv3.weighttorch.Size([512, 128, 1, 1, 1]) ==>>torch.Size([512, 128, 1, 1, 1])
+layer2.0.bn3.weighttorch.Size([512]) ==>>torch.Size([512])
+layer2.0.bn3.biastorch.Size([512]) ==>>torch.Size([512])
+layer2.0.bn3.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer2.0.bn3.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer2.0.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.0.downsample.0.weighttorch.Size([512, 256, 1, 1, 1]) ==>>torch.Size([512, 256, 1, 1, 1])
+layer2.0.downsample.1.weighttorch.Size([512]) ==>>torch.Size([512])
+layer2.0.downsample.1.biastorch.Size([512]) ==>>torch.Size([512])
+layer2.0.downsample.1.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer2.0.downsample.1.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer2.0.downsample.1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.1.conv1.weighttorch.Size([128, 512, 1, 1, 1]) ==>>torch.Size([128, 512, 1, 1, 1])
+layer2.1.bn1.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn1.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn1.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn1.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.1.conv2.weighttorch.Size([128, 128, 1, 3, 3]) ==>>torch.Size([128, 128, 1, 3, 3])
+layer2.1.bn2.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn2.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn2.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn2.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.1.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.1.conv3.weighttorch.Size([512, 128, 1, 1, 1]) ==>>torch.Size([512, 128, 1, 1, 1])
+layer2.1.bn3.weighttorch.Size([512]) ==>>torch.Size([512])
+layer2.1.bn3.biastorch.Size([512]) ==>>torch.Size([512])
+layer2.1.bn3.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer2.1.bn3.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer2.1.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.2.conv1.weighttorch.Size([128, 512, 3, 1, 1]) ==>>torch.Size([128, 512, 3, 1, 1])
+layer2.2.bn1.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn1.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn1.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn1.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.2.conv2.weighttorch.Size([128, 128, 1, 3, 3]) ==>>torch.Size([128, 128, 1, 3, 3])
+layer2.2.bn2.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn2.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn2.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn2.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.2.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.2.conv3.weighttorch.Size([512, 128, 1, 1, 1]) ==>>torch.Size([512, 128, 1, 1, 1])
+layer2.2.bn3.weighttorch.Size([512]) ==>>torch.Size([512])
+layer2.2.bn3.biastorch.Size([512]) ==>>torch.Size([512])
+layer2.2.bn3.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer2.2.bn3.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer2.2.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.3.conv1.weighttorch.Size([128, 512, 1, 1, 1]) ==>>torch.Size([128, 512, 1, 1, 1])
+layer2.3.bn1.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn1.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn1.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn1.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.3.conv2.weighttorch.Size([128, 128, 1, 3, 3]) ==>>torch.Size([128, 128, 1, 3, 3])
+layer2.3.bn2.weighttorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn2.biastorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn2.running_meantorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn2.running_vartorch.Size([128]) ==>>torch.Size([128])
+layer2.3.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer2.3.conv3.weighttorch.Size([512, 128, 1, 1, 1]) ==>>torch.Size([512, 128, 1, 1, 1])
+layer2.3.bn3.weighttorch.Size([512]) ==>>torch.Size([512])
+layer2.3.bn3.biastorch.Size([512]) ==>>torch.Size([512])
+layer2.3.bn3.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer2.3.bn3.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer2.3.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.0.conv1.weighttorch.Size([256, 512, 3, 1, 1]) ==>>torch.Size([256, 512, 3, 1, 1])
+layer3.0.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.0.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.0.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.0.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.0.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.0.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.0.downsample.0.weighttorch.Size([1024, 512, 1, 1, 1]) ==>>torch.Size([1024, 512, 1, 1, 1])
+layer3.0.downsample.1.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.downsample.1.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.downsample.1.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.downsample.1.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.0.downsample.1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.1.conv1.weighttorch.Size([256, 1024, 1, 1, 1]) ==>>torch.Size([256, 1024, 1, 1, 1])
+layer3.1.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.1.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.1.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.1.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.1.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.1.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.1.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.1.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.1.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.1.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.2.conv1.weighttorch.Size([256, 1024, 3, 1, 1]) ==>>torch.Size([256, 1024, 3, 1, 1])
+layer3.2.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.2.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.2.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.2.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.2.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.2.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.2.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.2.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.2.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.2.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.3.conv1.weighttorch.Size([256, 1024, 1, 1, 1]) ==>>torch.Size([256, 1024, 1, 1, 1])
+layer3.3.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.3.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.3.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.3.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.3.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.3.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.3.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.3.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.3.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.3.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.4.conv1.weighttorch.Size([256, 1024, 3, 1, 1]) ==>>torch.Size([256, 1024, 3, 1, 1])
+layer3.4.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.4.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.4.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.4.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.4.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.4.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.4.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.4.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.4.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.4.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.5.conv1.weighttorch.Size([256, 1024, 1, 1, 1]) ==>>torch.Size([256, 1024, 1, 1, 1])
+layer3.5.bn1.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn1.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn1.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn1.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.5.conv2.weighttorch.Size([256, 256, 1, 3, 3]) ==>>torch.Size([256, 256, 1, 3, 3])
+layer3.5.bn2.weighttorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn2.biastorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn2.running_meantorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn2.running_vartorch.Size([256]) ==>>torch.Size([256])
+layer3.5.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer3.5.conv3.weighttorch.Size([1024, 256, 1, 1, 1]) ==>>torch.Size([1024, 256, 1, 1, 1])
+layer3.5.bn3.weighttorch.Size([1024]) ==>>torch.Size([1024])
+layer3.5.bn3.biastorch.Size([1024]) ==>>torch.Size([1024])
+layer3.5.bn3.running_meantorch.Size([1024]) ==>>torch.Size([1024])
+layer3.5.bn3.running_vartorch.Size([1024]) ==>>torch.Size([1024])
+layer3.5.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.0.conv1.weighttorch.Size([512, 1024, 3, 1, 1]) ==>>torch.Size([512, 1024, 3, 1, 1])
+layer4.0.bn1.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn1.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn1.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn1.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.0.conv2.weighttorch.Size([512, 512, 1, 3, 3]) ==>>torch.Size([512, 512, 1, 3, 3])
+layer4.0.bn2.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn2.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn2.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn2.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.0.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.0.conv3.weighttorch.Size([2048, 512, 1, 1, 1]) ==>>torch.Size([2048, 512, 1, 1, 1])
+layer4.0.bn3.weighttorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.bn3.biastorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.bn3.running_meantorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.bn3.running_vartorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.0.downsample.0.weighttorch.Size([2048, 1024, 1, 1, 1]) ==>>torch.Size([2048, 1024, 1, 1, 1])
+layer4.0.downsample.1.weighttorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.downsample.1.biastorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.downsample.1.running_meantorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.downsample.1.running_vartorch.Size([2048]) ==>>torch.Size([2048])
+layer4.0.downsample.1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.1.conv1.weighttorch.Size([512, 2048, 3, 1, 1]) ==>>torch.Size([512, 2048, 3, 1, 1])
+layer4.1.bn1.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn1.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn1.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn1.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.1.conv2.weighttorch.Size([512, 512, 1, 3, 3]) ==>>torch.Size([512, 512, 1, 3, 3])
+layer4.1.bn2.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn2.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn2.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn2.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.1.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.1.conv3.weighttorch.Size([2048, 512, 1, 1, 1]) ==>>torch.Size([2048, 512, 1, 1, 1])
+layer4.1.bn3.weighttorch.Size([2048]) ==>>torch.Size([2048])
+layer4.1.bn3.biastorch.Size([2048]) ==>>torch.Size([2048])
+layer4.1.bn3.running_meantorch.Size([2048]) ==>>torch.Size([2048])
+layer4.1.bn3.running_vartorch.Size([2048]) ==>>torch.Size([2048])
+layer4.1.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.2.conv1.weighttorch.Size([512, 2048, 1, 1, 1]) ==>>torch.Size([512, 2048, 1, 1, 1])
+layer4.2.bn1.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn1.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn1.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn1.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn1.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.2.conv2.weighttorch.Size([512, 512, 1, 3, 3]) ==>>torch.Size([512, 512, 1, 3, 3])
+layer4.2.bn2.weighttorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn2.biastorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn2.running_meantorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn2.running_vartorch.Size([512]) ==>>torch.Size([512])
+layer4.2.bn2.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+layer4.2.conv3.weighttorch.Size([2048, 512, 1, 1, 1]) ==>>torch.Size([2048, 512, 1, 1, 1])
+layer4.2.bn3.weighttorch.Size([2048]) ==>>torch.Size([2048])
+layer4.2.bn3.biastorch.Size([2048]) ==>>torch.Size([2048])
+layer4.2.bn3.running_meantorch.Size([2048]) ==>>torch.Size([2048])
+layer4.2.bn3.running_vartorch.Size([2048]) ==>>torch.Size([2048])
+layer4.2.bn3.num_batches_trackedtorch.Size([]) ==>>torch.Size([])
+NAME IS NOT INPUT STATE DICT::>conv6.weight
+NAME IS NOT INPUT STATE DICT::>conv7.weight
+NAME IS NOT INPUT STATE DICT::>ego_lateral.weight
+NAME IS NOT INPUT STATE DICT::>lateral_layer1.weight
+NAME IS NOT INPUT STATE DICT::>lateral_layer2.weight
+NAME IS NOT INPUT STATE DICT::>lateral_layer3.weight
+NAME IS NOT INPUT STATE DICT::>corr_layer1.weight
+NAME IS NOT INPUT STATE DICT::>corr_layer2.weight
+NAME IS NOT INPUT STATE DICT::>corr_layer3.weight
+
+Lets do dataparallel
+
+ANCHOR_TYPE: RETINA
+ANNO_ROOT: 
+ARCH: resnet50
+BATCH_SIZE: 4
+CLASSWISE_NMS: False
+CLS_HEAD_TIME_SIZE: 3
+COMPUTE_PATHS: False
+COMPUTE_TUBES: False
+CONF_THRESH: 0.025
+DATASET: road
+DATA_ROOT: .\road-dataset\
+EVAL_EPOCHS: [30]
+FBN: True
+FREEZE_UPTO: 1
+GAMMA: 0.1
+GEN_CONF_THRESH: 0.025
+GEN_NMS: 0.5
+GEN_TOPK: 100
+HEAD_LAYERS: 3
+IOU_THRESH: 0.5
+JOINT_4M_MARGINALS: False
+LOG_START: 10
+LOG_STEP: 10
+LR: 0.004
+MAN_SEED: 123
+MAX_EPOCHS: 45
+MAX_SEQ_STEP: 1
+MAX_SIZE: 691
+MEANS: [0.485, 0.456, 0.406]
+MILESTONES: [20, 25]
+MIN_SEQ_STEP: 1
+MIN_SIZE: 512
+MODE: train
+MODEL_PATH: .\kinetics-pt\resnet50I3D.pth
+MODEL_TYPE: I3D
+MOMENTUM: 0.9
+MULTI_GPUS: True
+NEGTIVE_THRESHOLD: 0.4
+NMS_THRESH: 0.5
+NUM_FEATURE_MAPS: 5
+NUM_WORKERS: 8
+OPTIM: SGD
+PATHS_COST_TYPE: score
+PATHS_IOUTH: 0.5
+PATHS_JUMP_GAP: 4
+PATHS_MINSCORE: 0.1
+PATHS_MIN_LEN: 6
+POSTIVE_THRESHOLD: 0.5
+REG_HEAD_TIME_SIZE: 3
+RESUME: 30
+SAVE_ROOT: .\road-dataset\road/cache/resnet50I3D512-Pkinetics-b4s8x1x1-roadt3-h3x3x3/
+SEQ_LEN: 8
+STDS: [0.229, 0.224, 0.225]
+SUBSETS: ['val_3']
+TENSORBOARD: 1
+TEST_BATCH_SIZE: 1
+TEST_SEQ_LEN: 8
+TEST_SUBSETS: ['val_3']
+TOPK: 10
+TRAIN_SUBSETS: ['train_3']
+TRIM_METHOD: none
+TUBES_ALPHA: 0
+TUBES_EVAL_THRESHS: [0.2, 0.5]
+TUBES_MINLEN: 5
+TUBES_TOPK: 10
+USE_CEM: True
+VAL_STEP: 1
+VAL_SUBSETS: ['val_3']
+WEIGHT_DECAY: 0.0001
+all_classes: [['agent_ness'], ['Ped', 'Car', 'Cyc', 'Mobike', 'MedVeh', 'LarVeh', 'Bus', 'EmVeh', 'TL', 'OthTL'], ['Red', 'Amber', 'Green', 'MovAway', 'MovTow', 'Mov', 'Brake', 'Stop', 'IncatLft', 'IncatRht', 'HazLit', 'TurLft', 'TurRht', 'Ovtak', 'Wait2X', 'XingFmLft', 'XingFmRht', 'Xing', 'PushObj'], ['VehLane', 'OutgoLane', 'OutgoCycLane', 'IncomLane', 'IncomCycLane', 'Pav', 'LftPav', 'RhtPav', 'Jun', 'xing', 'BusStop', 'parking'], ['Bus-MovAway', 'Bus-MovTow', 'Bus-Stop', 'Bus-XingFmLft', 'Car-Brake', 'Car-IncatLft', 'Car-IncatRht', 'Car-MovAway', 'Car-MovTow', 'Car-Stop', 'Car-TurLft', 'Car-TurRht', 'Car-XingFmLft', 'Car-XingFmRht', 'Cyc-MovAway', 'Cyc-MovTow', 'Cyc-Stop', 'Cyc-TurLft', 'Cyc-XingFmLft', 'Cyc-XingFmRht', 'LarVeh-Stop', 'MedVeh-IncatLft', 'MedVeh-MovTow', 'MedVeh-Stop', 'MedVeh-TurRht', 'OthTL-Green', 'OthTL-Red', 'Ped-Mov', 'Ped-MovAway', 'Ped-MovTow', 'Ped-PushObj', 'Ped-Stop', 'Ped-Wait2X', 'Ped-Xing', 'Ped-XingFmLft', 'Ped-XingFmRht', 'TL-Amber', 'TL-Green', 'TL-Red'], ['Bus-MovTow-IncomLane', 'Bus-MovTow-Jun', 'Bus-Stop-IncomLane', 'Bus-Stop-VehLane', 'Bus-XingFmLft-Jun', 'Car-Brake-Jun', 'Car-Brake-VehLane', 'Car-IncatLft-Jun', 'Car-IncatLft-VehLane', 'Car-IncatRht-IncomLane', 'Car-IncatRht-Jun', 'Car-MovAway-Jun', 'Car-MovAway-OutgoLane', 'Car-MovAway-VehLane', 'Car-MovTow-IncomLane', 'Car-MovTow-Jun', 'Car-Stop-IncomLane', 'Car-Stop-Jun', 'Car-Stop-VehLane', 'Car-TurLft-Jun', 'Car-TurLft-VehLane', 'Car-TurRht-IncomLane', 'Car-TurRht-Jun', 'Car-XingFmLft-Jun', 'Cyc-MovAway-Jun', 'Cyc-MovAway-LftPav', 'Cyc-MovAway-OutgoCycLane', 'Cyc-MovAway-OutgoLane', 'Cyc-MovAway-VehLane', 'Cyc-MovTow-IncomCycLane', 'Cyc-MovTow-IncomLane', 'Cyc-MovTow-Jun', 'Cyc-MovTow-LftPav', 'Cyc-Stop-IncomCycLane', 'Cyc-Stop-IncomLane', 'Cyc-Stop-Jun', 'Cyc-TurLft-Jun', 'Cyc-XingFmLft-Jun', 'MedVeh-MovTow-IncomLane', 'MedVeh-MovTow-Jun', 'MedVeh-Stop-IncomLane', 'MedVeh-Stop-Jun', 'MedVeh-TurRht-Jun', 'Ped-Mov-Pav', 'Ped-MovAway-LftPav', 'Ped-MovAway-Pav', 'Ped-MovAway-RhtPav', 'Ped-MovTow-IncomLane', 'Ped-MovTow-LftPav', 'Ped-MovTow-RhtPav', 'Ped-MovTow-VehLane', 'Ped-PushObj-LftPav', 'Ped-PushObj-RhtPav', 'Ped-Stop-BusStop', 'Ped-Stop-LftPav', 'Ped-Stop-Pav', 'Ped-Stop-RhtPav', 'Ped-Stop-VehLane', 'Ped-Wait2X-LftPav', 'Ped-Wait2X-RhtPav', 'Ped-XingFmLft-IncomLane', 'Ped-XingFmLft-Jun', 'Ped-XingFmLft-VehLane', 'Ped-XingFmLft-xing', 'Ped-XingFmRht-IncomLane', 'Ped-XingFmRht-Jun', 'Ped-XingFmRht-RhtPav', 'Ped-XingFmRht-VehLane']]
+ar: 9
+cem_dim: 16
+ego_classes: ['AV-Stop', 'AV-Mov', 'AV-TurRht', 'AV-TurLft', 'AV-MovRht', 'AV-MovLft', 'AV-Ovtak']
+exp_name: resnet50I3D512-Pkinetics-b4s8x1x1-roadt3-h3x3x3
+head_size: 256
+hostname: nona
+label_types: ['agent_ness', 'agent', 'action', 'loc', 'duplex', 'triplet']
+log_dir: logs/resnet50I3D512-Pkinetics-b4s8x1x1-roadt3-h3x3x3/
+model_3d_layers: [[0, 1, 2], [0, 2], [0, 2, 4], [0, 1]]
+model_init: kinetics
+model_perms: [3, 4, 6, 3]
+model_subtype: I3D
+non_local_inds: [[], [], [], []]
+num_classes: 149
+num_classes_list: [1, 10, 19, 12, 39, 68]
+num_concepts: 68
+num_ego_classes: 7
+num_label_types: 6
+pos_weights: tensor([1.0000, 1.7310, 1.0979, 1.1651, 1.5082, 1.0000, 1.0000, 1.0813, 1.6056,
+        1.1584, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000,
+        1.0000, 1.0000, 1.5082, 5.4894, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000,
+        1.6997, 1.0000, 1.0000, 1.0000, 1.0000, 1.8135, 2.0077, 1.0000, 1.0000,
+        1.1924, 1.2162, 1.0000, 1.3218, 1.0000, 1.0000, 1.5544, 1.0000, 1.0000,
+        1.0000, 1.0000, 4.2462, 1.0000, 1.0000, 2.2821, 1.0000, 1.3132, 1.0000,
+        1.0000, 1.0000, 1.0000, 1.8189, 1.0000, 1.0000, 1.0005, 1.0000, 1.0000,
+        1.0000, 3.0619, 1.2297, 9.9890, 1.3833], device='cuda:0')
+user: alexr

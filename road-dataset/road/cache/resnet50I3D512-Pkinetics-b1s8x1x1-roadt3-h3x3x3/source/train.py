@@ -15,8 +15,23 @@ logger = utils.get_logger(__name__)
 
 
 def train(args, net, train_dataset, val_dataset):
-    
-    optimizer, scheduler, solver_print_str = get_optim(args, net)
+
+    # Change the optimizer and scheduler to train only CEM modules
+    # If you want to train the entire model, uncomment the following lines:
+
+    #optimizer, scheduler, solver_print_str = get_optim(args, net)
+
+    # === CUSTOM: Training only CEM modules ===
+    cem_params = [
+        p for name, p in net.named_parameters()
+        if any(k in name for k in ["cem_head", "ego_transformer", "ego_head"]) and p.requires_grad
+    ]
+
+    optimizer = torch.optim.AdamW(cem_params, lr=args.LR * 5)  # o lr=0.02
+    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.5)
+
+    solver_print_str = "[CEM OPTIM] Training cem_head, ego_transformer, ego_head with lr = {:.6f}".format(optimizer.param_groups[0]['lr'])
+
 
     if args.TENSORBOARD:
         from tensorboardX import SummaryWriter
@@ -35,9 +50,20 @@ def train(args, net, train_dataset, val_dataset):
         optimizer_file_name = '{:s}/optimizer_{:06d}.pth'.format(args.SAVE_ROOT, args.RESUME)
         # sechdular_file_name = '{:s}/optimizer_{:06d}.pth'.format(args.SAVE_ROOT, args.START_EPOCH)
         state_dict = torch.load(model_file_name)
-        net.load_state_dict(state_dict, strict=False)
 
-        #optimizer.load_state_dict(torch.load(optimizer_file_name))
+        # Change the state_dict to load only the CEM-related layers
+        # This is necessary because the model may contain layers that are not compatible with the current architecture
+        # If you want to load the entire model, uncomment the following line:
+        net.load_state_dict(state_dict, strict=False)
+        # Filtra manualmente i layer incompatibili (come ego_head)
+        #filtered_state_dict = {
+        #    k: v for k, v in state_dict.items()
+        #    if not any(exclude in k for exclude in ["ego_head", "cem_head", "ego_transformer"])
+        #}
+        #net.load_state_dict(filtered_state_dict, strict=False)
+
+        # Load the optimizer state if it is compatible
+        optimizer.load_state_dict(torch.load(optimizer_file_name))
         
     if args.TENSORBOARD:
         log_dir = '{:s}/tboard-{}-{date:%m-%d-%Hx}'.format(args.log_dir, args.MODE, date=datetime.datetime.now())
@@ -119,7 +145,7 @@ def run_train(args, train_data_loader, net, optimizer, epoch, iteration):
         loss_out = net(images, gt_boxes, gt_labels, ego_labels, counts, img_indexs, concept_labels=concept_labels)
         if isinstance(loss_out, tuple) and len(loss_out) == 3:
             loss_l, loss_c, loss_cem = loss_out
-            loss = loss_l + loss_c + 2.0 * loss_cem
+            loss = loss_l + loss_c + 5.0 * loss_cem
         elif isinstance(loss_out, tuple) and len(loss_out) == 2:
             loss_l, loss_c = loss_out
             loss = loss_l + loss_c

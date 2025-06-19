@@ -12,6 +12,24 @@ from modules.utils import get_individual_labels
 
 logger = utils.get_logger(__name__)
 
+def find_best_thresholds(y_true, y_probs, thresholds=np.arange(0.05, 0.95, 0.05)):
+    K = y_true.shape[1]
+    best_thresholds = np.zeros(K)
+    best_f1 = np.zeros(K)
+
+    for i in range(K):
+        scores = []
+        for t in thresholds:
+            preds = (y_probs[:, i] > t).astype(int)
+            f1 = f1_score(y_true[:, i], preds, zero_division=0)
+            scores.append(f1)
+        best_idx = np.argmax(scores)
+        best_thresholds[i] = thresholds[best_idx]
+        best_f1[i] = scores[best_idx]
+
+    return best_thresholds, best_f1
+
+
 def val(args, net, val_dataset):
     val_data_loader = data_utils.DataLoader(val_dataset, args.BATCH_SIZE, num_workers=args.NUM_WORKERS,
                                             shuffle=False, pin_memory=True, collate_fn=custum_collate)
@@ -142,7 +160,14 @@ def validate(args, net, val_data_loader, val_dataset, iteration_num):
         concept_preds_all = np.concatenate(concept_preds_all, axis=0).reshape(-1, concept_preds_all[0].shape[-1])
         concept_labels_all = np.concatenate(concept_labels_all, axis=0).reshape(-1, concept_preds_all.shape[-1])
 
-        concept_preds_bin = (concept_preds_all > 0.5).astype(int)
+        # Trova la soglia ottimale per ogni concetto
+        thresholds, f1s = find_best_thresholds(concept_labels_all, concept_preds_all)
+
+        # Binarizza con soglie dinamiche
+        concept_preds_bin = np.zeros_like(concept_preds_all)
+        for i, t in enumerate(thresholds):
+            concept_preds_bin[:, i] = (concept_preds_all[:, i] > t).astype(int)
+
         concept_labels_bin = concept_labels_all.astype(int)
 
         cem_accuracy = (concept_preds_bin == concept_labels_bin).mean()

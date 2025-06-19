@@ -99,15 +99,11 @@ def perform_detection(args, net,  val_data_loader, val_dataset, iteration):
         numc = args.num_classes_list[nlt]
         det_boxes.append([[] for _ in range(numc)])
         gt_boxes_all.append([])
-
-    # Inverti il dizionario una sola volta per avere accesso ai nomi concetti
-    index_to_triplet = {v: k for k, v in val_dataset.triplet_to_index.items()}
-
     
     nlt = 0
     processed_videos = []
     with torch.no_grad():
-        for val_itr, (images, gt_boxes, gt_targets, ego_labels, batch_counts, img_indexs, wh, concept_labels) in enumerate(val_data_loader):
+        for val_itr, (images, gt_boxes, gt_targets, ego_labels, batch_counts, img_indexs, wh) in enumerate(val_data_loader):
 
             torch.cuda.synchronize()
             t1 = time.perf_counter()
@@ -115,15 +111,7 @@ def perform_detection(args, net,  val_data_loader, val_dataset, iteration):
             batch_size = images.size(0)
             
             images = images.cuda(0, non_blocking=True)
-            outputs = net(images)
-            if isinstance(outputs, tuple):
-                if len(outputs) == 5:
-                    decoded_boxes, confidence, ego_preds, concept_probs, _ = outputs
-                elif len(outputs) == 4:
-                    decoded_boxes, confidence, ego_preds, concept_probs = outputs
-                elif len(outputs) == 3:
-                    decoded_boxes, confidence, ego_preds = outputs
-                    concept_probs = None
+            decoded_boxes, confidence, ego_preds = net(images)
             ego_preds = activation(ego_preds).cpu().numpy()
             ego_labels = ego_labels.numpy()
             confidence = activation(confidence)
@@ -184,17 +172,7 @@ def perform_detection(args, net,  val_data_loader, val_dataset, iteration):
                     save_name = '{:s}/{:05d}.pkl'.format(save_dir, frame_num+1)
                     frame_num += step_size
                     save_data = {'ego':ego_preds[b,si,:], 'main':save_data}
-                    # If cem is used, we need to save the concept probabilities
-                    if concept_probs is not None:
-                        concept_frame = concept_probs[b, si].detach().cpu()
-                        save_data['concept_probs'] = concept_frame  # ✅ salva nei .pkl per uso futuro
-
-                        # ✅ Spiegabilità: log dei concetti top-5 più attivi
-                        topk = concept_frame.topk(5)
-                        top_labels = [index_to_triplet.get(i.item(), f"Concept {i.item()}") for i in topk.indices]
-                        top_values = topk.values.numpy().tolist()
-                        logger.debug(f"[Explain] Frame {frame_num}: Top concepts: {list(zip(top_labels, top_values))}")
-
+                    
                     if si<seq_len-args.skip_ending or store_last:
                         with open(save_name,'wb') as ff:
                             pickle.dump(save_data, ff)

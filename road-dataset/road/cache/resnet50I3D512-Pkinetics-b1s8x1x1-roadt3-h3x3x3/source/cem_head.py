@@ -12,6 +12,15 @@ class CEMHead(nn.Module):
         # Due generatori di embedding per ogni concetto (attivo / inattivo)
         self.emb_pos = nn.ModuleList([nn.Linear(input_dim, emb_dim) for _ in range(concept_dim)])
         self.emb_neg = nn.ModuleList([nn.Linear(input_dim, emb_dim) for _ in range(concept_dim)])
+        # Inizializzazione personalizzata per separare c_pos e c_neg
+        for layer in self.emb_pos:
+            nn.init.normal_(layer.weight, mean=1.0, std=0.02)
+            nn.init.constant_(layer.bias, 0)
+
+        for layer in self.emb_neg:
+            nn.init.normal_(layer.weight, mean=-1.0, std=0.02)
+            nn.init.constant_(layer.bias, 0)
+
 
         # Scoring layer condiviso (senza sigmoid → logits)
         self.scoring_layer = nn.Linear(2 * emb_dim, 1)
