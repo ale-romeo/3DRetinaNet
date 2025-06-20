@@ -23,7 +23,10 @@ from modules.utils import make_joint_probs_from_marginals
 logger = utils.get_logger(__name__)
 
 def explain_ego_action(frame_num, concept_frame, ego_pred, index_to_triplet, ego_class_names):
-    top_concepts = concept_frame.topk(5)
+    # Applica la sigmoid ai logits concettuali
+    probs = torch.sigmoid(concept_frame)
+
+    top_concepts = probs.topk(5)
     top_labels = [index_to_triplet.get(i.item(), f"Concept {i.item()}") for i in top_concepts.indices]
     top_values = top_concepts.values.numpy().tolist()
 

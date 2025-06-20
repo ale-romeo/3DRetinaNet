@@ -267,13 +267,15 @@ def main():
                     for triplet in frame_triplets:
                         idx = train_dataset.triplet_to_index[triplet]
                         concept_freq[idx] += 1
+                total_samples = len(train_dataset)
+
             elif args.MODE == 'gen_dets':
                 for frame_triplets in val_dataset.frame_to_triplets.values():
                     for triplet in frame_triplets:
                         idx = val_dataset.triplet_to_index[triplet]
                         concept_freq[idx] += 1
-
-            total_samples = len(val_dataset)
+                total_samples = len(val_dataset)
+                
             pos_weights = np.log((total_samples + 1e-6) / (concept_freq + 1e-6))
             pos_weights = np.clip(pos_weights, 1.0, 20.0)
             args.pos_weights = torch.tensor(pos_weights, dtype=torch.float32).cuda()

@@ -30,6 +30,7 @@ road-dataset/road/rgb-images/
 road-dataset/road/videos/
 road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/detections-30-08-50/
 road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/detections-55-08-50/
+road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/detections-60-08-50/
 road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/model_000001.pth
 road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/model_000002.pth
 road-dataset/road/cache/resnet50I3D512-Pkinetics-b1s8x1x1-roadt3-h3x3x3/model_000003.pth
