@@ -22,18 +22,30 @@ import modules.evaluation as evaluate
 from modules.utils import make_joint_probs_from_marginals
 logger = utils.get_logger(__name__)
 
+def explain_ego_action(frame_num, concept_frame, ego_pred, index_to_triplet, ego_class_names):
+    top_concepts = concept_frame.topk(5)
+    top_labels = [index_to_triplet.get(i.item(), f"Concept {i.item()}") for i in top_concepts.indices]
+    top_values = top_concepts.values.numpy().tolist()
+
+    top_ego_class_idx = np.argmax(ego_pred)
+    top_ego_class_score = ego_pred[top_ego_class_idx]
+    top_ego_class_name = ego_class_names[top_ego_class_idx]
+
+    print(f"[Explain] Frame {frame_num:05d}: Predicted action '{top_ego_class_name}' ({top_ego_class_score:.2f}) based on:")
+    for lbl, val in zip(top_labels, top_values):
+        print(f"  - {lbl}: {val:.2f}")
+
 def gen_dets(args, net, val_dataset):
-    
     net.eval()
     val_data_loader = data_utils.DataLoader(val_dataset, int(args.TEST_BATCH_SIZE), num_workers=args.NUM_WORKERS,
                                  shuffle=False, pin_memory=True, collate_fn=custum_collate)
     for epoch in args.EVAL_EPOCHS:
         args.det_itr = epoch
         logger.info('Testing at ' + str(epoch))
-        
+
         args.det_save_dir = os.path.join(args.SAVE_ROOT, "detections-{it:02d}-{sq:02d}-{n:d}/".format(it=epoch, sq=args.TEST_SEQ_LEN, n=int(100*args.GEN_NMS)))
         logger.info('detection saving dir is :: '+args.det_save_dir)
-        
+
         is_all_done = True
         if os.path.isdir(args.det_save_dir):
             for vid, videoname in enumerate(val_dataset.video_list):
@@ -51,19 +63,19 @@ def gen_dets(args, net, val_dataset):
         else:
             is_all_done = False
             os.makedirs(args.det_save_dir)
-        
+
         if is_all_done:
             print('All done! skipping detection')
             continue
-        
+
         args.MODEL_PATH = args.SAVE_ROOT + 'model_{:06d}.pth'.format(epoch)
         net.load_state_dict(torch.load(args.MODEL_PATH))
-        
+
         logger.info('Finished loading model %d !' % epoch )
-        
+
         torch.cuda.synchronize()
         tt0 = time.perf_counter()
-        
+
         net.eval() # switch net to evaluation mode        
         mAP, _, ap_strs = perform_detection(args, net, val_data_loader, val_dataset, epoch)
         label_types = [args.label_types[0]] + ['ego_action']
@@ -115,15 +127,11 @@ def perform_detection(args, net,  val_data_loader, val_dataset, iteration):
             batch_size = images.size(0)
             
             images = images.cuda(0, non_blocking=True)
-            outputs = net(images)
-            if isinstance(outputs, tuple):
-                if len(outputs) == 5:
-                    decoded_boxes, confidence, ego_preds, concept_probs, _ = outputs
-                elif len(outputs) == 4:
-                    decoded_boxes, confidence, ego_preds, concept_probs = outputs
-                elif len(outputs) == 3:
-                    decoded_boxes, confidence, ego_preds = outputs
-                    concept_probs = None
+            if args.USE_CEM:
+                decoded_boxes, confidence, ego_preds, concept_probs, _ = net(images)
+            else:
+                decoded_boxes, confidence, ego_preds = net(images)
+                
             ego_preds = activation(ego_preds).cpu().numpy()
             ego_labels = ego_labels.numpy()
             confidence = activation(confidence)
@@ -185,15 +193,11 @@ def perform_detection(args, net,  val_data_loader, val_dataset, iteration):
                     frame_num += step_size
                     save_data = {'ego':ego_preds[b,si,:], 'main':save_data}
                     # If cem is used, we need to save the concept probabilities
-                    if concept_probs is not None:
+                    if args.USE_CEM:
                         concept_frame = concept_probs[b, si].detach().cpu()
                         save_data['concept_probs'] = concept_frame  # ✅ salva nei .pkl per uso futuro
 
-                        # ✅ Spiegabilità: log dei concetti top-5 più attivi
-                        topk = concept_frame.topk(5)
-                        top_labels = [index_to_triplet.get(i.item(), f"Concept {i.item()}") for i in topk.indices]
-                        top_values = topk.values.numpy().tolist()
-                        logger.debug(f"[Explain] Frame {frame_num}: Top concepts: {list(zip(top_labels, top_values))}")
+                        explain_ego_action(frame_num, concept_frame, ego_preds[b, si], index_to_triplet, args.ego_classes)
 
                     if si<seq_len-args.skip_ending or store_last:
                         with open(save_name,'wb') as ff:

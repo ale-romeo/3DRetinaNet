@@ -104,7 +104,7 @@ def main():
     parser.add_argument('--NEGTIVE_THRESHOLD', default=0.4,
                         type=float, help='Max threshold Jaccard index for matching')
     # Evaluation hyperparameters
-    parser.add_argument('--EVAL_EPOCHS', default='30', 
+    parser.add_argument('--EVAL_EPOCHS', default='60', 
                         type=str, help='eval epochs to test network on these epoch checkpoints usually the last epoch is used')
     parser.add_argument('--VAL_STEP', default=1, 
                         type=int, help='Number of training epoch before evaluation')
@@ -259,21 +259,24 @@ def main():
     args.ego_classes = val_dataset.ego_classes
     args.head_size = 256
 
-    # === Calcolo pesi positivi per la CEM loss ===
-    if args.USE_CEM:
-        concept_freq = np.zeros(args.num_concepts)
-        for frame_triplets in train_dataset.frame_to_triplets.values():
-            for triplet in frame_triplets:
-                idx = train_dataset.triplet_to_index[triplet]
-                concept_freq[idx] += 1
-
-        total_samples = len(train_dataset)
-        # Inversione log-scaled + stabilizzazione
-        pos_weights = np.log((total_samples + 1e-6) / (concept_freq + 1e-6))
-        pos_weights = np.clip(pos_weights, 1.0, 20.0)
-        args.pos_weights = torch.tensor(pos_weights, dtype=torch.float32).cuda()
-
     if args.MODE in ['train', 'val','gen_dets']:
+        if args.USE_CEM:
+            concept_freq = np.zeros(args.num_concepts)
+            if args.MODE == 'train':
+                for frame_triplets in train_dataset.frame_to_triplets.values():
+                    for triplet in frame_triplets:
+                        idx = train_dataset.triplet_to_index[triplet]
+                        concept_freq[idx] += 1
+            elif args.MODE == 'gen_dets':
+                for frame_triplets in val_dataset.frame_to_triplets.values():
+                    for triplet in frame_triplets:
+                        idx = val_dataset.triplet_to_index[triplet]
+                        concept_freq[idx] += 1
+
+            total_samples = len(val_dataset)
+            pos_weights = np.log((total_samples + 1e-6) / (concept_freq + 1e-6))
+            pos_weights = np.clip(pos_weights, 1.0, 20.0)
+            args.pos_weights = torch.tensor(pos_weights, dtype=torch.float32).cuda()
         net = build_retinanet(args).cuda()
         if args.MULTI_GPUS:
             logger.info('\nLets do dataparallel\n')
