@@ -174,6 +174,7 @@ def validate(args, net, val_data_loader, val_dataset, iteration_num):
         cem_f1_micro = f1_score(concept_labels_bin, concept_preds_bin, average='micro')
         cem_f1_macro = f1_score(concept_labels_bin, concept_preds_bin, average='macro')
 
+        logger.info(f"[CEM] pred 1s: {concept_preds_bin.sum()}, label 1s: {concept_labels_bin.sum()}")
         logger.info(f'[CEM] Concept Prediction Accuracy: {cem_accuracy:.4f}')
         logger.info(f'[CEM] Concept F1 Micro: {cem_f1_micro:.4f}')
         logger.info(f'[CEM] Concept F1 Macro: {cem_f1_macro:.4f}')
