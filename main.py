@@ -174,8 +174,6 @@ def main():
     parser.add_argument('--num_concepts', default=68, type=int, help='Number of concept labels (triplets)')
     parser.add_argument('--cem_dim', type=int, default=16, help='Dimensione embedding per ciascun concetto nel CEM')
 
-    # Use CUDA_VISIBLE_DEVICES=0,1,4,6 to select GPUs to use
-
 
     ## Parse arguments
     args = parser.parse_args()

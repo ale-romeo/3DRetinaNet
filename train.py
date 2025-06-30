@@ -93,7 +93,6 @@ def train(args, net, train_dataset, val_dataset):
     val_data_loader = data_utils.DataLoader(val_dataset, args.BATCH_SIZE, num_workers=args.NUM_WORKERS,
                                             shuffle=False, pin_memory=True, collate_fn=custum_collate)
     
-    
     iteration = 0
     for epoch in range(args.START_EPOCH, args.MAX_EPOCHS + 1):
         net.train()

@@ -56,4 +56,4 @@ class CEMHead(nn.Module):
         concept_logits = torch.stack(concept_logits, dim=-1)         # [B, T, k]
         concept_bottleneck = torch.cat(concept_embeddings, dim=-1)   # [B, T, k * m]
 
-        return concept_bottleneck, concept_logits  # ← logits, non sigmoid!
+        return concept_bottleneck, concept_logits  # ← logits, non sigmoid
