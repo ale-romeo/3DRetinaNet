@@ -34,9 +34,9 @@ def explain_ego_action(frame_num, concept_frame, ego_pred, index_to_triplet, ego
     top_ego_class_score = ego_pred[top_ego_class_idx]
     top_ego_class_name = ego_class_names[top_ego_class_idx]
 
-    print(f"[Explain] Frame {frame_num:05d}: Predicted action '{top_ego_class_name}' ({top_ego_class_score:.2f}) based on:")
+    logger.info(f"[Explain] Frame {frame_num:05d}: Predicted action '{top_ego_class_name}' ({top_ego_class_score:.2f}) based on:")
     for lbl, val in zip(top_labels, top_values):
-        print(f"  - {lbl}: {val:.2f}")
+        logger.info(f"  - {lbl}: {val:.2f}")
 
 def gen_dets(args, net, val_dataset):
     net.eval()
@@ -199,7 +199,7 @@ def perform_detection(args, net,  val_data_loader, val_dataset, iteration):
                     if args.USE_CEM:
                         concept_frame = concept_probs[b, si].detach().cpu()
                         save_data['concept_probs'] = concept_frame  # ✅ salva nei .pkl per uso futuro
-
+                        logger.info("-----------------video id %s, videoname %s", video_id, val_dataset.video_list[video_id])
                         explain_ego_action(frame_num, concept_frame, ego_preds[b, si], index_to_triplet, args.ego_classes)
 
                     if si<seq_len-args.skip_ending or store_last:

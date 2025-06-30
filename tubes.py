@@ -88,7 +88,23 @@ def build_eval_tubes(args, val_dataset):
                             log_file.write(ap_str+'\n')
                             
                 with open(result_file, 'w') as f:
-                    json.dump(results, f)
+
+                    import numpy as np
+
+                    def make_json_serializable(obj):
+                        if isinstance(obj, dict):
+                            return {k: make_json_serializable(v) for k, v in obj.items()}
+                        elif isinstance(obj, list):
+                            return [make_json_serializable(v) for v in obj]
+                        elif isinstance(obj, np.generic):  # include np.float32, np.int32, etc.
+                            return obj.item()
+                        else:
+                            return obj
+
+
+                    json.dump(make_json_serializable(results), f)
+
+                    #json.dump(results, f)
         mcount = 0
         for subset in args.SUBSETS:
             if len(subset)<2:
